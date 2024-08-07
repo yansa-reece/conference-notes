@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="ais_search_profile_ais_search_source_m2m">
     <ais_search_profile_ais_search_source_m2m action="INSERT_OR_UPDATE">
         <profile display_value="conference-notes Search Profile">cb4dfba3330f4210bbd031354d42cc0f</profile>
-        <search_source display_value="Contact">5c5d3fa3830f42107d786970ceaad3a5</search_source>
+        <search_source display_value="">5c5d3fa3830f42107d786970ceaad3a5</search_source>
         <sys_class_name>ais_search_profile_ais_search_source_m2m</sys_class_name>
         <sys_created_by>MGOPW</sys_created_by>
         <sys_created_on>2024-07-03 23:01:32</sys_created_on>

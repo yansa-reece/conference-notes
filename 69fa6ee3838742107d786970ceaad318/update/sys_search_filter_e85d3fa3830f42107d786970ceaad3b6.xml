@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_search_filter">
     <sys_search_filter action="INSERT_OR_UPDATE">
         <active>true</active>
-        <ais_search_source display_value="Contact">5c5d3fa3830f42107d786970ceaad3a5</ais_search_source>
+        <ais_search_source display_value="">5c5d3fa3830f42107d786970ceaad3a5</ais_search_source>
         <label>Contact</label>
         <name>Contact</name>
         <order>100</order>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route">
+    <sys_ux_app_route action="DELETE">
+        <app_config/>
+        <description/>
+        <extension_point display_value="U&amp;I Conference Notes">ff6dea7683ffc210b3fb7230feaad359</extension_point>
+        <fields/>
+        <icon/>
+        <name>Add Contact</name>
+        <optional_parameters/>
+        <order>0</order>
+        <parent_macroponent display_value="UXR Base Experience Shell">76a83a645b122010b913030a1d81c780</parent_macroponent>
+        <parent_macroponent_composition_element_id/>
+        <route_type>add-contact</route_type>
+        <screen_type display_value="Add Contact">63de6a3a83ffc210b3fb7230feaad3a7</screen_type>
+        <sys_class_name>sys_ux_app_route</sys_class_name>
+        <sys_created_by>reece.poulsen</sys_created_by>
+        <sys_created_on>2024-08-07 16:10:26</sys_created_on>
+        <sys_id>ebde6a3a83ffc210b3fb7230feaad3aa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Add Contact</sys_name>
+        <sys_package display_value="BAM - You &amp; I Builder Live! Conference Notes" source="x_snc_bam_you_i_0">69fa6ee3838742107d786970ceaad318</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BAM - You &amp; I Builder Live! Conference Notes">69fa6ee3838742107d786970ceaad318</sys_scope>
+        <sys_update_name>sys_ux_app_route_ebde6a3a83ffc210b3fb7230feaad3aa</sys_update_name>
+        <sys_updated_by>reece.poulsen</sys_updated_by>
+        <sys_updated_on>2024-08-07 16:10:26</sys_updated_on>
+    </sys_ux_app_route>
+    <sys_translated_text action="DELETE" query="documentkey=ebde6a3a83ffc210b3fb7230feaad3aa"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BAM - You &amp; I Builder Live! Conference Notes">69fa6ee3838742107d786970ceaad318</application>
+        <file_path/>
+        <instance_id>1da02244dbbdb990ae4c9027c59619b6</instance_id>
+        <instance_name>dev181649</instance_name>
+        <name>sys_ux_app_route_ebde6a3a83ffc210b3fb7230feaad3aa</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_app_route"><sys_ux_app_route action="INSERT_OR_UPDATE"><app_config/><description/><extension_point display_value="U&amp;I Conference Notes">ff6dea7683ffc210b3fb7230feaad359</extension_point><fields/><icon/><name>Add Contact</name><optional_parameters/><order>0</order><parent_macroponent display_value="UXR Base Experience Shell">76a83a645b122010b913030a1d81c780</parent_macroponent><parent_macroponent_composition_element_id/><route_type>add-contact</route_type><screen_type display_value="Add Contact">63de6a3a83ffc210b3fb7230feaad3a7</screen_type><sys_class_name>sys_ux_app_route</sys_class_name><sys_created_by>reece.poulsen</sys_created_by><sys_created_on>2024-08-07 16:10:26</sys_created_on><sys_id>ebde6a3a83ffc210b3fb7230feaad3aa</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Add Contact</sys_name><sys_package display_value="BAM - You &amp; I Builder Live! Conference Notes" source="x_snc_bam_you_i_0">69fa6ee3838742107d786970ceaad318</sys_package><sys_policy/><sys_scope display_value="BAM - You &amp; I Builder Live! Conference Notes">69fa6ee3838742107d786970ceaad318</sys_scope><sys_update_name>sys_ux_app_route_ebde6a3a83ffc210b3fb7230feaad3aa</sys_update_name><sys_updated_by>reece.poulsen</sys_updated_by><sys_updated_on>2024-08-07 16:10:26</sys_updated_on></sys_ux_app_route><sys_translated_text action="delete_multiple" query="documentkey=ebde6a3a83ffc210b3fb7230feaad3aa"/></record_update>]]></payload>
+        <payload_hash>-1192003438</payload_hash>
+        <record_name>Add Contact</record_name>
+        <reverted_from/>
+        <source>293326fe837fc210b3fb7230feaad34c</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>reece.poulsen</sys_created_by>
+        <sys_created_on>2024-08-07 16:10:26</sys_created_on>
+        <sys_id>2bde6e3a83ffc210b3fb7230feaad39d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1912d9b207d0000001</sys_recorded_at>
+        <sys_updated_by>reece.poulsen</sys_updated_by>
+        <sys_updated_on>2024-08-07 16:10:26</sys_updated_on>
+        <type>UX App Route</type>
+        <update_guid>ebde6e3afdffc2108f267748d9f40d9c</update_guid>
+        <update_guid_history>ebde6e3afdffc2108f267748d9f40d9c:-1192003438</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>reece.poulsen</sys_created_by>
+        <sys_created_on>2024-08-07 16:13:17</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_app_route">sys_ux_app_route</sys_db_object>
+        <sys_id>104f3c55a7874e37bb6e804237d70d21</sys_id>
+        <sys_metadata>ebde6a3a83ffc210b3fb7230feaad3aa</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Add Contact</sys_name>
+        <sys_package display_value="BAM - You &amp; I Builder Live! Conference Notes" source="x_snc_bam_you_i_0">69fa6ee3838742107d786970ceaad318</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BAM - You &amp; I Builder Live! Conference Notes">69fa6ee3838742107d786970ceaad318</sys_scope>
+        <sys_scope_delete display_value="">8e6b586c18d945e4a392cb47d16fdc89</sys_scope_delete>
+        <sys_update_name>sys_ux_app_route_ebde6a3a83ffc210b3fb7230feaad3aa</sys_update_name>
+        <sys_update_version display_value="sys_ux_app_route_ebde6a3a83ffc210b3fb7230feaad3aa">2bde6e3a83ffc210b3fb7230feaad39d</sys_update_version>
+        <sys_updated_by>reece.poulsen</sys_updated_by>
+        <sys_updated_on>2024-08-07 16:13:17</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
