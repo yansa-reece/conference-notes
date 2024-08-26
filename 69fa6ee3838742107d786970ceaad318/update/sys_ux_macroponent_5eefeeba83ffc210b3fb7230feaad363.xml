@@ -40,7 +40,63 @@
                                 },
                                 "elementId": "process_stepper",
                                 "elementLabel": "Process Stepper",
-                                "eventMappings": [],
+                                "eventMappings": [
+                                    {
+                                        "eventMappingId": "clzuekmepaaccbbwddbiiaasddwcbzejj",
+                                        "isConfiguration": false,
+                                        "offRowStorageId": null,
+                                        "sourceEventApiName": "sn_stepper.NOW_STEPPER#SELECTED_ITEM_SET",
+                                        "sourceEventCorrelationId": null,
+                                        "sourceEventDefinition": {
+                                            "apiName": "sn_stepper.NOW_STEPPER#SELECTED_ITEM_SET",
+                                            "id": null,
+                                            "type": "UXEVENT"
+                                        },
+                                        "sourceEventSysId": null,
+                                        "targets": [
+                                            {
+                                                "broker": null,
+                                                "clientScript": null,
+                                                "conditional": {
+                                                    "operation": {
+                                                        "left": {
+                                                            "binding": {
+                                                                "address": [
+                                                                    "newContact"
+                                                                ]
+                                                            },
+                                                            "type": "STATE_BINDING"
+                                                        },
+                                                        "operator": "EQUAL",
+                                                        "right": {
+                                                            "type": "JSON_LITERAL",
+                                                            "value": true
+                                                        }
+                                                    },
+                                                    "type": "BINARY"
+                                                },
+                                                "declarativeAction": null,
+                                                "event": {
+                                                    "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                                                    "payload": {
+                                                        "script": {
+                                                            "apiVersion": "1.0.0",
+                                                            "controllerElementId": null,
+                                                            "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\tif (api.state.newContact) {\n\t\treturn {\n\t\t\tpropName: \"newContact\",\n\t\t\tvalue: false\n\t\t};\n\t}\n}",
+                                                            "scriptSysId": null,
+                                                            "target": null
+                                                        },
+                                                        "type": "CLIENT_TRANSFORM_SCRIPT"
+                                                    },
+                                                    "sysId": "32408b42ff7a10109046e490703bf176"
+                                                },
+                                                "operation": null,
+                                                "targetId": "clzuekmepaaccbbxddbiiaasggaadykxy",
+                                                "type": "EVENT"
+                                            }
+                                        ]
+                                    }
+                                ],
                                 "isHidden": {
                                     "type": "JSON_LITERAL",
                                     "value": null
@@ -368,7 +424,7 @@
                                                                         },
                                                                         "pattern": {
                                                                             "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "value": "^.+$"
                                                                         },
                                                                         "placeholder": {
                                                                             "type": "TRANSLATION_LITERAL",
@@ -399,8 +455,14 @@
                                                                             "value": "text"
                                                                         },
                                                                         "value": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "script": {
+                                                                                "apiVersion": "2.0.0",
+                                                                                "controllerElementId": null,
+                                                                                "inlineScript": null,
+                                                                                "scriptSysId": "4a4ebbc183005610b3fb7230feaad36b",
+                                                                                "target": null
+                                                                            },
+                                                                            "type": "CLIENT_TRANSFORM_SCRIPT"
                                                                         }
                                                                     },
                                                                     "slot": null,
@@ -575,8 +637,14 @@
                                                                             "value": "email"
                                                                         },
                                                                         "value": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "script": {
+                                                                                "apiVersion": "2.0.0",
+                                                                                "controllerElementId": null,
+                                                                                "inlineScript": null,
+                                                                                "scriptSysId": "8a4ebbc183005610b3fb7230feaad36b",
+                                                                                "target": null
+                                                                            },
+                                                                            "type": "CLIENT_TRANSFORM_SCRIPT"
                                                                         }
                                                                     },
                                                                     "slot": null,
@@ -584,20 +652,20 @@
                                                                 },
                                                                 {
                                                                     "definition": {
-                                                                        "id": "838ba46920544c30b09458bec4acf33c",
+                                                                        "id": "bb0f92e8d7eff1590624bfe69d316f23",
                                                                         "type": "MACROPONENT"
                                                                     },
                                                                     "elementId": "phone_number_input",
                                                                     "elementLabel": "Phone Number Input",
                                                                     "eventMappings": [
                                                                         {
-                                                                            "eventMappingId": "clzkcmfohhaabbccvddbiiaafvthhccnwn",
+                                                                            "eventMappingId": "clzkclxaaaaaabbccqddbiiaayejjhhugxjj",
                                                                             "isConfiguration": false,
                                                                             "offRowStorageId": null,
-                                                                            "sourceEventApiName": "sn_input.NOW_INPUT_PHONE#VALUE_SET",
+                                                                            "sourceEventApiName": "sn_input.NOW_INPUT#VALUE_SET",
                                                                             "sourceEventCorrelationId": null,
                                                                             "sourceEventDefinition": {
-                                                                                "apiName": "sn_input.NOW_INPUT_PHONE#VALUE_SET",
+                                                                                "apiName": "sn_input.NOW_INPUT#VALUE_SET",
                                                                                 "id": null,
                                                                                 "type": "UXEVENT"
                                                                             },
@@ -616,7 +684,7 @@
                                                                                     "declarativeAction": null,
                                                                                     "event": null,
                                                                                     "operation": null,
-                                                                                    "targetId": "clzkcmfohhaabbccwddbiiaajjeecceeojjdgg",
+                                                                                    "targetId": "clzkclxaaaaaabbccrddbiiaatoddhjvrbb",
                                                                                     "type": "CLIENT_SCRIPT"
                                                                                 }
                                                                             ]
@@ -640,13 +708,13 @@
                                                                             "type": "JSON_LITERAL",
                                                                             "value": null
                                                                         },
-                                                                        "countryCodes": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": []
-                                                                        },
                                                                         "disabled": {
                                                                             "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "value": false
+                                                                        },
+                                                                        "enableCaretSlot": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": false
                                                                         },
                                                                         "fieldLayout": {
                                                                             "type": "JSON_LITERAL",
@@ -664,7 +732,7 @@
                                                                         },
                                                                         "invalid": {
                                                                             "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "value": false
                                                                         },
                                                                         "label": {
                                                                             "type": "TRANSLATION_LITERAL",
@@ -686,6 +754,10 @@
                                                                             "type": "JSON_LITERAL",
                                                                             "value": false
                                                                         },
+                                                                        "max": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": null
+                                                                        },
                                                                         "maxlength": {
                                                                             "type": "JSON_LITERAL",
                                                                             "value": null
@@ -694,7 +766,15 @@
                                                                             "container": [],
                                                                             "type": "LIST_CONTAINER"
                                                                         },
+                                                                        "min": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": null
+                                                                        },
                                                                         "minlength": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": null
+                                                                        },
+                                                                        "multiple": {
                                                                             "type": "JSON_LITERAL",
                                                                             "value": null
                                                                         },
@@ -702,23 +782,13 @@
                                                                             "type": "JSON_LITERAL",
                                                                             "value": "phone_number"
                                                                         },
-                                                                        "number": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": null
-                                                                        },
                                                                         "optional": {
                                                                             "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "value": false
                                                                         },
                                                                         "pattern": {
-                                                                            "script": {
-                                                                                "apiVersion": "2.0.0",
-                                                                                "controllerElementId": null,
-                                                                                "inlineScript": null,
-                                                                                "scriptSysId": "0334937a83f30610b3fb7230feaad312",
-                                                                                "target": null
-                                                                            },
-                                                                            "type": "CLIENT_TRANSFORM_SCRIPT"
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": null
                                                                         },
                                                                         "placeholder": {
                                                                             "type": "JSON_LITERAL",
@@ -726,23 +796,33 @@
                                                                         },
                                                                         "readonly": {
                                                                             "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "value": false
                                                                         },
                                                                         "required": {
                                                                             "type": "JSON_LITERAL",
-                                                                            "value": null
-                                                                        },
-                                                                        "selectedCountryCode": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "value": false
                                                                         },
                                                                         "size": {
                                                                             "type": "JSON_LITERAL",
                                                                             "value": "md"
                                                                         },
-                                                                        "value": {
+                                                                        "step": {
                                                                             "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "value": "any"
+                                                                        },
+                                                                        "type": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": "text"
+                                                                        },
+                                                                        "value": {
+                                                                            "script": {
+                                                                                "apiVersion": "2.0.0",
+                                                                                "controllerElementId": null,
+                                                                                "inlineScript": null,
+                                                                                "scriptSysId": "864ebbc183005610b3fb7230feaad36c",
+                                                                                "target": null
+                                                                            },
+                                                                            "type": "CLIENT_TRANSFORM_SCRIPT"
                                                                         }
                                                                     },
                                                                     "slot": null,
@@ -921,8 +1001,14 @@
                                                                             "value": "md"
                                                                         },
                                                                         "value": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "script": {
+                                                                                "apiVersion": "2.0.0",
+                                                                                "controllerElementId": null,
+                                                                                "inlineScript": null,
+                                                                                "scriptSysId": "0e4ebbc183005610b3fb7230feaad36b",
+                                                                                "target": null
+                                                                            },
+                                                                            "type": "CLIENT_TRANSFORM_SCRIPT"
                                                                         }
                                                                     },
                                                                     "slot": null,
@@ -1268,8 +1354,14 @@
                                                                             "value": "text"
                                                                         },
                                                                         "value": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "script": {
+                                                                                "apiVersion": "2.0.0",
+                                                                                "controllerElementId": null,
+                                                                                "inlineScript": null,
+                                                                                "scriptSysId": "4e4ebbc183005610b3fb7230feaad36b",
+                                                                                "target": null
+                                                                            },
+                                                                            "type": "CLIENT_TRANSFORM_SCRIPT"
                                                                         }
                                                                     },
                                                                     "slot": null,
@@ -1440,8 +1532,14 @@
                                                                             "value": "text"
                                                                         },
                                                                         "value": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "script": {
+                                                                                "apiVersion": "2.0.0",
+                                                                                "controllerElementId": null,
+                                                                                "inlineScript": null,
+                                                                                "scriptSysId": "8e4ebbc183005610b3fb7230feaad36b",
+                                                                                "target": null
+                                                                            },
+                                                                            "type": "CLIENT_TRANSFORM_SCRIPT"
                                                                         }
                                                                     },
                                                                     "slot": null,
@@ -1620,8 +1718,14 @@
                                                                             "value": "md"
                                                                         },
                                                                         "value": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "script": {
+                                                                                "apiVersion": "2.0.0",
+                                                                                "controllerElementId": null,
+                                                                                "inlineScript": null,
+                                                                                "scriptSysId": "ce4ebbc183005610b3fb7230feaad36b",
+                                                                                "target": null
+                                                                            },
+                                                                            "type": "CLIENT_TRANSFORM_SCRIPT"
                                                                         }
                                                                     },
                                                                     "slot": null,
@@ -1783,8 +1887,14 @@
                                                                                                     "value": false
                                                                                                 },
                                                                                                 "selected": {
-                                                                                                    "type": "JSON_LITERAL",
-                                                                                                    "value": false
+                                                                                                    "script": {
+                                                                                                        "apiVersion": "2.0.0",
+                                                                                                        "controllerElementId": null,
+                                                                                                        "inlineScript": null,
+                                                                                                        "scriptSysId": "024ebbc183005610b3fb7230feaad36c",
+                                                                                                        "target": null
+                                                                                                    },
+                                                                                                    "type": "CLIENT_TRANSFORM_SCRIPT"
                                                                                                 },
                                                                                                 "size": {
                                                                                                     "type": "JSON_LITERAL",
@@ -2266,8 +2376,14 @@
                                                                             "value": "text"
                                                                         },
                                                                         "value": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "script": {
+                                                                                "apiVersion": "2.0.0",
+                                                                                "controllerElementId": null,
+                                                                                "inlineScript": null,
+                                                                                "scriptSysId": "424ebbc183005610b3fb7230feaad36c",
+                                                                                "target": null
+                                                                            },
+                                                                            "type": "CLIENT_TRANSFORM_SCRIPT"
                                                                         }
                                                                     },
                                                                     "slot": null,
@@ -2440,8 +2556,14 @@
                                                                             "value": "text"
                                                                         },
                                                                         "value": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "script": {
+                                                                                "apiVersion": "2.0.0",
+                                                                                "controllerElementId": null,
+                                                                                "inlineScript": null,
+                                                                                "scriptSysId": "824ebbc183005610b3fb7230feaad36c",
+                                                                                "target": null
+                                                                            },
+                                                                            "type": "CLIENT_TRANSFORM_SCRIPT"
                                                                         }
                                                                     },
                                                                     "slot": null,
@@ -2846,8 +2968,14 @@
                                                                             "value": "text"
                                                                         },
                                                                         "value": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "script": {
+                                                                                "apiVersion": "2.0.0",
+                                                                                "controllerElementId": null,
+                                                                                "inlineScript": null,
+                                                                                "scriptSysId": "064ebbc183005610b3fb7230feaad36c",
+                                                                                "target": null
+                                                                            },
+                                                                            "type": "CLIENT_TRANSFORM_SCRIPT"
                                                                         }
                                                                     },
                                                                     "slot": null,
@@ -3009,8 +3137,14 @@
                                                                             "value": "date-time"
                                                                         },
                                                                         "value": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": ""
+                                                                            "script": {
+                                                                                "apiVersion": "2.0.0",
+                                                                                "controllerElementId": null,
+                                                                                "inlineScript": null,
+                                                                                "scriptSysId": "464ebbc183005610b3fb7230feaad36c",
+                                                                                "target": null
+                                                                            },
+                                                                            "type": "CLIENT_TRANSFORM_SCRIPT"
                                                                         },
                                                                         "weekdayHeadings": {
                                                                             "type": "JSON_LITERAL",
@@ -3757,8 +3891,19 @@
                                                                 "value": null
                                                             },
                                                             "disabled": {
-                                                                "type": "JSON_LITERAL",
-                                                                "value": false
+                                                                "operation": {
+                                                                    "operand": {
+                                                                        "binding": {
+                                                                            "address": [
+                                                                                "contactData",
+                                                                                "name"
+                                                                            ]
+                                                                        },
+                                                                        "type": "STATE_BINDING"
+                                                                    },
+                                                                    "operator": "NOT"
+                                                                },
+                                                                "type": "UNARY"
                                                             },
                                                             "icon": {
                                                                 "type": "JSON_LITERAL",
@@ -3781,12 +3926,14 @@
                                                                 "value": "md"
                                                             },
                                                             "tooltipContent": {
-                                                                "type": "TRANSLATION_LITERAL",
-                                                                "value": {
-                                                                    "code": null,
-                                                                    "comment": "",
-                                                                    "message": "Move to the next step"
-                                                                }
+                                                                "script": {
+                                                                    "apiVersion": "2.0.0",
+                                                                    "controllerElementId": null,
+                                                                    "inlineScript": null,
+                                                                    "scriptSysId": "c64ebbc183005610b3fb7230feaad36b",
+                                                                    "target": null
+                                                                },
+                                                                "type": "CLIENT_TRANSFORM_SCRIPT"
                                                             },
                                                             "variant": {
                                                                 "type": "JSON_LITERAL",
@@ -4161,6 +4308,87 @@
                         "type": "EVENT"
                     }
                 ]
+            },
+            {
+                "eventMappingId": "clzueffceesaabbvoddbiiaarjjryeemdii",
+                "isConfiguration": false,
+                "offRowStorageId": null,
+                "sourceEventApiName": "sn_canvas_chrome.NOW_CONFIRM_MODAL#POSITIVE_BUTTON_CLICKED",
+                "sourceEventCorrelationId": null,
+                "sourceEventDefinition": {
+                    "apiName": "sn_canvas_chrome.NOW_CONFIRM_MODAL#POSITIVE_BUTTON_CLICKED",
+                    "id": null,
+                    "type": "UXEVENT"
+                },
+                "sourceEventSysId": null,
+                "targets": [
+                    {
+                        "broker": null,
+                        "clientScript": null,
+                        "conditional": null,
+                        "declarativeAction": null,
+                        "event": {
+                            "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                            "payload": {
+                                "script": {
+                                    "apiVersion": "1.0.0",
+                                    "controllerElementId": null,
+                                    "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tpropName: \"newContact\",\n\t\tvalue: true\n\t};\n}",
+                                    "scriptSysId": null,
+                                    "target": null
+                                },
+                                "type": "CLIENT_TRANSFORM_SCRIPT"
+                            },
+                            "sysId": "32408b42ff7a10109046e490703bf176"
+                        },
+                        "operation": null,
+                        "targetId": "clzueffceesaabbvpddbiiaawyddosaiv",
+                        "type": "EVENT"
+                    },
+                    {
+                        "broker": null,
+                        "clientScript": null,
+                        "conditional": null,
+                        "declarativeAction": null,
+                        "event": {
+                            "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                            "payload": {
+                                "type": "JSON_LITERAL",
+                                "value": {
+                                    "propName": "currentStep",
+                                    "value": 1
+                                }
+                            },
+                            "sysId": "32408b42ff7a10109046e490703bf176"
+                        },
+                        "operation": null,
+                        "targetId": "clzueffmyaaabbwccddbiiaaoaaqzqrwa",
+                        "type": "EVENT"
+                    },
+                    {
+                        "broker": null,
+                        "clientScript": null,
+                        "conditional": null,
+                        "declarativeAction": null,
+                        "event": {
+                            "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                            "payload": {
+                                "script": {
+                                    "apiVersion": "1.0.0",
+                                    "controllerElementId": null,
+                                    "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tpropName: \"contactData\",\n\t\tvalue: {}\n\t};\n}",
+                                    "scriptSysId": null,
+                                    "target": null
+                                },
+                                "type": "CLIENT_TRANSFORM_SCRIPT"
+                            },
+                            "sysId": "32408b42ff7a10109046e490703bf176"
+                        },
+                        "operation": null,
+                        "targetId": "clzueffvjzaabbwdddbiiaaqscvxdny",
+                        "type": "EVENT"
+                    }
+                ]
             }
         ],
         "isHidden": {
@@ -4424,9 +4652,6 @@
   "message" : "Move back a step",
   "comment" : ""
 }, {
-  "message" : "Move to the next step",
-  "comment" : ""
-}, {
   "message" : "Name",
   "comment" : ""
 }, {
@@ -4500,20 +4725,31 @@
         "name": "contactRecordSysId",
         "shape": "",
         "valueType": "string"
+    },
+    {
+        "fieldType": "boolean",
+        "id": "",
+        "initialValue": {
+            "type": "JSON_LITERAL",
+            "value": false
+        },
+        "name": "newContact",
+        "shape": "",
+        "valueType": "boolean"
     }
 ]</state_properties>
         <sys_class_name>sys_ux_macroponent</sys_class_name>
         <sys_created_by>reece.poulsen</sys_created_by>
         <sys_created_on>2024-08-07 16:15:00</sys_created_on>
         <sys_id>5eefeeba83ffc210b3fb7230feaad363</sys_id>
-        <sys_mod_count>186</sys_mod_count>
+        <sys_mod_count>214</sys_mod_count>
         <sys_name>Add Contact</sys_name>
         <sys_package display_value="BAM - You &amp; I Builder Live! Conference Notes" source="x_snc_bam_you_i_0">69fa6ee3838742107d786970ceaad318</sys_package>
         <sys_policy/>
         <sys_scope display_value="BAM - You &amp; I Builder Live! Conference Notes">69fa6ee3838742107d786970ceaad318</sys_scope>
         <sys_update_name>sys_ux_macroponent_5eefeeba83ffc210b3fb7230feaad363</sys_update_name>
         <sys_updated_by>reece.poulsen</sys_updated_by>
-        <sys_updated_on>2024-08-08 15:50:32</sys_updated_on>
+        <sys_updated_on>2024-08-14 22:24:07</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=5eefeeba83ffc210b3fb7230feaad363"/>
 </record_update>

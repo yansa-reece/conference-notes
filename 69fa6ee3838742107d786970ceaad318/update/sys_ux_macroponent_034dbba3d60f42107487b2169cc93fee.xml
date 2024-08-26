@@ -954,7 +954,7 @@
                                                                         },
                                                                         "hideShadow": {
                                                                             "type": "JSON_LITERAL",
-                                                                            "value": false
+                                                                            "value": true
                                                                         },
                                                                         "interaction": {
                                                                             "type": "JSON_LITERAL",
@@ -6618,7 +6618,7 @@
                                                                                     },
                                                                                     "hideLimitSelector": {
                                                                                         "type": "JSON_LITERAL",
-                                                                                        "value": true
+                                                                                        "value": false
                                                                                     },
                                                                                     "hideLinks": {
                                                                                         "type": "JSON_LITERAL",
@@ -6725,7 +6725,7 @@
                                                                                     },
                                                                                     "limit": {
                                                                                         "type": "JSON_LITERAL",
-                                                                                        "value": 10
+                                                                                        "value": 100
                                                                                     },
                                                                                     "listMenuOpen": {
                                                                                         "type": "JSON_LITERAL",
@@ -7160,6 +7160,7 @@
                         {
                             "element_id": "body_container",
                             "styles": {
+                                "margin-bottom": "0",
                                 "padding": "var(--now-scalable-space--lg)",
                                 "padding-bottom": "var(--now-scalable-space--lg)",
                                 "padding-left": "var(--now-scalable-space--lg)",
@@ -8486,14 +8487,14 @@
         <sys_created_by>MGOPW</sys_created_by>
         <sys_created_on>2024-07-03 23:01:29</sys_created_on>
         <sys_id>034dbba3d60f42107487b2169cc93fee</sys_id>
-        <sys_mod_count>122</sys_mod_count>
+        <sys_mod_count>128</sys_mod_count>
         <sys_name>Home</sys_name>
         <sys_package display_value="BAM - You &amp; I Builder Live! Conference Notes" source="x_snc_bam_you_i_0">69fa6ee3838742107d786970ceaad318</sys_package>
         <sys_policy/>
         <sys_scope display_value="BAM - You &amp; I Builder Live! Conference Notes">69fa6ee3838742107d786970ceaad318</sys_scope>
         <sys_update_name>sys_ux_macroponent_034dbba3d60f42107487b2169cc93fee</sys_update_name>
         <sys_updated_by>reece.poulsen</sys_updated_by>
-        <sys_updated_on>2024-08-08 22:37:11</sys_updated_on>
+        <sys_updated_on>2024-08-26 17:33:21</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=034dbba3d60f42107487b2169cc93fee"/>
 </record_update>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_uib_screen_test_values">
+    <sys_uib_screen_test_values action="DELETE">
+        <macroponent_config/>
+        <screen display_value="Contact List">efe8f40983541a10b3fb7230feaad354</screen>
+        <sys_class_name>sys_uib_screen_test_values</sys_class_name>
+        <sys_created_by>reece.poulsen</sys_created_by>
+        <sys_created_on>2024-08-26 17:37:11</sys_created_on>
+        <sys_id>23e8fc0983541a10b3fb7230feaad3e7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="BAM - You &amp; I Builder Live! Conference Notes" source="x_snc_bam_you_i_0">69fa6ee3838742107d786970ceaad318</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BAM - You &amp; I Builder Live! Conference Notes">69fa6ee3838742107d786970ceaad318</sys_scope>
+        <sys_update_name>sys_uib_screen_test_values_23e8fc0983541a10b3fb7230feaad3e7</sys_update_name>
+        <sys_updated_by>reece.poulsen</sys_updated_by>
+        <sys_updated_on>2024-08-26 17:37:11</sys_updated_on>
+    </sys_uib_screen_test_values>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BAM - You &amp; I Builder Live! Conference Notes">69fa6ee3838742107d786970ceaad318</application>
+        <file_path/>
+        <instance_id>1da02244dbbdb990ae4c9027c59619b6</instance_id>
+        <instance_name>dev181649</instance_name>
+        <name>sys_uib_screen_test_values_23e8fc0983541a10b3fb7230feaad3e7</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_uib_screen_test_values"><sys_uib_screen_test_values action="INSERT_OR_UPDATE"><macroponent_config/><screen display_value="Contact List">efe8f40983541a10b3fb7230feaad354</screen><sys_class_name>sys_uib_screen_test_values</sys_class_name><sys_created_by>reece.poulsen</sys_created_by><sys_created_on>2024-08-26 17:37:11</sys_created_on><sys_id>23e8fc0983541a10b3fb7230feaad3e7</sys_id><sys_mod_count>0</sys_mod_count><sys_name/><sys_package display_value="BAM - You &amp; I Builder Live! Conference Notes" source="x_snc_bam_you_i_0">69fa6ee3838742107d786970ceaad318</sys_package><sys_policy/><sys_scope display_value="BAM - You &amp; I Builder Live! Conference Notes">69fa6ee3838742107d786970ceaad318</sys_scope><sys_update_name>sys_uib_screen_test_values_23e8fc0983541a10b3fb7230feaad3e7</sys_update_name><sys_updated_by>reece.poulsen</sys_updated_by><sys_updated_on>2024-08-26 17:37:11</sys_updated_on></sys_uib_screen_test_values></record_update>]]></payload>
+        <payload_hash>-443772863</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>5498c4c3837b0610b3fb7230feaad3ef</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>reece.poulsen</sys_created_by>
+        <sys_created_on>2024-08-26 17:37:11</sys_created_on>
+        <sys_id>a7e8fc0983541a10b3fb7230feaad3e9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1918fc361140000001</sys_recorded_at>
+        <sys_updated_by>reece.poulsen</sys_updated_by>
+        <sys_updated_on>2024-08-26 17:37:11</sys_updated_on>
+        <type>UIB Screen Test Values</type>
+        <update_guid>2be8fc09e2541a104385b4232ec5d8e8</update_guid>
+        <update_guid_history>2be8fc09e2541a104385b4232ec5d8e8:-443772863</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>reece.poulsen</sys_created_by>
+        <sys_created_on>2024-08-26 17:37:41</sys_created_on>
+        <sys_db_object display_value="" name="sys_uib_screen_test_values">sys_uib_screen_test_values</sys_db_object>
+        <sys_id>7dd3e7d6c766460a9417620f60356069</sys_id>
+        <sys_metadata>23e8fc0983541a10b3fb7230feaad3e7</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="BAM - You &amp; I Builder Live! Conference Notes" source="x_snc_bam_you_i_0">69fa6ee3838742107d786970ceaad318</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BAM - You &amp; I Builder Live! Conference Notes">69fa6ee3838742107d786970ceaad318</sys_scope>
+        <sys_scope_delete display_value="">8e6b586c18d945e4a392cb47d16fdc89</sys_scope_delete>
+        <sys_update_name>sys_uib_screen_test_values_23e8fc0983541a10b3fb7230feaad3e7</sys_update_name>
+        <sys_update_version display_value="sys_uib_screen_test_values_23e8fc0983541a10b3fb7230feaad3e7">a7e8fc0983541a10b3fb7230feaad3e9</sys_update_version>
+        <sys_updated_by>reece.poulsen</sys_updated_by>
+        <sys_updated_on>2024-08-26 17:37:41</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
