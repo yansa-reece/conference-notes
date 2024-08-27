@@ -8,7 +8,7 @@
   "message" : "Contact Entry",
   "comment" : ""
 }, {
-  "message" : "Contacts",
+  "message" : "Contact List",
   "comment" : ""
 }, {
   "message" : "Home",
@@ -22,14 +22,14 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>global</sys_domain_path>
         <sys_id>0b4dbba3980f4210d9f8e832c0104bf3</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>chrome_toolbar</sys_name>
         <sys_package display_value="BAM - You &amp; I Builder Live! Conference Notes" source="x_snc_bam_you_i_0">69fa6ee3838742107d786970ceaad318</sys_package>
         <sys_policy/>
         <sys_scope display_value="BAM - You &amp; I Builder Live! Conference Notes">69fa6ee3838742107d786970ceaad318</sys_scope>
         <sys_update_name>sys_ux_page_property_0b4dbba3980f4210d9f8e832c0104bf3</sys_update_name>
         <sys_updated_by>reece.poulsen</sys_updated_by>
-        <sys_updated_on>2024-08-26 20:29:51</sys_updated_on>
+        <sys_updated_on>2024-08-27 06:10:36</sys_updated_on>
         <type>json</type>
         <unique_name>x_snc_bam_you_i_0.434dfba3410f421039b870acd9fc5e10.root.global.chrome_toolbar</unique_name>
         <value>[
@@ -71,11 +71,11 @@
         "id": "contact-list",
         "label": {
             "translatable": true,
-            "message": "Contacts"
+            "message": "Contact List"
         },
-        "icon": "list-outline",
+        "icon": "address-book-outline",
         "routeInfo": {
-            "route": "list"
+            "route": "contact-list"
         },
         "group": "top",
         "order": 200,

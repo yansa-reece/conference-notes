@@ -2,8 +2,8 @@
     <sys_ux_client_script action="INSERT_OR_UPDATE">
         <controller_preset/>
         <includes/>
-        <macroponent display_value="Add Contact">5eefeeba83ffc210b3fb7230feaad363</macroponent>
-        <name>note_input/now_default/value</name>
+        <macroponent display_value="Contact List">db39784983541a10b3fb7230feaad329</macroponent>
+        <name>stylized_text_2/now_default/text</name>
         <preset/>
         <required_translations>[]</required_translations>
         <script><![CDATA[/**
@@ -12,21 +12,21 @@
   * @param {TransformApiHelpers} params.helpers
   */
 function evaluateProperty({api, helpers}) {
-	return api.state.contactData.note;
+	return `${api.state.selectedContact.company_organization.displayValue} Contacts`;
 }]]></script>
         <script_api_version>2.0.0</script_api_version>
         <sys_class_name>sys_ux_client_script</sys_class_name>
         <sys_created_by>reece.poulsen</sys_created_by>
-        <sys_created_on>2024-08-14 22:10:22</sys_created_on>
-        <sys_id>0e4ebbc183005610b3fb7230feaad36b</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_name>note_input/now_default/value</sys_name>
+        <sys_created_on>2024-08-27 04:03:41</sys_created_on>
+        <sys_id>af740f0983145a10b3fb7230feaad36f</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>stylized_text_2/now_default/text</sys_name>
         <sys_package display_value="BAM - You &amp; I Builder Live! Conference Notes" source="x_snc_bam_you_i_0">69fa6ee3838742107d786970ceaad318</sys_package>
         <sys_policy/>
         <sys_scope display_value="BAM - You &amp; I Builder Live! Conference Notes">69fa6ee3838742107d786970ceaad318</sys_scope>
-        <sys_update_name>sys_ux_client_script_0e4ebbc183005610b3fb7230feaad36b</sys_update_name>
+        <sys_update_name>sys_ux_client_script_af740f0983145a10b3fb7230feaad36f</sys_update_name>
         <sys_updated_by>reece.poulsen</sys_updated_by>
-        <sys_updated_on>2024-08-27 14:55:59</sys_updated_on>
+        <sys_updated_on>2024-08-27 04:12:20</sys_updated_on>
         <target>macroponent</target>
         <type>transform</type>
     </sys_ux_client_script>
