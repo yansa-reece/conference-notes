@@ -49,58 +49,12 @@
                                     "composition": [
                                         {
                                             "definition": {
-                                                "id": "bb0f92e8d7eff1590624bfe69d316f23",
+                                                "id": "d356d14b6e293a3020a244b63d278d8f",
                                                 "type": "MACROPONENT"
                                             },
-                                            "elementId": "input_1",
-                                            "elementLabel": "Contact Search",
-                                            "eventMappings": [
-                                                {
-                                                    "eventMappingId": "cmaabbaavxgaacctyddbiiaaffakeebxjl",
-                                                    "isConfiguration": false,
-                                                    "offRowStorageId": null,
-                                                    "sourceEventApiName": "sn_input.NOW_INPUT#INPUT",
-                                                    "sourceEventCorrelationId": null,
-                                                    "sourceEventDefinition": {
-                                                        "apiName": "sn_input.NOW_INPUT#INPUT",
-                                                        "id": null,
-                                                        "type": "UXEVENT"
-                                                    },
-                                                    "sourceEventSysId": null,
-                                                    "targets": [
-                                                        {
-                                                            "broker": null,
-                                                            "clientScript": null,
-                                                            "conditional": null,
-                                                            "declarativeAction": null,
-                                                            "event": {
-                                                                "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
-                                                                "payload": {
-                                                                    "container": {
-                                                                        "propName": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": "contactSearchTerm"
-                                                                        },
-                                                                        "value": {
-                                                                            "binding": {
-                                                                                "address": [
-                                                                                    "fieldValue"
-                                                                                ]
-                                                                            },
-                                                                            "type": "EVENT_PAYLOAD_BINDING"
-                                                                        }
-                                                                    },
-                                                                    "type": "MAP_CONTAINER"
-                                                                },
-                                                                "sysId": "32408b42ff7a10109046e490703bf176"
-                                                            },
-                                                            "operation": null,
-                                                            "targetId": "cmaabbaavxgaacctzddbiiaaaaapccoaeejj",
-                                                            "type": "EVENT"
-                                                        }
-                                                    ]
-                                                }
-                                            ],
+                                            "elementId": "container_9",
+                                            "elementLabel": "Contact Actions Container",
+                                            "eventMappings": [],
                                             "isHidden": {
                                                 "type": "JSON_LITERAL",
                                                 "value": null
@@ -109,81 +63,502 @@
                                                 "composition": [
                                                     {
                                                         "definition": {
-                                                            "id": "33eaddad37cf901283bbdc7a574773b9",
+                                                            "id": "bb0f92e8d7eff1590624bfe69d316f23",
                                                             "type": "MACROPONENT"
                                                         },
-                                                        "elementId": "icon_1",
-                                                        "elementLabel": "Search Icon",
-                                                        "eventMappings": [],
+                                                        "elementId": "input_1",
+                                                        "elementLabel": "Contact Search",
+                                                        "eventMappings": [
+                                                            {
+                                                                "eventMappingId": "cmaabbaavxgaacctyddbiiaaffakeebxjl",
+                                                                "isConfiguration": false,
+                                                                "offRowStorageId": null,
+                                                                "sourceEventApiName": "sn_input.NOW_INPUT#INPUT",
+                                                                "sourceEventCorrelationId": null,
+                                                                "sourceEventDefinition": {
+                                                                    "apiName": "sn_input.NOW_INPUT#INPUT",
+                                                                    "id": null,
+                                                                    "type": "UXEVENT"
+                                                                },
+                                                                "sourceEventSysId": null,
+                                                                "targets": [
+                                                                    {
+                                                                        "broker": null,
+                                                                        "clientScript": null,
+                                                                        "conditional": null,
+                                                                        "declarativeAction": null,
+                                                                        "event": {
+                                                                            "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                                                                            "payload": {
+                                                                                "container": {
+                                                                                    "propName": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": "contactSearchTerm"
+                                                                                    },
+                                                                                    "value": {
+                                                                                        "binding": {
+                                                                                            "address": [
+                                                                                                "fieldValue"
+                                                                                            ]
+                                                                                        },
+                                                                                        "type": "EVENT_PAYLOAD_BINDING"
+                                                                                    }
+                                                                                },
+                                                                                "type": "MAP_CONTAINER"
+                                                                            },
+                                                                            "sysId": "32408b42ff7a10109046e490703bf176"
+                                                                        },
+                                                                        "operation": null,
+                                                                        "targetId": "cmaabbaavxgaacctzddbiiaaaaapccoaeejj",
+                                                                        "type": "EVENT"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ],
+                                                        "isHidden": {
+                                                            "type": "JSON_LITERAL",
+                                                            "value": null
+                                                        },
+                                                        "overrides": {
+                                                            "composition": [
+                                                                {
+                                                                    "definition": {
+                                                                        "id": "33eaddad37cf901283bbdc7a574773b9",
+                                                                        "type": "MACROPONENT"
+                                                                    },
+                                                                    "elementId": "icon_1",
+                                                                    "elementLabel": "Search Icon",
+                                                                    "eventMappings": [],
+                                                                    "isHidden": {
+                                                                        "type": "JSON_LITERAL",
+                                                                        "value": null
+                                                                    },
+                                                                    "preset": null,
+                                                                    "propertyValues": {
+                                                                        "configAria": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": null
+                                                                        },
+                                                                        "icon": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": "magnifying-glass-outline"
+                                                                        },
+                                                                        "size": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": "md"
+                                                                        },
+                                                                        "supportRtl": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": false
+                                                                        }
+                                                                    },
+                                                                    "slot": "end",
+                                                                    "styles": null
+                                                                }
+                                                            ]
+                                                        },
+                                                        "preset": null,
+                                                        "propertyValues": {
+                                                            "align": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            },
+                                                            "autofocus": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": false
+                                                            },
+                                                            "configAria": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            },
+                                                            "disabled": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": false
+                                                            },
+                                                            "enableCaretSlot": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": false
+                                                            },
+                                                            "fieldLayout": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": {
+                                                                    "layout": "vertical"
+                                                                }
+                                                            },
+                                                            "helperContent": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            },
+                                                            "hideRequiredIndicator": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": false
+                                                            },
+                                                            "invalid": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": false
+                                                            },
+                                                            "label": {
+                                                                "type": "TRANSLATION_LITERAL",
+                                                                "value": {
+                                                                    "code": null,
+                                                                    "comment": "",
+                                                                    "message": ""
+                                                                }
+                                                            },
+                                                            "landmark": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            },
+                                                            "manageInvalid": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": false
+                                                            },
+                                                            "manageValue": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": false
+                                                            },
+                                                            "max": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            },
+                                                            "maxlength": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            },
+                                                            "messages": {
+                                                                "container": [],
+                                                                "type": "LIST_CONTAINER"
+                                                            },
+                                                            "min": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            },
+                                                            "minlength": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            },
+                                                            "multiple": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            },
+                                                            "name": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            },
+                                                            "optional": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": false
+                                                            },
+                                                            "pattern": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            },
+                                                            "placeholder": {
+                                                                "type": "TRANSLATION_LITERAL",
+                                                                "value": {
+                                                                    "code": null,
+                                                                    "comment": "",
+                                                                    "message": "Search"
+                                                                }
+                                                            },
+                                                            "readonly": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": false
+                                                            },
+                                                            "required": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": false
+                                                            },
+                                                            "size": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": "md"
+                                                            },
+                                                            "step": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": "any"
+                                                            },
+                                                            "type": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": "text"
+                                                            },
+                                                            "value": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            }
+                                                        },
+                                                        "slot": null,
+                                                        "styles": {
+                                                            "default": {
+                                                                "flex": "1 0 auto",
+                                                                "margin": "0",
+                                                                "margin-bottom": "0",
+                                                                "margin-left": "0",
+                                                                "margin-right": "0",
+                                                                "margin-top": "0"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "definition": {
+                                                            "id": "844d56291d91b330f2269558e3f47701",
+                                                            "type": "MACROPONENT"
+                                                        },
+                                                        "elementId": "new_contact_button",
+                                                        "elementLabel": "New Contact Button",
+                                                        "eventMappings": [
+                                                            {
+                                                                "eventMappingId": "cmaacsffxivaaaayeddbiiaauyaggggaejj",
+                                                                "isConfiguration": false,
+                                                                "offRowStorageId": null,
+                                                                "sourceEventApiName": "sn_button.NOW_BUTTON_ICONIC#CLICKED",
+                                                                "sourceEventCorrelationId": null,
+                                                                "sourceEventDefinition": {
+                                                                    "apiName": "sn_button.NOW_BUTTON_ICONIC#CLICKED",
+                                                                    "id": null,
+                                                                    "type": "UXEVENT"
+                                                                },
+                                                                "sourceEventSysId": null,
+                                                                "targets": [
+                                                                    {
+                                                                        "broker": null,
+                                                                        "clientScript": null,
+                                                                        "conditional": null,
+                                                                        "declarativeAction": null,
+                                                                        "event": {
+                                                                            "apiName": "x_snc_bam_you_i_0.MODAL_SELECTED_RELAY_db39784983541a10b3fb7230feaad329",
+                                                                            "payload": {
+                                                                                "type": "JSON_LITERAL",
+                                                                                "value": {
+                                                                                    "bare": false,
+                                                                                    "displayOptions": null,
+                                                                                    "headerLabel": "Add a New Contact",
+                                                                                    "modalId": "[component-id$='new_contact_modal']",
+                                                                                    "preserveState": false,
+                                                                                    "showModal": true,
+                                                                                    "viewportElementId": "viewport_2",
+                                                                                    "viewportFields": null,
+                                                                                    "viewportParams": null,
+                                                                                    "viewportRoute": "add-contact"
+                                                                                }
+                                                                            },
+                                                                            "sysId": "cbe30e89835c1a10b3fb7230feaad3af"
+                                                                        },
+                                                                        "operation": null,
+                                                                        "targetId": "cmaacsffxivaaaayfddbiiaatciiuccciiaa",
+                                                                        "type": "EVENT"
+                                                                    },
+                                                                    {
+                                                                        "broker": null,
+                                                                        "clientScript": null,
+                                                                        "conditional": null,
+                                                                        "declarativeAction": null,
+                                                                        "event": {
+                                                                            "apiName": "sn_uxf.MACROPONENT_VIEWPORT_LOAD_REQUESTED",
+                                                                            "payload": {
+                                                                                "script": {
+                                                                                    "apiVersion": "1.0.0",
+                                                                                    "controllerElementId": null,
+                                                                                    "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tviewportElementId: \"viewport_2\",\n\t\troute: \"add-contact\",\n\t\tfields: null,\n\t\tparams: null\n\t};\n}",
+                                                                                    "scriptSysId": null,
+                                                                                    "target": null
+                                                                                },
+                                                                                "type": "CLIENT_TRANSFORM_SCRIPT"
+                                                                            },
+                                                                            "sysId": "f49aa75023071010b1e3c50947bf65de"
+                                                                        },
+                                                                        "operation": null,
+                                                                        "targetId": "cmaacsggfotaaaayyddbiiaaowqvheexy",
+                                                                        "type": "EVENT"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ],
                                                         "isHidden": {
                                                             "type": "JSON_LITERAL",
                                                             "value": null
                                                         },
                                                         "preset": null,
                                                         "propertyValues": {
+                                                            "bare": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": false
+                                                            },
                                                             "configAria": {
                                                                 "type": "JSON_LITERAL",
                                                                 "value": null
                                                             },
+                                                            "disabled": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": false
+                                                            },
+                                                            "hidePadding": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": false
+                                                            },
+                                                            "highContrast": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": false
+                                                            },
                                                             "icon": {
                                                                 "type": "JSON_LITERAL",
-                                                                "value": "magnifying-glass-outline"
+                                                                "value": "plus-outline"
+                                                            },
+                                                            "landmark": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
                                                             },
                                                             "size": {
                                                                 "type": "JSON_LITERAL",
                                                                 "value": "md"
                                                             },
-                                                            "supportRtl": {
+                                                            "tooltipContent": {
+                                                                "type": "TRANSLATION_LITERAL",
+                                                                "value": {
+                                                                    "code": null,
+                                                                    "comment": "",
+                                                                    "message": "Add a new contact"
+                                                                }
+                                                            },
+                                                            "variant": {
                                                                 "type": "JSON_LITERAL",
-                                                                "value": false
+                                                                "value": "tertiary"
                                                             }
                                                         },
-                                                        "slot": "end",
+                                                        "slot": null,
+                                                        "styles": null
+                                                    },
+                                                    {
+                                                        "definition": {
+                                                            "id": "844d56291d91b330f2269558e3f47701",
+                                                            "type": "MACROPONENT"
+                                                        },
+                                                        "elementId": "refresh_contacts_button",
+                                                        "elementLabel": "Refresh Contacts Button",
+                                                        "eventMappings": [
+                                                            {
+                                                                "eventMappingId": "cmaacsghyiaabbaafddbiiaapnjiuvlcc",
+                                                                "isConfiguration": false,
+                                                                "offRowStorageId": null,
+                                                                "sourceEventApiName": "sn_button.NOW_BUTTON_ICONIC#CLICKED",
+                                                                "sourceEventCorrelationId": null,
+                                                                "sourceEventDefinition": {
+                                                                    "apiName": "sn_button.NOW_BUTTON_ICONIC#CLICKED",
+                                                                    "id": null,
+                                                                    "type": "UXEVENT"
+                                                                },
+                                                                "sourceEventSysId": null,
+                                                                "targets": [
+                                                                    {
+                                                                        "broker": null,
+                                                                        "clientScript": null,
+                                                                        "conditional": null,
+                                                                        "declarativeAction": null,
+                                                                        "event": null,
+                                                                        "operation": {
+                                                                            "dataBrokerId": "b997a84053021010cbc2ddeeff7b1228",
+                                                                            "operationName": "REFRESH",
+                                                                            "parentResourceId": "get_contacts",
+                                                                            "payload": {
+                                                                                "type": "JSON_LITERAL",
+                                                                                "value": {}
+                                                                            }
+                                                                        },
+                                                                        "targetId": "cmaacsghyiaabbaagddbiiaarggvrnpbr",
+                                                                        "type": "DATABROKER_OP"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ],
+                                                        "isHidden": {
+                                                            "type": "JSON_LITERAL",
+                                                            "value": null
+                                                        },
+                                                        "preset": null,
+                                                        "propertyValues": {
+                                                            "bare": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": false
+                                                            },
+                                                            "configAria": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            },
+                                                            "disabled": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": false
+                                                            },
+                                                            "hidePadding": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": false
+                                                            },
+                                                            "highContrast": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": false
+                                                            },
+                                                            "icon": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": "arrow-clockwise-outline"
+                                                            },
+                                                            "landmark": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            },
+                                                            "size": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": "md"
+                                                            },
+                                                            "tooltipContent": {
+                                                                "type": "TRANSLATION_LITERAL",
+                                                                "value": {
+                                                                    "code": null,
+                                                                    "comment": "",
+                                                                    "message": "Refresh the contact list"
+                                                                }
+                                                            },
+                                                            "variant": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": "tertiary"
+                                                            }
+                                                        },
+                                                        "slot": null,
                                                         "styles": null
                                                     }
-                                                ]
+                                                ],
+                                                "layout": {
+                                                    "default": {
+                                                        "children": null,
+                                                        "items": [
+                                                            {
+                                                                "element_id": "input_1"
+                                                            },
+                                                            {
+                                                                "element_id": "new_contact_button"
+                                                            },
+                                                            {
+                                                                "element_id": "refresh_contacts_button"
+                                                            }
+                                                        ],
+                                                        "root": null,
+                                                        "rules": null,
+                                                        "styles": {
+                                                            "align-items": "center",
+                                                            "display": "flex",
+                                                            "flex-direction": "row",
+                                                            "gap": "var(--now-scalable-space--sm)"
+                                                        },
+                                                        "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
+                                                        "type": "flex"
+                                                    },
+                                                    "version": "3.1.0"
+                                                }
                                             },
                                             "preset": null,
                                             "propertyValues": {
-                                                "align": {
+                                                "ariaRegionHeadingLevel": {
                                                     "type": "JSON_LITERAL",
-                                                    "value": null
+                                                    "value": "1"
                                                 },
-                                                "autofocus": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": false
-                                                },
-                                                "configAria": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": null
-                                                },
-                                                "disabled": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": false
-                                                },
-                                                "enableCaretSlot": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": false
-                                                },
-                                                "fieldLayout": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": {
-                                                        "layout": "vertical"
-                                                    }
-                                                },
-                                                "helperContent": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": null
-                                                },
-                                                "hideRequiredIndicator": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": false
-                                                },
-                                                "invalid": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": false
-                                                },
-                                                "label": {
+                                                "ariaRegionName": {
                                                     "type": "TRANSLATION_LITERAL",
                                                     "value": {
                                                         "code": null,
@@ -191,95 +566,28 @@
                                                         "message": ""
                                                     }
                                                 },
-                                                "landmark": {
+                                                "ariaRole": {
                                                     "type": "JSON_LITERAL",
-                                                    "value": null
+                                                    "value": ""
                                                 },
-                                                "manageInvalid": {
+                                                "hideEmptyStateUi": {
                                                     "type": "JSON_LITERAL",
-                                                    "value": false
+                                                    "value": true
                                                 },
-                                                "manageValue": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": false
-                                                },
-                                                "max": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": null
-                                                },
-                                                "maxlength": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": null
-                                                },
-                                                "messages": {
-                                                    "container": [],
-                                                    "type": "LIST_CONTAINER"
-                                                },
-                                                "min": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": null
-                                                },
-                                                "minlength": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": null
-                                                },
-                                                "multiple": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": null
-                                                },
-                                                "name": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": null
-                                                },
-                                                "optional": {
+                                                "includeAriaHeading": {
                                                     "type": "JSON_LITERAL",
                                                     "value": false
-                                                },
-                                                "pattern": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": null
-                                                },
-                                                "placeholder": {
-                                                    "type": "TRANSLATION_LITERAL",
-                                                    "value": {
-                                                        "code": null,
-                                                        "comment": "",
-                                                        "message": "Search"
-                                                    }
-                                                },
-                                                "readonly": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": false
-                                                },
-                                                "required": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": false
-                                                },
-                                                "size": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": "md"
-                                                },
-                                                "step": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": "any"
                                                 },
                                                 "type": {
                                                     "type": "JSON_LITERAL",
-                                                    "value": "text"
-                                                },
-                                                "value": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": null
+                                                    "value": "section"
                                                 }
                                             },
                                             "slot": null,
                                             "styles": {
                                                 "default": {
-                                                    "margin": "0",
-                                                    "margin-bottom": "0",
-                                                    "margin-left": "0",
-                                                    "margin-right": "var(--now-scalable-space--lg)",
-                                                    "margin-top": "0"
+                                                    "margin-left": "var(--now-scalable-space--xs)",
+                                                    "margin-right": "var(--now-scalable-space--lg)"
                                                 }
                                             }
                                         },
@@ -620,7 +928,7 @@
                                                                                 "styles": {
                                                                                     "display": "flex",
                                                                                     "flex-direction": "column",
-                                                                                    "gap": "0"
+                                                                                    "gap": "var(--now-scalable-space--xxs)"
                                                                                 },
                                                                                 "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
                                                                                 "type": "flex"
@@ -759,14 +1067,8 @@
                                                                 "value": true
                                                             },
                                                             "selected": {
-                                                                "script": {
-                                                                    "apiVersion": "2.0.0",
-                                                                    "controllerElementId": null,
-                                                                    "inlineScript": null,
-                                                                    "scriptSysId": "9b2a7549831c1a10b3fb7230feaad3e2",
-                                                                    "target": null
-                                                                },
-                                                                "type": "CLIENT_TRANSFORM_SCRIPT"
+                                                                "type": "JSON_LITERAL",
+                                                                "value": false
                                                             },
                                                             "sidebar": {
                                                                 "type": "JSON_LITERAL",
@@ -841,7 +1143,7 @@
                                             "children": null,
                                             "items": [
                                                 {
-                                                    "element_id": "input_1"
+                                                    "element_id": "container_9"
                                                 },
                                                 {
                                                     "element_id": "contact_repeater"
@@ -1200,7 +1502,7 @@
                                                                         "align-items": "center",
                                                                         "display": "flex",
                                                                         "flex-direction": "row",
-                                                                        "gap": "var(--now-scalable-space--sm)"
+                                                                        "gap": "var(--now-scalable-space--lg)"
                                                                     },
                                                                     "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
                                                                     "type": "flex"
@@ -1257,16 +1559,261 @@
                                                             "value": null
                                                         },
                                                         "overrides": {
-                                                            "composition": [],
+                                                            "composition": [
+                                                                {
+                                                                    "definition": {
+                                                                        "id": "844d56291d91b330f2269558e3f47701",
+                                                                        "type": "MACROPONENT"
+                                                                    },
+                                                                    "elementId": "edit_contact_button",
+                                                                    "elementLabel": "Edit Contact Button",
+                                                                    "eventMappings": [
+                                                                        {
+                                                                            "eventMappingId": "cmaackbeeccyaaddijjddbiiaayiccczhhkx",
+                                                                            "isConfiguration": false,
+                                                                            "offRowStorageId": null,
+                                                                            "sourceEventApiName": "sn_button.NOW_BUTTON_ICONIC#CLICKED",
+                                                                            "sourceEventCorrelationId": null,
+                                                                            "sourceEventDefinition": {
+                                                                                "apiName": "sn_button.NOW_BUTTON_ICONIC#CLICKED",
+                                                                                "id": null,
+                                                                                "type": "UXEVENT"
+                                                                            },
+                                                                            "sourceEventSysId": null,
+                                                                            "targets": [
+                                                                                {
+                                                                                    "broker": null,
+                                                                                    "clientScript": null,
+                                                                                    "conditional": null,
+                                                                                    "declarativeAction": null,
+                                                                                    "event": {
+                                                                                        "apiName": "x_snc_bam_you_i_0.MODAL_SELECTED_RELAY_db39784983541a10b3fb7230feaad329",
+                                                                                        "payload": {
+                                                                                            "type": "JSON_LITERAL",
+                                                                                            "value": {
+                                                                                                "bare": false,
+                                                                                                "displayOptions": null,
+                                                                                                "headerLabel": "Edit Contact Info",
+                                                                                                "modalId": "[component-id$='edit_contact_info_modal']",
+                                                                                                "preserveState": false,
+                                                                                                "showModal": true,
+                                                                                                "viewportElementId": "viewport_1",
+                                                                                                "viewportFields": null,
+                                                                                                "viewportParams": null,
+                                                                                                "viewportRoute": "add-contact"
+                                                                                            }
+                                                                                        },
+                                                                                        "sysId": "cbe30e89835c1a10b3fb7230feaad3af"
+                                                                                    },
+                                                                                    "operation": null,
+                                                                                    "targetId": "cmaackbeeccyaaddiaddbiiaaffnggcpyeedd",
+                                                                                    "type": "EVENT"
+                                                                                },
+                                                                                {
+                                                                                    "broker": null,
+                                                                                    "clientScript": null,
+                                                                                    "conditional": null,
+                                                                                    "declarativeAction": null,
+                                                                                    "event": {
+                                                                                        "apiName": "sn_uxf.MACROPONENT_VIEWPORT_LOAD_REQUESTED",
+                                                                                        "payload": {
+                                                                                            "script": {
+                                                                                                "apiVersion": "1.0.0",
+                                                                                                "controllerElementId": null,
+                                                                                                "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\tconst contactSysId = api.state.selectedContact.sys_id.value;\n\treturn {\n\t\tviewportElementId: \"viewport_1\",\n\t\troute: \"record\",\n\t\tfields: {\n\t\t\ttable: \"x_snc_bam_you_i_0_contact\",\n\t\t\tsysId: contactSysId\n\t\t},\n\t\tparams: null\n\t};\n}",
+                                                                                                "scriptSysId": null,
+                                                                                                "target": null
+                                                                                            },
+                                                                                            "type": "CLIENT_TRANSFORM_SCRIPT"
+                                                                                        },
+                                                                                        "sysId": "f49aa75023071010b1e3c50947bf65de"
+                                                                                    },
+                                                                                    "operation": null,
+                                                                                    "targetId": "cmaackcoffnaaddizddbiiaaweccceejccaa",
+                                                                                    "type": "EVENT"
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ],
+                                                                    "isHidden": {
+                                                                        "type": "JSON_LITERAL",
+                                                                        "value": null
+                                                                    },
+                                                                    "preset": null,
+                                                                    "propertyValues": {
+                                                                        "bare": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": false
+                                                                        },
+                                                                        "configAria": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": null
+                                                                        },
+                                                                        "disabled": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": false
+                                                                        },
+                                                                        "hidePadding": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": false
+                                                                        },
+                                                                        "highContrast": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": false
+                                                                        },
+                                                                        "icon": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": "pencil-outline"
+                                                                        },
+                                                                        "landmark": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": null
+                                                                        },
+                                                                        "size": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": "md"
+                                                                        },
+                                                                        "tooltipContent": {
+                                                                            "type": "TRANSLATION_LITERAL",
+                                                                            "value": {
+                                                                                "code": null,
+                                                                                "comment": "",
+                                                                                "message": "Edit contact info"
+                                                                            }
+                                                                        },
+                                                                        "variant": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": "tertiary"
+                                                                        }
+                                                                    },
+                                                                    "slot": null,
+                                                                    "styles": null
+                                                                },
+                                                                {
+                                                                    "definition": {
+                                                                        "id": "844d56291d91b330f2269558e3f47701",
+                                                                        "type": "MACROPONENT"
+                                                                    },
+                                                                    "elementId": "delete_contact_button",
+                                                                    "elementLabel": "Delete Contact Button",
+                                                                    "eventMappings": [
+                                                                        {
+                                                                            "eventMappingId": "cmaacssnkbaabbddggddbiiaaqduehjbff",
+                                                                            "isConfiguration": false,
+                                                                            "offRowStorageId": null,
+                                                                            "sourceEventApiName": "sn_button.NOW_BUTTON_ICONIC#CLICKED",
+                                                                            "sourceEventCorrelationId": null,
+                                                                            "sourceEventDefinition": {
+                                                                                "apiName": "sn_button.NOW_BUTTON_ICONIC#CLICKED",
+                                                                                "id": null,
+                                                                                "type": "UXEVENT"
+                                                                            },
+                                                                            "sourceEventSysId": null,
+                                                                            "targets": [
+                                                                                {
+                                                                                    "broker": null,
+                                                                                    "clientScript": null,
+                                                                                    "conditional": null,
+                                                                                    "declarativeAction": null,
+                                                                                    "event": {
+                                                                                        "apiName": "x_snc_bam_you_i_0.MODAL_SELECTED_RELAY_db39784983541a10b3fb7230feaad329",
+                                                                                        "payload": {
+                                                                                            "type": "JSON_LITERAL",
+                                                                                            "value": {
+                                                                                                "bare": false,
+                                                                                                "displayOptions": null,
+                                                                                                "headerLabel": "Confirmation",
+                                                                                                "modalId": "[component-id$='delete_modal']",
+                                                                                                "preserveState": false,
+                                                                                                "showModal": true,
+                                                                                                "viewportElementId": null,
+                                                                                                "viewportFields": null,
+                                                                                                "viewportParams": null,
+                                                                                                "viewportRoute": null
+                                                                                            }
+                                                                                        },
+                                                                                        "sysId": "cbe30e89835c1a10b3fb7230feaad3af"
+                                                                                    },
+                                                                                    "operation": null,
+                                                                                    "targetId": "cmaacssnkbaabbddhhddbiiaajsufffclx",
+                                                                                    "type": "EVENT"
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ],
+                                                                    "isHidden": {
+                                                                        "type": "JSON_LITERAL",
+                                                                        "value": null
+                                                                    },
+                                                                    "preset": null,
+                                                                    "propertyValues": {
+                                                                        "bare": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": false
+                                                                        },
+                                                                        "configAria": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": null
+                                                                        },
+                                                                        "disabled": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": false
+                                                                        },
+                                                                        "hidePadding": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": false
+                                                                        },
+                                                                        "highContrast": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": false
+                                                                        },
+                                                                        "icon": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": "trash-outline"
+                                                                        },
+                                                                        "landmark": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": null
+                                                                        },
+                                                                        "size": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": "md"
+                                                                        },
+                                                                        "tooltipContent": {
+                                                                            "type": "TRANSLATION_LITERAL",
+                                                                            "value": {
+                                                                                "code": null,
+                                                                                "comment": "",
+                                                                                "message": "Delete contact"
+                                                                            }
+                                                                        },
+                                                                        "variant": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": "tertiary"
+                                                                        }
+                                                                    },
+                                                                    "slot": null,
+                                                                    "styles": null
+                                                                }
+                                                            ],
                                                             "layout": {
                                                                 "default": {
                                                                     "children": null,
-                                                                    "items": [],
+                                                                    "items": [
+                                                                        {
+                                                                            "element_id": "edit_contact_button"
+                                                                        },
+                                                                        {
+                                                                            "element_id": "delete_contact_button"
+                                                                        }
+                                                                    ],
                                                                     "root": null,
                                                                     "rules": null,
                                                                     "styles": {
+                                                                        "align-items": "center",
                                                                         "display": "flex",
-                                                                        "flex-direction": "column"
+                                                                        "flex-direction": "row",
+                                                                        "gap": "var(--now-scalable-space--sm)"
                                                                     },
                                                                     "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
                                                                     "type": "flex"
@@ -1306,7 +1853,9 @@
                                                             }
                                                         },
                                                         "slot": null,
-                                                        "styles": null
+                                                        "styles": {
+                                                            "default": {}
+                                                        }
                                                     },
                                                     {
                                                         "definition": {
@@ -1498,7 +2047,7 @@
                                                     "border-radius": "var(--now-static-border-radius--md)",
                                                     "border-style": "solid",
                                                     "border-width": "1px",
-                                                    "grid-column": "span 3",
+                                                    "grid-column": "span 2",
                                                     "padding": "var(--now-scalable-space--xl)",
                                                     "padding-bottom": "var(--now-scalable-space--xl)",
                                                     "padding-left": "var(--now-scalable-space--xl)",
@@ -5419,79 +5968,6 @@
                                                     "padding-top": "var(--now-scalable-space--lg)"
                                                 }
                                             }
-                                        },
-                                        {
-                                            "definition": {
-                                                "id": "d356d14b6e293a3020a244b63d278d8f",
-                                                "type": "MACROPONENT"
-                                            },
-                                            "elementId": "email_container",
-                                            "elementLabel": "Email Container",
-                                            "eventMappings": [],
-                                            "isHidden": {
-                                                "type": "JSON_LITERAL",
-                                                "value": null
-                                            },
-                                            "overrides": {
-                                                "composition": [],
-                                                "layout": {
-                                                    "default": {
-                                                        "children": null,
-                                                        "items": [],
-                                                        "root": null,
-                                                        "rules": null,
-                                                        "styles": {
-                                                            "display": "flex",
-                                                            "flex-direction": "column"
-                                                        },
-                                                        "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
-                                                        "type": "flex"
-                                                    },
-                                                    "version": "3.1.0"
-                                                }
-                                            },
-                                            "preset": null,
-                                            "propertyValues": {
-                                                "ariaRegionHeadingLevel": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": "1"
-                                                },
-                                                "ariaRegionName": {
-                                                    "type": "TRANSLATION_LITERAL",
-                                                    "value": {
-                                                        "code": null,
-                                                        "comment": "",
-                                                        "message": ""
-                                                    }
-                                                },
-                                                "ariaRole": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": ""
-                                                },
-                                                "hideEmptyStateUi": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": true
-                                                },
-                                                "includeAriaHeading": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": false
-                                                },
-                                                "type": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": "section"
-                                                }
-                                            },
-                                            "slot": null,
-                                            "styles": {
-                                                "default": {
-                                                    "grid-column": "span 2",
-                                                    "padding": "var(--now-scalable-space--lg)",
-                                                    "padding-bottom": "var(--now-scalable-space--lg)",
-                                                    "padding-left": "var(--now-scalable-space--lg)",
-                                                    "padding-right": "var(--now-scalable-space--lg)",
-                                                    "padding-top": "var(--now-scalable-space--lg)"
-                                                }
-                                            }
                                         }
                                     ],
                                     "layout": {
@@ -5512,9 +5988,6 @@
                                                 },
                                                 {
                                                     "element_id": "notes_container"
-                                                },
-                                                {
-                                                    "element_id": "email_container"
                                                 }
                                             ],
                                             "root": null,
@@ -5525,7 +5998,7 @@
                                                 "grid-auto-columns": "1fr",
                                                 "grid-auto-flow": "row",
                                                 "grid-auto-rows": "auto",
-                                                "grid-template-columns": "1fr 1fr 1fr",
+                                                "grid-template-columns": "1fr 1fr",
                                                 "grid-template-rows": "auto"
                                             },
                                             "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
@@ -5567,7 +6040,9 @@
                                 },
                                 "slot": "left",
                                 "styles": {
-                                    "default": {}
+                                    "default": {
+                                        "overflow-y": "scroll"
+                                    }
                                 }
                             }
                         ],
@@ -5703,6 +6178,492 @@
                 "padding-top": "var(--now-scalable-space--lg)"
             }
         }
+    },
+    {
+        "definition": {
+            "id": "9c2e3b0978b3250ef3081204f151026a",
+            "type": "MACROPONENT"
+        },
+        "elementId": "edit_contact_info_modal",
+        "elementLabel": "Edit Contact Info Modal",
+        "eventMappings": [
+            {
+                "eventMappingId": "cmaackwvvhhaaeeeuddbiiaaiiseffeehheed",
+                "isConfiguration": false,
+                "offRowStorageId": null,
+                "sourceEventApiName": "sn_uxf_page.CANVAS_MODAL#CLOSED",
+                "sourceEventCorrelationId": null,
+                "sourceEventDefinition": {
+                    "apiName": "sn_uxf_page.CANVAS_MODAL#CLOSED",
+                    "id": null,
+                    "type": "UXEVENT"
+                },
+                "sourceEventSysId": null,
+                "targets": [
+                    {
+                        "broker": null,
+                        "clientScript": null,
+                        "conditional": null,
+                        "declarativeAction": null,
+                        "event": null,
+                        "operation": {
+                            "dataBrokerId": "b997a84053021010cbc2ddeeff7b1228",
+                            "operationName": "REFRESH",
+                            "parentResourceId": "get_contacts",
+                            "payload": {
+                                "type": "JSON_LITERAL",
+                                "value": {}
+                            }
+                        },
+                        "targetId": "cmaackwvvhhaaeeevddbiiaacfflbbllus",
+                        "type": "DATABROKER_OP"
+                    }
+                ]
+            }
+        ],
+        "extensionPoints": [],
+        "isHidden": {
+            "type": "JSON_LITERAL",
+            "value": null
+        },
+        "overrides": {
+            "composition": [
+                {
+                    "definition": {
+                        "id": "MACROPONENT_VIEWPORT_HEADLESS",
+                        "type": "MACROPONENT_VIEWPORT_HEADLESS"
+                    },
+                    "elementId": "viewport_1",
+                    "elementLabel": "Viewport 1",
+                    "eventMappings": [],
+                    "extensionPoints": [
+                        {
+                            "name": "U&amp;I Conference Notes ",
+                            "sysId": "8b8f62ba83ffc210b3fb7230feaad3a5"
+                        }
+                    ],
+                    "isHidden": {
+                        "type": "JSON_LITERAL",
+                        "value": null
+                    },
+                    "preset": null,
+                    "propertyValues": {
+                        "pageCollectionMode": {
+                            "type": "JSON_LITERAL",
+                            "value": true
+                        }
+                    },
+                    "slot": null,
+                    "styles": null
+                }
+            ],
+            "layout": {
+                "default": {
+                    "children": null,
+                    "items": [
+                        {
+                            "element_id": "viewport_1"
+                        }
+                    ],
+                    "root": null,
+                    "rules": null,
+                    "styles": {
+                        "display": "flex",
+                        "flex-direction": "column"
+                    },
+                    "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
+                    "type": "flex"
+                },
+                "version": "3.1.0"
+            }
+        },
+        "preset": null,
+        "propertyValues": {
+            "bare": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "defer": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "disableDismiss": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "enableResizable": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "labelledby": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "resizableMaxHeight": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "resizableMaxWidth": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "resizableMinHeight": {
+                "type": "JSON_LITERAL",
+                "value": 133
+            },
+            "resizableMinWidth": {
+                "type": "JSON_LITERAL",
+                "value": 420
+            },
+            "size": {
+                "type": "JSON_LITERAL",
+                "value": "lg"
+            }
+        },
+        "slot": null,
+        "styles": null
+    },
+    {
+        "definition": {
+            "id": "9c2e3b0978b3250ef3081204f151026a",
+            "type": "MACROPONENT"
+        },
+        "elementId": "new_contact_modal",
+        "elementLabel": "New Contact Modal",
+        "eventMappings": [
+            {
+                "eventMappingId": "cmaacsjjrccffaaaazvddbiiaadccacaaffnb",
+                "isConfiguration": false,
+                "offRowStorageId": null,
+                "sourceEventApiName": "sn_uxf_page.CANVAS_MODAL#CLOSED",
+                "sourceEventCorrelationId": null,
+                "sourceEventDefinition": {
+                    "apiName": "sn_uxf_page.CANVAS_MODAL#CLOSED",
+                    "id": null,
+                    "type": "UXEVENT"
+                },
+                "sourceEventSysId": null,
+                "targets": [
+                    {
+                        "broker": null,
+                        "clientScript": null,
+                        "conditional": null,
+                        "declarativeAction": null,
+                        "event": null,
+                        "operation": {
+                            "dataBrokerId": "b997a84053021010cbc2ddeeff7b1228",
+                            "operationName": "REFRESH",
+                            "parentResourceId": "get_contacts",
+                            "payload": {
+                                "type": "JSON_LITERAL",
+                                "value": {}
+                            }
+                        },
+                        "targetId": "cmaacsjjrccffaaaazwddbiiaanjjztggehd",
+                        "type": "DATABROKER_OP"
+                    }
+                ]
+            }
+        ],
+        "extensionPoints": [],
+        "isHidden": {
+            "type": "JSON_LITERAL",
+            "value": null
+        },
+        "overrides": {
+            "composition": [
+                {
+                    "definition": {
+                        "id": "MACROPONENT_VIEWPORT_HEADLESS",
+                        "type": "MACROPONENT_VIEWPORT_HEADLESS"
+                    },
+                    "elementId": "viewport_2",
+                    "elementLabel": "Viewport 2",
+                    "eventMappings": [],
+                    "extensionPoints": [
+                        {
+                            "name": "U&amp;I Conference Notes ",
+                            "sysId": "8b8f62ba83ffc210b3fb7230feaad3a5"
+                        }
+                    ],
+                    "isHidden": {
+                        "type": "JSON_LITERAL",
+                        "value": null
+                    },
+                    "preset": null,
+                    "propertyValues": {
+                        "pageCollectionMode": {
+                            "type": "JSON_LITERAL",
+                            "value": true
+                        }
+                    },
+                    "slot": null,
+                    "styles": null
+                }
+            ],
+            "layout": {
+                "default": {
+                    "children": null,
+                    "items": [
+                        {
+                            "element_id": "viewport_2"
+                        }
+                    ],
+                    "root": null,
+                    "rules": null,
+                    "styles": {
+                        "display": "flex",
+                        "flex-direction": "column"
+                    },
+                    "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
+                    "type": "flex"
+                },
+                "version": "3.1.0"
+            }
+        },
+        "preset": null,
+        "propertyValues": {
+            "bare": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "defer": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "disableDismiss": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "enableResizable": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "labelledby": {
+                "type": "JSON_LITERAL",
+                "value": ""
+            },
+            "resizableMaxHeight": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "resizableMaxWidth": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "resizableMinHeight": {
+                "type": "JSON_LITERAL",
+                "value": 133
+            },
+            "resizableMinWidth": {
+                "type": "JSON_LITERAL",
+                "value": 420
+            },
+            "size": {
+                "type": "JSON_LITERAL",
+                "value": "lg"
+            }
+        },
+        "slot": null,
+        "styles": null
+    },
+    {
+        "definition": {
+            "id": "13ecfe155b630010b913cbd59b81c7d6",
+            "type": "MACROPONENT"
+        },
+        "elementId": "delete_modal",
+        "elementLabel": "Delete Modal",
+        "eventMappings": [
+            {
+                "eventMappingId": "cmaacsxjjmiiaabbeerddbiiaalrffphhraaz",
+                "isConfiguration": false,
+                "offRowStorageId": null,
+                "sourceEventApiName": "sn_canvas_chrome.NOW_CONFIRM_MODAL#NEGATIVE_BUTTON_CLICKED",
+                "sourceEventCorrelationId": null,
+                "sourceEventDefinition": {
+                    "apiName": "sn_canvas_chrome.NOW_CONFIRM_MODAL#NEGATIVE_BUTTON_CLICKED",
+                    "id": null,
+                    "type": "UXEVENT"
+                },
+                "sourceEventSysId": null,
+                "targets": [
+                    {
+                        "broker": null,
+                        "clientScript": null,
+                        "conditional": null,
+                        "declarativeAction": null,
+                        "event": {
+                            "apiName": "x_snc_bam_you_i_0.MODAL_SELECTED_RELAY_db39784983541a10b3fb7230feaad329",
+                            "payload": {
+                                "type": "JSON_LITERAL",
+                                "value": {
+                                    "bare": false,
+                                    "displayOptions": null,
+                                    "headerLabel": null,
+                                    "modalId": "[component-id$='delete_modal']",
+                                    "preserveState": false,
+                                    "showModal": false,
+                                    "viewportElementId": null,
+                                    "viewportFields": null,
+                                    "viewportParams": null,
+                                    "viewportRoute": null
+                                }
+                            },
+                            "sysId": "cbe30e89835c1a10b3fb7230feaad3af"
+                        },
+                        "operation": null,
+                        "targetId": "cmaacsxjjmiiaabbeesddbiiaaebbpjxoep",
+                        "type": "EVENT"
+                    }
+                ]
+            },
+            {
+                "eventMappingId": "cmaacsxxccjjaabbffaddbiiaahheeuzvccdd",
+                "isConfiguration": false,
+                "offRowStorageId": null,
+                "sourceEventApiName": "sn_canvas_chrome.NOW_CONFIRM_MODAL#POSITIVE_BUTTON_CLICKED",
+                "sourceEventCorrelationId": null,
+                "sourceEventDefinition": {
+                    "apiName": "sn_canvas_chrome.NOW_CONFIRM_MODAL#POSITIVE_BUTTON_CLICKED",
+                    "id": null,
+                    "type": "UXEVENT"
+                },
+                "sourceEventSysId": null,
+                "targets": [
+                    {
+                        "broker": null,
+                        "clientScript": null,
+                        "conditional": null,
+                        "declarativeAction": null,
+                        "event": null,
+                        "operation": {
+                            "dataBrokerId": "00cd9b8353211010cbc2ddeeff7b1205",
+                            "operationName": "EXECUTE",
+                            "parentResourceId": "delete_record",
+                            "payload": {
+                                "container": {
+                                    "recordId": {
+                                        "binding": {
+                                            "address": [
+                                                "selectedContact",
+                                                "sys_id",
+                                                "value"
+                                            ]
+                                        },
+                                        "type": "STATE_BINDING"
+                                    },
+                                    "table": {
+                                        "type": "JSON_LITERAL",
+                                        "value": "x_snc_bam_you_i_0_contact"
+                                    }
+                                },
+                                "type": "MAP_CONTAINER"
+                            }
+                        },
+                        "targetId": "cmaacsxxccjjaabbffbddbiiaaohjccgppo",
+                        "type": "DATABROKER_OP"
+                    },
+                    {
+                        "broker": null,
+                        "clientScript": null,
+                        "conditional": null,
+                        "declarativeAction": null,
+                        "event": null,
+                        "operation": {
+                            "dataBrokerId": "b997a84053021010cbc2ddeeff7b1228",
+                            "operationName": "REFRESH",
+                            "parentResourceId": "get_contacts",
+                            "payload": {
+                                "type": "JSON_LITERAL",
+                                "value": {}
+                            }
+                        },
+                        "targetId": "cmaacszjjumaabbggccddbiiaahhddyjccdeedd",
+                        "type": "DATABROKER_OP"
+                    }
+                ]
+            }
+        ],
+        "isHidden": {
+            "type": "JSON_LITERAL",
+            "value": null
+        },
+        "preset": null,
+        "propertyValues": {
+            "content": {
+                "script": {
+                    "apiVersion": "2.0.0",
+                    "controllerElementId": null,
+                    "inlineScript": null,
+                    "scriptSysId": "a31c829d83589a10b3fb7230feaad303",
+                    "target": null
+                },
+                "type": "CLIENT_TRANSFORM_SCRIPT"
+            },
+            "defer": {
+                "type": "JSON_LITERAL",
+                "value": true
+            },
+            "enableResizable": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "headerLabel": {
+                "type": "TRANSLATION_LITERAL",
+                "value": {
+                    "code": null,
+                    "comment": "",
+                    "message": "Delete Contact"
+                }
+            },
+            "preventDefaultPrimaryAction": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "preventDefaultSecondaryAction": {
+                "type": "JSON_LITERAL",
+                "value": false
+            },
+            "primaryButtonLabel": {
+                "type": "TRANSLATION_LITERAL",
+                "value": {
+                    "code": null,
+                    "comment": "",
+                    "message": "Yes"
+                }
+            },
+            "resizableMaxHeight": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "resizableMaxWidth": {
+                "type": "JSON_LITERAL",
+                "value": null
+            },
+            "resizableMinHeight": {
+                "type": "JSON_LITERAL",
+                "value": 133
+            },
+            "resizableMinWidth": {
+                "type": "JSON_LITERAL",
+                "value": 420
+            },
+            "secondaryButtonLabel": {
+                "type": "TRANSLATION_LITERAL",
+                "value": {
+                    "code": null,
+                    "comment": "",
+                    "message": "Cancel"
+                }
+            },
+            "size": {
+                "type": "JSON_LITERAL",
+                "value": "md"
+            }
+        },
+        "slot": null,
+        "styles": null
     }
 ]</composition>
         <da_relay_models/>
@@ -6281,13 +7242,28 @@
   "message" : "Add a Task",
   "comment" : ""
 }, {
+  "message" : "Add a new contact",
+  "comment" : ""
+}, {
+  "message" : "Cancel",
+  "comment" : ""
+}, {
   "message" : "Complete Task",
   "comment" : ""
 }, {
   "message" : "Contact Tasks",
   "comment" : ""
 }, {
+  "message" : "Delete Contact",
+  "comment" : ""
+}, {
+  "message" : "Delete contact",
+  "comment" : ""
+}, {
   "message" : "Delete task",
+  "comment" : ""
+}, {
+  "message" : "Edit contact info",
   "comment" : ""
 }, {
   "message" : "New tag/interest",
@@ -6302,6 +7278,9 @@
   "message" : "Notes",
   "comment" : ""
 }, {
+  "message" : "Refresh the contact list",
+  "comment" : ""
+}, {
   "message" : "Reopen Task",
   "comment" : ""
 }, {
@@ -6312,6 +7291,9 @@
   "comment" : ""
 }, {
   "message" : "Take a quick note",
+  "comment" : ""
+}, {
+  "message" : "Yes",
   "comment" : ""
 } ]</required_translations>
         <root_component/>
@@ -6376,14 +7358,14 @@
         <sys_created_by>reece.poulsen</sys_created_by>
         <sys_created_on>2024-08-26 17:38:32</sys_created_on>
         <sys_id>db39784983541a10b3fb7230feaad329</sys_id>
-        <sys_mod_count>282</sys_mod_count>
+        <sys_mod_count>326</sys_mod_count>
         <sys_name>Contact List</sys_name>
         <sys_package display_value="BAM - You &amp; I Builder Live! Conference Notes" source="x_snc_bam_you_i_0">69fa6ee3838742107d786970ceaad318</sys_package>
         <sys_policy/>
         <sys_scope display_value="BAM - You &amp; I Builder Live! Conference Notes">69fa6ee3838742107d786970ceaad318</sys_scope>
         <sys_update_name>sys_ux_macroponent_db39784983541a10b3fb7230feaad329</sys_update_name>
         <sys_updated_by>reece.poulsen</sys_updated_by>
-        <sys_updated_on>2024-08-27 14:47:20</sys_updated_on>
+        <sys_updated_on>2024-08-27 19:17:42</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=db39784983541a10b3fb7230feaad329"/>
 </record_update>
