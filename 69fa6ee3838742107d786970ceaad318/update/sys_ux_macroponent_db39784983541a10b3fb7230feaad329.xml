@@ -2064,9 +2064,7 @@
                                                                     {
                                                                         "layout": {
                                                                             "items": [],
-                                                                            "styles": {
-                                                                                "flex-direction": "column"
-                                                                            },
+                                                                            "styles": {},
                                                                             "type": "flex"
                                                                         },
                                                                         "queryId": "now_small"
@@ -2122,7 +2120,9 @@
                                                             "queries": [
                                                                 {
                                                                     "queryId": "now_small",
-                                                                    "value": {}
+                                                                    "value": {
+                                                                        "grid-row": "1/2"
+                                                                    }
                                                                 },
                                                                 {
                                                                     "queryId": "now_medium",
@@ -2379,6 +2379,185 @@
                                                                     },
                                                                     "slot": null,
                                                                     "styles": null
+                                                                },
+                                                                {
+                                                                    "definition": {
+                                                                        "id": "d37ce8abca89d02905fed903c8e34d8e",
+                                                                        "type": "MACROPONENT"
+                                                                    },
+                                                                    "elementId": "reached_out_button",
+                                                                    "elementLabel": "Reached Out Button",
+                                                                    "eventMappings": [
+                                                                        {
+                                                                            "eventMappingId": "cmaafrohfwaaaaycddbiiaaddbuirqvg",
+                                                                            "isConfiguration": false,
+                                                                            "offRowStorageId": null,
+                                                                            "sourceEventApiName": "sn_button.NOW_BUTTON#CLICKED",
+                                                                            "sourceEventCorrelationId": null,
+                                                                            "sourceEventDefinition": {
+                                                                                "apiName": "sn_button.NOW_BUTTON#CLICKED",
+                                                                                "id": null,
+                                                                                "type": "UXEVENT"
+                                                                            },
+                                                                            "sourceEventSysId": null,
+                                                                            "targets": [
+                                                                                {
+                                                                                    "broker": null,
+                                                                                    "clientScript": null,
+                                                                                    "conditional": null,
+                                                                                    "declarativeAction": null,
+                                                                                    "event": null,
+                                                                                    "operation": {
+                                                                                        "dataBrokerId": "9b4b978353211010cbc2ddeeff7b1245",
+                                                                                        "operationName": "EXECUTE",
+                                                                                        "parentResourceId": "update_record",
+                                                                                        "payload": {
+                                                                                            "container": {
+                                                                                                "recordId": {
+                                                                                                    "binding": {
+                                                                                                        "address": [
+                                                                                                            "selectedContact",
+                                                                                                            "sys_id",
+                                                                                                            "value"
+                                                                                                        ]
+                                                                                                    },
+                                                                                                    "type": "STATE_BINDING"
+                                                                                                },
+                                                                                                "table": {
+                                                                                                    "type": "JSON_LITERAL",
+                                                                                                    "value": "x_snc_bam_you_i_0_contact"
+                                                                                                },
+                                                                                                "templateFields": {
+                                                                                                    "transform": {
+                                                                                                        "operands": {
+                                                                                                            "container": [
+                                                                                                                {
+                                                                                                                    "type": "JSON_LITERAL",
+                                                                                                                    "value": "reached_out="
+                                                                                                                },
+                                                                                                                {
+                                                                                                                    "operation": {
+                                                                                                                        "operand": {
+                                                                                                                            "binding": {
+                                                                                                                                "address": [
+                                                                                                                                    "selectedContact",
+                                                                                                                                    "reached_out",
+                                                                                                                                    "value"
+                                                                                                                                ]
+                                                                                                                            },
+                                                                                                                            "type": "STATE_BINDING"
+                                                                                                                        },
+                                                                                                                        "operator": "NOT"
+                                                                                                                    },
+                                                                                                                    "type": "UNARY"
+                                                                                                                }
+                                                                                                            ],
+                                                                                                            "type": "LIST_CONTAINER"
+                                                                                                        },
+                                                                                                        "operator": "CONCAT"
+                                                                                                    },
+                                                                                                    "type": "CLIENT_TRANSFORM"
+                                                                                                },
+                                                                                                "useSetDisplayValue": {
+                                                                                                    "type": "JSON_LITERAL",
+                                                                                                    "value": null
+                                                                                                }
+                                                                                            },
+                                                                                            "type": "MAP_CONTAINER"
+                                                                                        }
+                                                                                    },
+                                                                                    "targetId": "cmaafrohfwaaaaydddbiiaahujjhkvdf",
+                                                                                    "type": "DATABROKER_OP"
+                                                                                },
+                                                                                {
+                                                                                    "broker": null,
+                                                                                    "clientScript": null,
+                                                                                    "conditional": null,
+                                                                                    "declarativeAction": null,
+                                                                                    "event": {
+                                                                                        "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                                                                                        "payload": {
+                                                                                            "script": {
+                                                                                                "apiVersion": "1.0.0",
+                                                                                                "controllerElementId": null,
+                                                                                                "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\tconst selectedContact = {...api.state.selectedContact};\n\tselectedContact.reached_out.value = !selectedContact.reached_out.value;\n\treturn {\n\t\tpropName: \"selectedContact\",\n\t\tvalue: selectedContact\n\t};\n}",
+                                                                                                "scriptSysId": null,
+                                                                                                "target": null
+                                                                                            },
+                                                                                            "type": "CLIENT_TRANSFORM_SCRIPT"
+                                                                                        },
+                                                                                        "sysId": "32408b42ff7a10109046e490703bf176"
+                                                                                    },
+                                                                                    "operation": null,
+                                                                                    "targetId": "cmaafrpuvgaaaazwddbiiaajjamdggjjz",
+                                                                                    "type": "EVENT"
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ],
+                                                                    "isHidden": {
+                                                                        "type": "JSON_LITERAL",
+                                                                        "value": null
+                                                                    },
+                                                                    "preset": null,
+                                                                    "propertyValues": {
+                                                                        "configAria": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": null
+                                                                        },
+                                                                        "disabled": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": false
+                                                                        },
+                                                                        "icon": {
+                                                                            "script": {
+                                                                                "apiVersion": "2.0.0",
+                                                                                "controllerElementId": null,
+                                                                                "inlineScript": null,
+                                                                                "scriptSysId": "9ba2410e8390de10b3fb7230feaad387",
+                                                                                "target": null
+                                                                            },
+                                                                            "type": "CLIENT_TRANSFORM_SCRIPT"
+                                                                        },
+                                                                        "label": {
+                                                                            "script": {
+                                                                                "apiVersion": "2.0.0",
+                                                                                "controllerElementId": null,
+                                                                                "inlineScript": null,
+                                                                                "scriptSysId": "5fa2410e8390de10b3fb7230feaad387",
+                                                                                "target": null
+                                                                            },
+                                                                            "type": "CLIENT_TRANSFORM_SCRIPT"
+                                                                        },
+                                                                        "landmark": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": null
+                                                                        },
+                                                                        "size": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": "md"
+                                                                        },
+                                                                        "tooltipContent": {
+                                                                            "type": "TRANSLATION_LITERAL",
+                                                                            "value": {
+                                                                                "code": null,
+                                                                                "comment": "",
+                                                                                "message": "Have you reached out?"
+                                                                            }
+                                                                        },
+                                                                        "variant": {
+                                                                            "script": {
+                                                                                "apiVersion": "2.0.0",
+                                                                                "controllerElementId": null,
+                                                                                "inlineScript": null,
+                                                                                "scriptSysId": "1fa2410e8390de10b3fb7230feaad387",
+                                                                                "target": null
+                                                                            },
+                                                                            "type": "CLIENT_TRANSFORM_SCRIPT"
+                                                                        }
+                                                                    },
+                                                                    "slot": null,
+                                                                    "styles": null
                                                                 }
                                                             ],
                                                             "layout": {
@@ -2390,6 +2569,9 @@
                                                                         },
                                                                         {
                                                                             "element_id": "delete_contact_button"
+                                                                        },
+                                                                        {
+                                                                            "element_id": "reached_out_button"
                                                                         }
                                                                     ],
                                                                     "root": null,
@@ -2453,7 +2635,9 @@
                                                             "queries": [
                                                                 {
                                                                     "queryId": "now_small",
-                                                                    "value": {}
+                                                                    "value": {
+                                                                        "grid-row": "3/4"
+                                                                    }
                                                                 }
                                                             ]
                                                         }
@@ -2501,22 +2685,8 @@
                                                                                 "preset": null,
                                                                                 "propertyValues": {
                                                                                     "align": {
-                                                                                        "type": "CLIENT_RESPONSIVE_QUERY",
-                                                                                        "value": {
-                                                                                            "default": {
-                                                                                                "type": "JSON_LITERAL",
-                                                                                                "value": "horizontal"
-                                                                                            },
-                                                                                            "queries": [
-                                                                                                {
-                                                                                                    "queryId": "now_small",
-                                                                                                    "value": {
-                                                                                                        "type": "JSON_LITERAL",
-                                                                                                        "value": "vertical"
-                                                                                                    }
-                                                                                                }
-                                                                                            ]
-                                                                                        }
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": "vertical"
                                                                                     },
                                                                                     "delimiter": {
                                                                                         "type": "JSON_LITERAL",
@@ -2527,33 +2697,16 @@
                                                                                         "value": null
                                                                                     },
                                                                                     "items": {
-                                                                                        "type": "CLIENT_RESPONSIVE_QUERY",
-                                                                                        "value": {
-                                                                                            "default": {
-                                                                                                "container": [
-                                                                                                    {
-                                                                                                        "binding": {
-                                                                                                            "address": [],
-                                                                                                            "category": "value"
-                                                                                                        },
-                                                                                                        "type": "REPEATER_ITEM_BINDING"
-                                                                                                    }
-                                                                                                ],
-                                                                                                "type": "LIST_CONTAINER"
-                                                                                            },
-                                                                                            "queries": [
-                                                                                                {
-                                                                                                    "queryId": "now_small",
-                                                                                                    "value": {
-                                                                                                        "binding": {
-                                                                                                            "address": [],
-                                                                                                            "category": "value"
-                                                                                                        },
-                                                                                                        "type": "REPEATER_ITEM_BINDING"
-                                                                                                    }
-                                                                                                }
-                                                                                            ]
-                                                                                        }
+                                                                                        "container": [
+                                                                                            {
+                                                                                                "binding": {
+                                                                                                    "address": [],
+                                                                                                    "category": "value"
+                                                                                                },
+                                                                                                "type": "REPEATER_ITEM_BINDING"
+                                                                                            }
+                                                                                        ],
+                                                                                        "type": "LIST_CONTAINER"
                                                                                     },
                                                                                     "size": {
                                                                                         "type": "JSON_LITERAL",
@@ -2565,7 +2718,9 @@
                                                                                     }
                                                                                 },
                                                                                 "slot": null,
-                                                                                "styles": null
+                                                                                "styles": {
+                                                                                    "default": {}
+                                                                                }
                                                                             }
                                                                         ],
                                                                         "layout": {
@@ -2573,8 +2728,7 @@
                                                                                 "children": null,
                                                                                 "items": [
                                                                                     {
-                                                                                        "element_id": "secondary_info",
-                                                                                        "styles": {}
+                                                                                        "element_id": "secondary_info"
                                                                                     }
                                                                                 ],
                                                                                 "root": null,
@@ -2613,7 +2767,7 @@
                                                                                     "queryId": "now_medium"
                                                                                 }
                                                                             ],
-                                                                            "version": "3.0.0"
+                                                                            "version": "3.1.0"
                                                                         }
                                                                     },
                                                                     "preset": null,
@@ -2623,7 +2777,7 @@
                                                                             "apiVersion": "2.0.0",
                                                                             "controllerElementId": null,
                                                                             "inlineScript": null,
-                                                                            "scriptSysId": "cbd15846835c9e10b3fb7230feaad301",
+                                                                            "scriptSysId": "dfa2410e8390de10b3fb7230feaad387",
                                                                             "target": null
                                                                         },
                                                                         "type": "CLIENT_TRANSFORM_SCRIPT"
@@ -2714,6 +2868,8 @@
                                                                 {
                                                                     "queryId": "now_small",
                                                                     "value": {
+                                                                        "grid-column": "unset",
+                                                                        "grid-row": "2/3",
                                                                         "margin-top": "0"
                                                                     }
                                                                 }
@@ -2753,16 +2909,16 @@
                                                             "layout": {
                                                                 "items": [],
                                                                 "styles": {
-                                                                    "align-items": "center",
-                                                                    "display": "flex",
-                                                                    "flex-direction": "column",
+                                                                    "display": "grid",
+                                                                    "flex-direction": "unset",
                                                                     "gap": "var(--now-scalable-space--lg)",
-                                                                    "grid-auto-columns": "unset",
-                                                                    "grid-auto-rows": "unset",
-                                                                    "grid-template-columns": "unset",
-                                                                    "grid-template-rows": "unset"
+                                                                    "grid-auto-columns": "1fr",
+                                                                    "grid-auto-rows": "auto",
+                                                                    "grid-template-columns": "1fr",
+                                                                    "grid-template-rows": "1fr",
+                                                                    "justify-items": "center"
                                                                 },
-                                                                "type": "flex"
+                                                                "type": "grid"
                                                             },
                                                             "queryId": "now_small"
                                                         },
@@ -6768,6 +6924,14 @@
                                                                 "type": "flex"
                                                             },
                                                             "queryId": "now_medium"
+                                                        },
+                                                        {
+                                                            "layout": {
+                                                                "items": [],
+                                                                "styles": {},
+                                                                "type": "flex"
+                                                            },
+                                                            "queryId": "now_small"
                                                         }
                                                     ],
                                                     "version": "3.1.0"
@@ -6825,6 +6989,12 @@
                                                         "value": {
                                                             "grid-column": "span 2"
                                                         }
+                                                    },
+                                                    {
+                                                        "queryId": "now_small",
+                                                        "value": {
+                                                            "margin-bottom": "0"
+                                                        }
                                                     }
                                                 ]
                                             }
@@ -6871,6 +7041,7 @@
                                                     "styles": {
                                                         "display": "flex",
                                                         "flex-direction": "column",
+                                                        "gap": "var(--now-scalable-space--md)",
                                                         "grid-auto-columns": "unset",
                                                         "grid-auto-flow": "unset",
                                                         "grid-auto-rows": "unset",
@@ -7293,6 +7464,7 @@
                 {
                     "queryId": "now_small",
                     "value": {
+                        "box-sizing": "border-box",
                         "overflow-y": "scroll",
                         "padding-top": "0"
                     }
@@ -8085,7 +8257,98 @@
         },
         "elementId": "delete_record",
         "elementLabel": "Delete Record",
-        "eventMappings": [],
+        "eventMappings": [
+            {
+                "eventMappingId": "cmaafmgaabbtaaaawuddbhhzjhhtccejoc",
+                "isConfiguration": false,
+                "offRowStorageId": null,
+                "sourceEventApiName": "sn_uxf.DATA_OP_FAILED",
+                "sourceEventCorrelationId": null,
+                "sourceEventDefinition": {
+                    "apiName": "sn_uxf.DATA_OP_FAILED",
+                    "id": null,
+                    "type": "UXEVENT"
+                },
+                "sourceEventSysId": null,
+                "targets": [
+                    {
+                        "broker": null,
+                        "clientScript": null,
+                        "conditional": null,
+                        "declarativeAction": null,
+                        "event": {
+                            "apiName": "sn_uxf_page.NOW_UXF_PAGE#ADD_NOTIFICATIONS",
+                            "payload": {
+                                "type": "JSON_LITERAL",
+                                "value": {
+                                    "items": [
+                                        {
+                                            "action": {
+                                                "type": "dismiss"
+                                            },
+                                            "content": "Unable to delete user",
+                                            "id": "delete_failed",
+                                            "status": "critical"
+                                        }
+                                    ]
+                                }
+                            },
+                            "sysId": "49fe7d575f983bb3f8eea3fa8d40694c"
+                        },
+                        "operation": null,
+                        "targetId": "cmaafmgaabbtaaaawvddbhhzccjjtpdihhaa",
+                        "type": "EVENT"
+                    },
+                    {
+                        "broker": null,
+                        "clientScript": {
+                            "payload": {
+                                "type": "JSON_LITERAL",
+                                "value": {}
+                            },
+                            "sysId": "7cd69dc983181a10b3fb7230feaad383"
+                        },
+                        "conditional": null,
+                        "declarativeAction": null,
+                        "event": null,
+                        "operation": null,
+                        "targetId": "cmaafmkcccddaaaayhddbhhzfbboyymccee",
+                        "type": "CLIENT_SCRIPT"
+                    }
+                ]
+            },
+            {
+                "eventMappingId": "cmaafmknlaaaaaykddbhhzddggybbiiaahhb",
+                "isConfiguration": false,
+                "offRowStorageId": null,
+                "sourceEventApiName": "sn_uxf.DATA_OP_SUCCEEDED",
+                "sourceEventCorrelationId": null,
+                "sourceEventDefinition": {
+                    "apiName": "sn_uxf.DATA_OP_SUCCEEDED",
+                    "id": null,
+                    "type": "UXEVENT"
+                },
+                "sourceEventSysId": null,
+                "targets": [
+                    {
+                        "broker": null,
+                        "clientScript": {
+                            "payload": {
+                                "type": "JSON_LITERAL",
+                                "value": {}
+                            },
+                            "sysId": "7cd69dc983181a10b3fb7230feaad383"
+                        },
+                        "conditional": null,
+                        "declarativeAction": null,
+                        "event": null,
+                        "operation": null,
+                        "targetId": "cmaafmknlaaaaaylddbhhzhhswxggucf",
+                        "type": "CLIENT_SCRIPT"
+                    }
+                ]
+            }
+        ],
         "inputValues": {
             "recordId": {
                 "type": "JSON_LITERAL",
@@ -8396,6 +8659,9 @@
   "message" : "Enter a label",
   "comment" : ""
 }, {
+  "message" : "Have you reached out?",
+  "comment" : ""
+}, {
   "message" : "New tag/interest",
   "comment" : ""
 }, {
@@ -8511,14 +8777,14 @@
         <sys_created_by>reece.poulsen</sys_created_by>
         <sys_created_on>2024-08-26 17:38:32</sys_created_on>
         <sys_id>db39784983541a10b3fb7230feaad329</sys_id>
-        <sys_mod_count>431</sys_mod_count>
+        <sys_mod_count>450</sys_mod_count>
         <sys_name>Contact List</sys_name>
         <sys_package display_value="BAM - You &amp; I Builder Live! Conference Notes" source="x_snc_bam_you_i_0">69fa6ee3838742107d786970ceaad318</sys_package>
         <sys_policy/>
         <sys_scope display_value="BAM - You &amp; I Builder Live! Conference Notes">69fa6ee3838742107d786970ceaad318</sys_scope>
         <sys_update_name>sys_ux_macroponent_db39784983541a10b3fb7230feaad329</sys_update_name>
         <sys_updated_by>reece.poulsen</sys_updated_by>
-        <sys_updated_on>2024-08-29 18:02:40</sys_updated_on>
+        <sys_updated_on>2024-08-29 21:20:44</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=db39784983541a10b3fb7230feaad329"/>
 </record_update>
