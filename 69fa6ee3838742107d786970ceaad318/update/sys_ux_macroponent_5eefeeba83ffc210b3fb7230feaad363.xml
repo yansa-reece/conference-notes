@@ -3094,10 +3094,89 @@
                                                                     },
                                                                     "elementId": "date_met_input",
                                                                     "elementLabel": "Date Met Input",
-                                                                    "eventMappings": [],
+                                                                    "eventMappings": [
+                                                                        {
+                                                                            "eventMappingId": "cmaafuogqzaaaazjddbiiaauceejbkzf",
+                                                                            "isConfiguration": false,
+                                                                            "offRowStorageId": null,
+                                                                            "sourceEventApiName": "sn_date_time.NOW_DATE_TIME#VALUE_SET",
+                                                                            "sourceEventCorrelationId": null,
+                                                                            "sourceEventDefinition": {
+                                                                                "apiName": "sn_date_time.NOW_DATE_TIME#VALUE_SET",
+                                                                                "id": null,
+                                                                                "type": "UXEVENT"
+                                                                            },
+                                                                            "sourceEventSysId": null,
+                                                                            "targets": [
+                                                                                {
+                                                                                    "broker": null,
+                                                                                    "clientScript": {
+                                                                                        "payload": {
+                                                                                            "type": "JSON_LITERAL",
+                                                                                            "value": {}
+                                                                                        },
+                                                                                        "sysId": "ff42fffe83b70610b3fb7230feaad36a"
+                                                                                    },
+                                                                                    "conditional": null,
+                                                                                    "declarativeAction": null,
+                                                                                    "event": null,
+                                                                                    "operation": null,
+                                                                                    "targetId": "cmaafuogqzaaaazkddbiiaaddmjjjjqilc",
+                                                                                    "type": "CLIENT_SCRIPT"
+                                                                                },
+                                                                                {
+                                                                                    "broker": null,
+                                                                                    "clientScript": {
+                                                                                        "payload": {
+                                                                                            "type": "JSON_LITERAL",
+                                                                                            "value": {}
+                                                                                        },
+                                                                                        "sysId": "ffefaa7a83ffc210b3fb7230feaad3d0"
+                                                                                    },
+                                                                                    "conditional": null,
+                                                                                    "declarativeAction": null,
+                                                                                    "event": null,
+                                                                                    "operation": null,
+                                                                                    "targetId": "cmaafuqeegglaaaazqddbiiaatffhlkkggq",
+                                                                                    "type": "CLIENT_SCRIPT"
+                                                                                }
+                                                                            ]
+                                                                        },
+                                                                        {
+                                                                            "eventMappingId": "cmaafusnmeeaabbaabddbiiaarwjiintth",
+                                                                            "isConfiguration": false,
+                                                                            "offRowStorageId": null,
+                                                                            "sourceEventApiName": "sn_date_time.NOW_DATE_TIME#INPUT",
+                                                                            "sourceEventCorrelationId": null,
+                                                                            "sourceEventDefinition": {
+                                                                                "apiName": "sn_date_time.NOW_DATE_TIME#INPUT",
+                                                                                "id": null,
+                                                                                "type": "UXEVENT"
+                                                                            },
+                                                                            "sourceEventSysId": null,
+                                                                            "targets": [
+                                                                                {
+                                                                                    "broker": null,
+                                                                                    "clientScript": {
+                                                                                        "payload": {
+                                                                                            "type": "JSON_LITERAL",
+                                                                                            "value": {}
+                                                                                        },
+                                                                                        "sysId": "ffefaa7a83ffc210b3fb7230feaad3d0"
+                                                                                    },
+                                                                                    "conditional": null,
+                                                                                    "declarativeAction": null,
+                                                                                    "event": null,
+                                                                                    "operation": null,
+                                                                                    "targetId": "cmaafusnmffaabbaacddbiiaaghhvhhmjjkjj",
+                                                                                    "type": "CLIENT_SCRIPT"
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ],
                                                                     "isHidden": {
                                                                         "type": "JSON_LITERAL",
-                                                                        "value": true
+                                                                        "value": false
                                                                     },
                                                                     "preset": null,
                                                                     "propertyValues": {
@@ -3151,8 +3230,14 @@
                                                                             "type": "LIST_CONTAINER"
                                                                         },
                                                                         "format": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "binding": {
+                                                                                "address": [
+                                                                                    "user",
+                                                                                    "dateFormat"
+                                                                                ],
+                                                                                "category": "session"
+                                                                            },
+                                                                            "type": "CONTEXT_BINDING"
                                                                         },
                                                                         "helperContent": {
                                                                             "type": "JSON_LITERAL",
@@ -3240,7 +3325,7 @@
                                                                         },
                                                                         "type": {
                                                                             "type": "JSON_LITERAL",
-                                                                            "value": "date-time"
+                                                                            "value": "date"
                                                                         },
                                                                         "value": {
                                                                             "script": {
@@ -3689,184 +3774,14 @@
                                                                             "operationName": "EXECUTE",
                                                                             "parentResourceId": "create_contact_record",
                                                                             "payload": {
-                                                                                "container": {
-                                                                                    "table": {
-                                                                                        "type": "JSON_LITERAL",
-                                                                                        "value": "x_snc_bam_you_i_0_contact"
-                                                                                    },
-                                                                                    "templateFields": {
-                                                                                        "transform": {
-                                                                                            "operands": {
-                                                                                                "container": [
-                                                                                                    {
-                                                                                                        "type": "JSON_LITERAL",
-                                                                                                        "value": "name="
-                                                                                                    },
-                                                                                                    {
-                                                                                                        "binding": {
-                                                                                                            "address": [
-                                                                                                                "contactData",
-                                                                                                                "name"
-                                                                                                            ]
-                                                                                                        },
-                                                                                                        "type": "STATE_BINDING"
-                                                                                                    },
-                                                                                                    {
-                                                                                                        "type": "JSON_LITERAL",
-                                                                                                        "value": "^email="
-                                                                                                    },
-                                                                                                    {
-                                                                                                        "binding": {
-                                                                                                            "address": [
-                                                                                                                "contactData",
-                                                                                                                "email"
-                                                                                                            ]
-                                                                                                        },
-                                                                                                        "type": "STATE_BINDING"
-                                                                                                    },
-                                                                                                    {
-                                                                                                        "type": "JSON_LITERAL",
-                                                                                                        "value": "^phone_number="
-                                                                                                    },
-                                                                                                    {
-                                                                                                        "binding": {
-                                                                                                            "address": [
-                                                                                                                "contactData",
-                                                                                                                "phone_number"
-                                                                                                            ]
-                                                                                                        },
-                                                                                                        "type": "STATE_BINDING"
-                                                                                                    },
-                                                                                                    {
-                                                                                                        "type": "JSON_LITERAL",
-                                                                                                        "value": "^note="
-                                                                                                    },
-                                                                                                    {
-                                                                                                        "binding": {
-                                                                                                            "address": [
-                                                                                                                "contactData",
-                                                                                                                "note"
-                                                                                                            ]
-                                                                                                        },
-                                                                                                        "type": "STATE_BINDING"
-                                                                                                    },
-                                                                                                    {
-                                                                                                        "type": "JSON_LITERAL",
-                                                                                                        "value": "^job_title="
-                                                                                                    },
-                                                                                                    {
-                                                                                                        "binding": {
-                                                                                                            "address": [
-                                                                                                                "contactData",
-                                                                                                                "job_title"
-                                                                                                            ]
-                                                                                                        },
-                                                                                                        "type": "STATE_BINDING"
-                                                                                                    },
-                                                                                                    {
-                                                                                                        "type": "JSON_LITERAL",
-                                                                                                        "value": "^company_organization="
-                                                                                                    },
-                                                                                                    {
-                                                                                                        "binding": {
-                                                                                                            "address": [
-                                                                                                                "contactData",
-                                                                                                                "company_organization"
-                                                                                                            ]
-                                                                                                        },
-                                                                                                        "type": "STATE_BINDING"
-                                                                                                    },
-                                                                                                    {
-                                                                                                        "type": "JSON_LITERAL",
-                                                                                                        "value": "^tags_interests="
-                                                                                                    },
-                                                                                                    {
-                                                                                                        "binding": {
-                                                                                                            "address": [
-                                                                                                                "contactData",
-                                                                                                                "tags_interests"
-                                                                                                            ]
-                                                                                                        },
-                                                                                                        "type": "STATE_BINDING"
-                                                                                                    },
-                                                                                                    {
-                                                                                                        "type": "JSON_LITERAL",
-                                                                                                        "value": "^follow_up_action="
-                                                                                                    },
-                                                                                                    {
-                                                                                                        "binding": {
-                                                                                                            "address": [
-                                                                                                                "contactData",
-                                                                                                                "follow_up_action"
-                                                                                                            ]
-                                                                                                        },
-                                                                                                        "type": "STATE_BINDING"
-                                                                                                    },
-                                                                                                    {
-                                                                                                        "type": "JSON_LITERAL",
-                                                                                                        "value": "^event_name="
-                                                                                                    },
-                                                                                                    {
-                                                                                                        "binding": {
-                                                                                                            "address": [
-                                                                                                                "contactData",
-                                                                                                                "event_name"
-                                                                                                            ]
-                                                                                                        },
-                                                                                                        "type": "STATE_BINDING"
-                                                                                                    },
-                                                                                                    {
-                                                                                                        "type": "JSON_LITERAL",
-                                                                                                        "value": "^location_met="
-                                                                                                    },
-                                                                                                    {
-                                                                                                        "binding": {
-                                                                                                            "address": [
-                                                                                                                "contactData",
-                                                                                                                "location_met"
-                                                                                                            ]
-                                                                                                        },
-                                                                                                        "type": "STATE_BINDING"
-                                                                                                    },
-                                                                                                    {
-                                                                                                        "type": "JSON_LITERAL",
-                                                                                                        "value": "^event_role="
-                                                                                                    },
-                                                                                                    {
-                                                                                                        "binding": {
-                                                                                                            "address": [
-                                                                                                                "contactData",
-                                                                                                                "event_role"
-                                                                                                            ]
-                                                                                                        },
-                                                                                                        "type": "STATE_BINDING"
-                                                                                                    },
-                                                                                                    {
-                                                                                                        "type": "JSON_LITERAL",
-                                                                                                        "value": "^session_attended="
-                                                                                                    },
-                                                                                                    {
-                                                                                                        "binding": {
-                                                                                                            "address": [
-                                                                                                                "contactData",
-                                                                                                                "session_attended"
-                                                                                                            ]
-                                                                                                        },
-                                                                                                        "type": "STATE_BINDING"
-                                                                                                    }
-                                                                                                ],
-                                                                                                "type": "LIST_CONTAINER"
-                                                                                            },
-                                                                                            "operator": "CONCAT"
-                                                                                        },
-                                                                                        "type": "CLIENT_TRANSFORM"
-                                                                                    },
-                                                                                    "useSetDisplayValue": {
-                                                                                        "type": "JSON_LITERAL",
-                                                                                        "value": null
-                                                                                    }
+                                                                                "script": {
+                                                                                    "apiVersion": "1.0.0",
+                                                                                    "controllerElementId": null,
+                                                                                    "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\tconst fields = [];\n\tconst contactData = {...api.state.contactData};\n\tObject.keys(contactData).forEach(key =&gt; {\n\t\tconst value = contactData[key];\n\t\tfields.push(`${key}=${value}`);\n\t});\n\n\treturn {\n\t\ttable: \"x_snc_bam_you_i_0_contact\",\n\t\ttemplateFields: fields.join(\"^\"),\n\t\tuseSetDisplayValue: null\n\t};\n}",
+                                                                                    "scriptSysId": null,
+                                                                                    "target": null
                                                                                 },
-                                                                                "type": "MAP_CONTAINER"
+                                                                                "type": "CLIENT_TRANSFORM_SCRIPT"
                                                                             }
                                                                         },
                                                                         "targetId": "clzkdiddvuaabbhhsddbiiaapvgffswye",
@@ -4950,14 +4865,14 @@
         <sys_created_by>reece.poulsen</sys_created_by>
         <sys_created_on>2024-08-07 16:15:00</sys_created_on>
         <sys_id>5eefeeba83ffc210b3fb7230feaad363</sys_id>
-        <sys_mod_count>229</sys_mod_count>
+        <sys_mod_count>236</sys_mod_count>
         <sys_name>Add Contact</sys_name>
         <sys_package display_value="BAM - You &amp; I Builder Live! Conference Notes" source="x_snc_bam_you_i_0">69fa6ee3838742107d786970ceaad318</sys_package>
         <sys_policy/>
         <sys_scope display_value="BAM - You &amp; I Builder Live! Conference Notes">69fa6ee3838742107d786970ceaad318</sys_scope>
         <sys_update_name>sys_ux_macroponent_5eefeeba83ffc210b3fb7230feaad363</sys_update_name>
         <sys_updated_by>reece.poulsen</sys_updated_by>
-        <sys_updated_on>2024-08-29 16:54:47</sys_updated_on>
+        <sys_updated_on>2024-08-29 22:37:51</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=5eefeeba83ffc210b3fb7230feaad363"/>
 </record_update>
