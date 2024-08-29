@@ -24,8 +24,338 @@
                         "id": "d356d14b6e293a3020a244b63d278d8f",
                         "type": "MACROPONENT"
                     },
-                    "elementId": "main_grid",
-                    "elementLabel": "Main Grid",
+                    "elementId": "mobile_nav_bar",
+                    "elementLabel": "Mobile Nav Bar",
+                    "eventMappings": [],
+                    "isHidden": {
+                        "type": "CLIENT_RESPONSIVE_QUERY",
+                        "value": {
+                            "default": {
+                                "type": "JSON_LITERAL",
+                                "value": true
+                            },
+                            "queries": [
+                                {
+                                    "queryId": "now_medium",
+                                    "value": {
+                                        "type": "JSON_LITERAL",
+                                        "value": true
+                                    }
+                                },
+                                {
+                                    "queryId": "now_small",
+                                    "value": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    "overrides": {
+                        "composition": [
+                            {
+                                "definition": {
+                                    "id": "844d56291d91b330f2269558e3f47701",
+                                    "type": "MACROPONENT"
+                                },
+                                "elementId": "open_close_contact_list_button",
+                                "elementLabel": "Open Close Contact List Button",
+                                "eventMappings": [
+                                    {
+                                        "eventMappingId": "cmaafhjhhzddaaaaylddbiiaahhhhshxiiffgg",
+                                        "isConfiguration": false,
+                                        "offRowStorageId": null,
+                                        "sourceEventApiName": "sn_button.NOW_BUTTON_ICONIC#CLICKED",
+                                        "sourceEventCorrelationId": null,
+                                        "sourceEventDefinition": {
+                                            "apiName": "sn_button.NOW_BUTTON_ICONIC#CLICKED",
+                                            "id": null,
+                                            "type": "UXEVENT"
+                                        },
+                                        "sourceEventSysId": null,
+                                        "targets": [
+                                            {
+                                                "broker": null,
+                                                "clientScript": null,
+                                                "conditional": null,
+                                                "declarativeAction": null,
+                                                "event": {
+                                                    "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                                                    "payload": {
+                                                        "container": {
+                                                            "propName": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": "mobileShowContactList"
+                                                            },
+                                                            "value": {
+                                                                "operation": {
+                                                                    "operand": {
+                                                                        "binding": {
+                                                                            "address": [
+                                                                                "mobileShowContactList"
+                                                                            ]
+                                                                        },
+                                                                        "type": "STATE_BINDING"
+                                                                    },
+                                                                    "operator": "NOT"
+                                                                },
+                                                                "type": "UNARY"
+                                                            }
+                                                        },
+                                                        "type": "MAP_CONTAINER"
+                                                    },
+                                                    "sysId": "32408b42ff7a10109046e490703bf176"
+                                                },
+                                                "operation": null,
+                                                "targetId": "cmaafhjhhzeeaaaaymddbiiaapaiwmkghh",
+                                                "type": "EVENT"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "isHidden": {
+                                    "type": "JSON_LITERAL",
+                                    "value": null
+                                },
+                                "preset": null,
+                                "propertyValues": {
+                                    "bare": {
+                                        "type": "CLIENT_RESPONSIVE_QUERY",
+                                        "value": {
+                                            "default": {
+                                                "type": "JSON_LITERAL",
+                                                "value": false
+                                            },
+                                            "queries": [
+                                                {
+                                                    "queryId": "now_small",
+                                                    "value": {
+                                                        "type": "JSON_LITERAL",
+                                                        "value": false
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "configAria": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "disabled": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "hidePadding": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "highContrast": {
+                                        "type": "JSON_LITERAL",
+                                        "value": false
+                                    },
+                                    "icon": {
+                                        "type": "CLIENT_RESPONSIVE_QUERY",
+                                        "value": {
+                                            "default": {
+                                                "type": "JSON_LITERAL",
+                                                "value": "magnifying-glass-outline"
+                                            },
+                                            "queries": [
+                                                {
+                                                    "queryId": "now_small",
+                                                    "value": {
+                                                        "transform": {
+                                                            "operands": {
+                                                                "container": [
+                                                                    {
+                                                                        "binding": {
+                                                                            "address": [
+                                                                                "mobileShowContactList"
+                                                                            ]
+                                                                        },
+                                                                        "type": "STATE_BINDING"
+                                                                    },
+                                                                    {
+                                                                        "type": "JSON_LITERAL",
+                                                                        "value": "panel-display-right-expand-outline"
+                                                                    },
+                                                                    {
+                                                                        "type": "JSON_LITERAL",
+                                                                        "value": "panel-display-left-expand-outline"
+                                                                    }
+                                                                ],
+                                                                "type": "LIST_CONTAINER"
+                                                            },
+                                                            "operator": "IF"
+                                                        },
+                                                        "type": "CLIENT_TRANSFORM"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "landmark": {
+                                        "type": "JSON_LITERAL",
+                                        "value": null
+                                    },
+                                    "size": {
+                                        "type": "CLIENT_RESPONSIVE_QUERY",
+                                        "value": {
+                                            "default": {
+                                                "type": "JSON_LITERAL",
+                                                "value": "md"
+                                            },
+                                            "queries": [
+                                                {
+                                                    "queryId": "now_small",
+                                                    "value": {
+                                                        "type": "JSON_LITERAL",
+                                                        "value": "md"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "tooltipContent": {
+                                        "type": "CLIENT_RESPONSIVE_QUERY",
+                                        "value": {
+                                            "default": {
+                                                "type": "TRANSLATION_LITERAL",
+                                                "value": {
+                                                    "code": null,
+                                                    "comment": "",
+                                                    "message": "Enter a label"
+                                                }
+                                            },
+                                            "queries": [
+                                                {
+                                                    "queryId": "now_small",
+                                                    "value": {
+                                                        "script": {
+                                                            "apiVersion": "2.0.0",
+                                                            "controllerElementId": null,
+                                                            "inlineScript": null,
+                                                            "scriptSysId": "3d00ccc283d89e10b3fb7230feaad37b",
+                                                            "target": null
+                                                        },
+                                                        "type": "CLIENT_TRANSFORM_SCRIPT"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "variant": {
+                                        "type": "CLIENT_RESPONSIVE_QUERY",
+                                        "value": {
+                                            "default": {
+                                                "type": "JSON_LITERAL",
+                                                "value": "secondary"
+                                            },
+                                            "queries": [
+                                                {
+                                                    "queryId": "now_small",
+                                                    "value": {
+                                                        "type": "JSON_LITERAL",
+                                                        "value": "tertiary"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                },
+                                "slot": null,
+                                "styles": null
+                            }
+                        ],
+                        "layout": {
+                            "default": {
+                                "children": null,
+                                "items": [
+                                    {
+                                        "element_id": "open_close_contact_list_button"
+                                    }
+                                ],
+                                "root": null,
+                                "rules": null,
+                                "styles": {
+                                    "display": "flex",
+                                    "flex-direction": "column"
+                                },
+                                "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
+                                "type": "flex"
+                            },
+                            "queries": [
+                                {
+                                    "layout": {
+                                        "items": [],
+                                        "styles": {
+                                            "flex-direction": "row",
+                                            "justify-content": "flex-end"
+                                        },
+                                        "type": "flex"
+                                    },
+                                    "queryId": "now_small"
+                                }
+                            ],
+                            "version": "3.1.0"
+                        }
+                    },
+                    "preset": null,
+                    "propertyValues": {
+                        "ariaRegionHeadingLevel": {
+                            "type": "JSON_LITERAL",
+                            "value": "1"
+                        },
+                        "ariaRegionName": {
+                            "type": "TRANSLATION_LITERAL",
+                            "value": {
+                                "code": null,
+                                "comment": "",
+                                "message": ""
+                            }
+                        },
+                        "ariaRole": {
+                            "type": "JSON_LITERAL",
+                            "value": ""
+                        },
+                        "hideEmptyStateUi": {
+                            "type": "JSON_LITERAL",
+                            "value": true
+                        },
+                        "includeAriaHeading": {
+                            "type": "JSON_LITERAL",
+                            "value": false
+                        },
+                        "type": {
+                            "type": "JSON_LITERAL",
+                            "value": "section"
+                        }
+                    },
+                    "slot": null,
+                    "styles": {
+                        "default": {},
+                        "queries": [
+                            {
+                                "queryId": "now_small",
+                                "value": {
+                                    "padding": "var(--now-scalable-space--xs)",
+                                    "padding-bottom": "var(--now-scalable-space--sm)",
+                                    "padding-left": "0",
+                                    "padding-right": "0",
+                                    "padding-top": "var(--now-scalable-space--sm)"
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "definition": {
+                        "id": "07b0bb09419d26f0af681796bc548f19",
+                        "type": "MACROPONENT"
+                    },
+                    "elementId": "resizable_panes",
+                    "elementLabel": "Resizable panes",
                     "eventMappings": [],
                     "isHidden": {
                         "type": "JSON_LITERAL",
@@ -42,8 +372,22 @@
                                 "elementLabel": "Contact List Container",
                                 "eventMappings": [],
                                 "isHidden": {
-                                    "type": "JSON_LITERAL",
-                                    "value": null
+                                    "type": "CLIENT_RESPONSIVE_QUERY",
+                                    "value": {
+                                        "default": {
+                                            "type": "JSON_LITERAL",
+                                            "value": null
+                                        },
+                                        "queries": [
+                                            {
+                                                "queryId": "now_small",
+                                                "value": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": false
+                                                }
+                                            }
+                                        ]
+                                    }
                                 },
                                 "overrides": {
                                     "composition": [
@@ -295,7 +639,15 @@
                                                                 "margin-left": "0",
                                                                 "margin-right": "0",
                                                                 "margin-top": "0"
-                                                            }
+                                                            },
+                                                            "queries": [
+                                                                {
+                                                                    "queryId": "now_medium",
+                                                                    "value": {
+                                                                        "width": "50%"
+                                                                    }
+                                                                }
+                                                            ]
                                                         }
                                                     },
                                                     {
@@ -587,7 +939,7 @@
                                             "styles": {
                                                 "default": {
                                                     "margin-left": "var(--now-scalable-space--xs)",
-                                                    "margin-right": "var(--now-scalable-space--lg)"
+                                                    "margin-right": "var(--now-scalable-space--sm)"
                                                 }
                                             }
                                         },
@@ -720,6 +1072,29 @@
                                                                         },
                                                                         "targetId": "cmaacaagaahaaaaaaygddbiiaarssiplmdd",
                                                                         "type": "DATABROKER_OP"
+                                                                    },
+                                                                    {
+                                                                        "broker": null,
+                                                                        "clientScript": null,
+                                                                        "conditional": null,
+                                                                        "declarativeAction": null,
+                                                                        "event": {
+                                                                            "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                                                                            "payload": {
+                                                                                "script": {
+                                                                                    "apiVersion": "1.0.0",
+                                                                                    "controllerElementId": null,
+                                                                                    "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tpropName: \"mobileShowContactList\",\n\t\tvalue: false\n\t};\n}",
+                                                                                    "scriptSysId": null,
+                                                                                    "target": null
+                                                                                },
+                                                                                "type": "CLIENT_TRANSFORM_SCRIPT"
+                                                                            },
+                                                                            "sysId": "32408b42ff7a10109046e490703bf176"
+                                                                        },
+                                                                        "operation": null,
+                                                                        "targetId": "cmaafkatbbkaaaayjjddbiiaalccaaqdgjjgg",
+                                                                        "type": "EVENT"
                                                                     }
                                                                 ]
                                                             }
@@ -846,8 +1221,22 @@
                                                                                         "value": {}
                                                                                     },
                                                                                     "css": {
-                                                                                        "type": "JSON_LITERAL",
-                                                                                        "value": "* { \n    font-size: 16px;\n}"
+                                                                                        "type": "CLIENT_RESPONSIVE_QUERY",
+                                                                                        "value": {
+                                                                                            "default": {
+                                                                                                "type": "JSON_LITERAL",
+                                                                                                "value": "* { \n    font-size: 16px;\n}"
+                                                                                            },
+                                                                                            "queries": [
+                                                                                                {
+                                                                                                    "queryId": "now_small",
+                                                                                                    "value": {
+                                                                                                        "type": "JSON_LITERAL",
+                                                                                                        "value": "* { \n    font-size: 16px;\n}"
+                                                                                                    }
+                                                                                                }
+                                                                                            ]
+                                                                                        }
                                                                                     },
                                                                                     "tag": {
                                                                                         "type": "JSON_LITERAL",
@@ -890,8 +1279,22 @@
                                                                                         "value": {}
                                                                                     },
                                                                                     "css": {
-                                                                                        "type": "JSON_LITERAL",
-                                                                                        "value": "* { }"
+                                                                                        "type": "CLIENT_RESPONSIVE_QUERY",
+                                                                                        "value": {
+                                                                                            "default": {
+                                                                                                "type": "JSON_LITERAL",
+                                                                                                "value": "* { }"
+                                                                                            },
+                                                                                            "queries": [
+                                                                                                {
+                                                                                                    "queryId": "now_small",
+                                                                                                    "value": {
+                                                                                                        "type": "JSON_LITERAL",
+                                                                                                        "value": "* { \n}"
+                                                                                                    }
+                                                                                                }
+                                                                                            ]
+                                                                                        }
                                                                                     },
                                                                                     "tag": {
                                                                                         "type": "JSON_LITERAL",
@@ -933,6 +1336,16 @@
                                                                                 "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
                                                                                 "type": "flex"
                                                                             },
+                                                                            "queries": [
+                                                                                {
+                                                                                    "layout": {
+                                                                                        "items": [],
+                                                                                        "styles": {},
+                                                                                        "type": "flex"
+                                                                                    },
+                                                                                    "queryId": "now_medium"
+                                                                                }
+                                                                            ],
                                                                             "version": "3.1.0"
                                                                         }
                                                                     },
@@ -976,7 +1389,15 @@
                                                                             "margin-left": "var(--now-scalable-space--sm)",
                                                                             "margin-right": "var(--now-scalable-space--sm)",
                                                                             "margin-top": "var(--now-scalable-space--sm)"
-                                                                        }
+                                                                        },
+                                                                        "queries": [
+                                                                            {
+                                                                                "queryId": "now_medium",
+                                                                                "value": {
+                                                                                    "width": "50%"
+                                                                                }
+                                                                            }
+                                                                        ]
                                                                     }
                                                                 },
                                                                 {
@@ -988,8 +1409,22 @@
                                                                     "elementLabel": "Contact Job Title",
                                                                     "eventMappings": [],
                                                                     "isHidden": {
-                                                                        "type": "JSON_LITERAL",
-                                                                        "value": null
+                                                                        "type": "CLIENT_RESPONSIVE_QUERY",
+                                                                        "value": {
+                                                                            "default": {
+                                                                                "type": "JSON_LITERAL",
+                                                                                "value": null
+                                                                            },
+                                                                            "queries": [
+                                                                                {
+                                                                                    "queryId": "now_medium",
+                                                                                    "value": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": true
+                                                                                    }
+                                                                                }
+                                                                            ]
+                                                                        }
                                                                     },
                                                                     "preset": null,
                                                                     "propertyValues": {
@@ -1045,6 +1480,16 @@
                                                                     "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
                                                                     "type": "flex"
                                                                 },
+                                                                "queries": [
+                                                                    {
+                                                                        "layout": {
+                                                                            "items": [],
+                                                                            "styles": {},
+                                                                            "type": "flex"
+                                                                        },
+                                                                        "queryId": "now_medium"
+                                                                    }
+                                                                ],
                                                                 "version": "3.1.0"
                                                             }
                                                         },
@@ -1085,14 +1530,20 @@
                                                                 "margin": "var(--now-scalable-space--xs)",
                                                                 "margin-bottom": "var(--now-scalable-space--xs)",
                                                                 "margin-left": "var(--now-scalable-space--xs)",
-                                                                "margin-right": "var(--now-scalable-space--lg)",
+                                                                "margin-right": "var(--now-scalable-space--sm)",
                                                                 "margin-top": "var(--now-scalable-space--xs)",
                                                                 "padding": "0",
                                                                 "padding-bottom": "0",
                                                                 "padding-left": "0",
                                                                 "padding-right": "0",
                                                                 "padding-top": "0"
-                                                            }
+                                                            },
+                                                            "queries": [
+                                                                {
+                                                                    "queryId": "now_medium",
+                                                                    "value": {}
+                                                                }
+                                                            ]
                                                         }
                                                     }
                                                 ],
@@ -1213,8 +1664,22 @@
                                 "elementLabel": "Contact Details Container",
                                 "eventMappings": [],
                                 "isHidden": {
-                                    "type": "JSON_LITERAL",
-                                    "value": null
+                                    "type": "CLIENT_RESPONSIVE_QUERY",
+                                    "value": {
+                                        "default": {
+                                            "type": "JSON_LITERAL",
+                                            "value": null
+                                        },
+                                        "queries": [
+                                            {
+                                                "queryId": "now_small",
+                                                "value": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": false
+                                                }
+                                            }
+                                        ]
+                                    }
                                 },
                                 "overrides": {
                                     "composition": [
@@ -1287,8 +1752,22 @@
                                                                             "value": ""
                                                                         },
                                                                         "size": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": "lg"
+                                                                            "type": "CLIENT_RESPONSIVE_QUERY",
+                                                                            "value": {
+                                                                                "default": {
+                                                                                    "type": "JSON_LITERAL",
+                                                                                    "value": "lg"
+                                                                                },
+                                                                                "queries": [
+                                                                                    {
+                                                                                        "queryId": "now_small",
+                                                                                        "value": {
+                                                                                            "type": "JSON_LITERAL",
+                                                                                            "value": "lg"
+                                                                                        }
+                                                                                    }
+                                                                                ]
+                                                                            }
                                                                         },
                                                                         "tooltipContent": {
                                                                             "transform": {
@@ -1362,8 +1841,29 @@
                                                                                         "value": {}
                                                                                     },
                                                                                     "css": {
-                                                                                        "type": "JSON_LITERAL",
-                                                                                        "value": "* { \n    font-size: 24px;\n}"
+                                                                                        "type": "CLIENT_RESPONSIVE_QUERY",
+                                                                                        "value": {
+                                                                                            "default": {
+                                                                                                "type": "JSON_LITERAL",
+                                                                                                "value": "* { \n    font-size: 24px;\n}"
+                                                                                            },
+                                                                                            "queries": [
+                                                                                                {
+                                                                                                    "queryId": "now_small",
+                                                                                                    "value": {
+                                                                                                        "type": "JSON_LITERAL",
+                                                                                                        "value": "* { \n    font-size: 24px;\n    text-align: center;\n}"
+                                                                                                    }
+                                                                                                },
+                                                                                                {
+                                                                                                    "queryId": "now_medium",
+                                                                                                    "value": {
+                                                                                                        "type": "JSON_LITERAL",
+                                                                                                        "value": "* { \n    font-size: 24px;\n    text-align: center;\n}"
+                                                                                                    }
+                                                                                                }
+                                                                                            ]
+                                                                                        }
                                                                                     },
                                                                                     "tag": {
                                                                                         "type": "JSON_LITERAL",
@@ -1402,8 +1902,29 @@
                                                                                         "value": {}
                                                                                     },
                                                                                     "css": {
-                                                                                        "type": "JSON_LITERAL",
-                                                                                        "value": "* { \n    font-size: 18px;\n    color: gray;\n}"
+                                                                                        "type": "CLIENT_RESPONSIVE_QUERY",
+                                                                                        "value": {
+                                                                                            "default": {
+                                                                                                "type": "JSON_LITERAL",
+                                                                                                "value": "* { \n    font-size: 18px;\n    color: gray;\n}"
+                                                                                            },
+                                                                                            "queries": [
+                                                                                                {
+                                                                                                    "queryId": "now_small",
+                                                                                                    "value": {
+                                                                                                        "type": "JSON_LITERAL",
+                                                                                                        "value": "* { \n    font-size: 18px;\n    color: gray;\n    text-align: center;\n}"
+                                                                                                    }
+                                                                                                },
+                                                                                                {
+                                                                                                    "queryId": "now_medium",
+                                                                                                    "value": {
+                                                                                                        "type": "JSON_LITERAL",
+                                                                                                        "value": "* { \n    font-size: 18px;\n    color: gray;\n    text-align: center;\n}"
+                                                                                                    }
+                                                                                                }
+                                                                                            ]
+                                                                                        }
                                                                                     },
                                                                                     "tag": {
                                                                                         "type": "JSON_LITERAL",
@@ -1445,6 +1966,28 @@
                                                                                 "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
                                                                                 "type": "flex"
                                                                             },
+                                                                            "queries": [
+                                                                                {
+                                                                                    "layout": {
+                                                                                        "items": [],
+                                                                                        "styles": {
+                                                                                            "align-items": "center"
+                                                                                        },
+                                                                                        "type": "flex"
+                                                                                    },
+                                                                                    "queryId": "now_small"
+                                                                                },
+                                                                                {
+                                                                                    "layout": {
+                                                                                        "items": [],
+                                                                                        "styles": {
+                                                                                            "align-items": "center"
+                                                                                        },
+                                                                                        "type": "flex"
+                                                                                    },
+                                                                                    "queryId": "now_medium"
+                                                                                }
+                                                                            ],
                                                                             "version": "3.1.0"
                                                                         }
                                                                     },
@@ -1481,7 +2024,17 @@
                                                                     },
                                                                     "slot": null,
                                                                     "styles": {
-                                                                        "default": {}
+                                                                        "default": {},
+                                                                        "queries": [
+                                                                            {
+                                                                                "queryId": "now_small",
+                                                                                "value": {}
+                                                                            },
+                                                                            {
+                                                                                "queryId": "now_medium",
+                                                                                "value": {}
+                                                                            }
+                                                                        ]
                                                                     }
                                                                 }
                                                             ],
@@ -1507,6 +2060,28 @@
                                                                     "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
                                                                     "type": "flex"
                                                                 },
+                                                                "queries": [
+                                                                    {
+                                                                        "layout": {
+                                                                            "items": [],
+                                                                            "styles": {
+                                                                                "flex-direction": "column"
+                                                                            },
+                                                                            "type": "flex"
+                                                                        },
+                                                                        "queryId": "now_small"
+                                                                    },
+                                                                    {
+                                                                        "layout": {
+                                                                            "items": [],
+                                                                            "styles": {
+                                                                                "flex-direction": "column"
+                                                                            },
+                                                                            "type": "flex"
+                                                                        },
+                                                                        "queryId": "now_medium"
+                                                                    }
+                                                                ],
                                                                 "version": "3.1.0"
                                                             }
                                                         },
@@ -1543,7 +2118,17 @@
                                                         },
                                                         "slot": null,
                                                         "styles": {
-                                                            "default": {}
+                                                            "default": {},
+                                                            "queries": [
+                                                                {
+                                                                    "queryId": "now_small",
+                                                                    "value": {}
+                                                                },
+                                                                {
+                                                                    "queryId": "now_medium",
+                                                                    "value": {}
+                                                                }
+                                                            ]
                                                         }
                                                     },
                                                     {
@@ -1818,6 +2403,16 @@
                                                                     "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
                                                                     "type": "flex"
                                                                 },
+                                                                "queries": [
+                                                                    {
+                                                                        "layout": {
+                                                                            "items": [],
+                                                                            "styles": {},
+                                                                            "type": "flex"
+                                                                        },
+                                                                        "queryId": "now_small"
+                                                                    }
+                                                                ],
                                                                 "version": "3.1.0"
                                                             }
                                                         },
@@ -1854,7 +2449,13 @@
                                                         },
                                                         "slot": null,
                                                         "styles": {
-                                                            "default": {}
+                                                            "default": {},
+                                                            "queries": [
+                                                                {
+                                                                    "queryId": "now_small",
+                                                                    "value": {}
+                                                                }
+                                                            ]
                                                         }
                                                     },
                                                     {
@@ -1873,51 +2474,174 @@
                                                             "composition": [
                                                                 {
                                                                     "definition": {
-                                                                        "id": "cfdc0486addc8811fd5249eae681d12d",
-                                                                        "type": "MACROPONENT"
+                                                                        "id": "REPEATER",
+                                                                        "type": "REPEATER"
                                                                     },
-                                                                    "elementId": "secondary_info",
-                                                                    "elementLabel": "Secondary Info",
+                                                                    "elementId": "secondary_fields_repeater",
+                                                                    "elementLabel": "Secondary Fields Repeater",
                                                                     "eventMappings": [],
                                                                     "isHidden": {
                                                                         "type": "JSON_LITERAL",
                                                                         "value": null
                                                                     },
-                                                                    "preset": null,
-                                                                    "propertyValues": {
-                                                                        "align": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": "horizontal"
-                                                                        },
-                                                                        "delimiter": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": ","
-                                                                        },
-                                                                        "itemMinWidth": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": null
-                                                                        },
-                                                                        "items": {
-                                                                            "script": {
-                                                                                "apiVersion": "2.0.0",
-                                                                                "controllerElementId": null,
-                                                                                "inlineScript": null,
-                                                                                "scriptSysId": "f1294d0583d41a10b3fb7230feaad384",
-                                                                                "target": null
+                                                                    "overrides": {
+                                                                        "composition": [
+                                                                            {
+                                                                                "definition": {
+                                                                                    "id": "cfdc0486addc8811fd5249eae681d12d",
+                                                                                    "type": "MACROPONENT"
+                                                                                },
+                                                                                "elementId": "secondary_info",
+                                                                                "elementLabel": "Secondary Info",
+                                                                                "eventMappings": [],
+                                                                                "isHidden": {
+                                                                                    "type": "JSON_LITERAL",
+                                                                                    "value": null
+                                                                                },
+                                                                                "preset": null,
+                                                                                "propertyValues": {
+                                                                                    "align": {
+                                                                                        "type": "CLIENT_RESPONSIVE_QUERY",
+                                                                                        "value": {
+                                                                                            "default": {
+                                                                                                "type": "JSON_LITERAL",
+                                                                                                "value": "horizontal"
+                                                                                            },
+                                                                                            "queries": [
+                                                                                                {
+                                                                                                    "queryId": "now_small",
+                                                                                                    "value": {
+                                                                                                        "type": "JSON_LITERAL",
+                                                                                                        "value": "vertical"
+                                                                                                    }
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    },
+                                                                                    "delimiter": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": ","
+                                                                                    },
+                                                                                    "itemMinWidth": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": null
+                                                                                    },
+                                                                                    "items": {
+                                                                                        "type": "CLIENT_RESPONSIVE_QUERY",
+                                                                                        "value": {
+                                                                                            "default": {
+                                                                                                "container": [
+                                                                                                    {
+                                                                                                        "binding": {
+                                                                                                            "address": [],
+                                                                                                            "category": "value"
+                                                                                                        },
+                                                                                                        "type": "REPEATER_ITEM_BINDING"
+                                                                                                    }
+                                                                                                ],
+                                                                                                "type": "LIST_CONTAINER"
+                                                                                            },
+                                                                                            "queries": [
+                                                                                                {
+                                                                                                    "queryId": "now_small",
+                                                                                                    "value": {
+                                                                                                        "binding": {
+                                                                                                            "address": [],
+                                                                                                            "category": "value"
+                                                                                                        },
+                                                                                                        "type": "REPEATER_ITEM_BINDING"
+                                                                                                    }
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    },
+                                                                                    "size": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": "md"
+                                                                                    },
+                                                                                    "truncated": {
+                                                                                        "type": "JSON_LITERAL",
+                                                                                        "value": false
+                                                                                    }
+                                                                                },
+                                                                                "slot": null,
+                                                                                "styles": null
+                                                                            }
+                                                                        ],
+                                                                        "layout": {
+                                                                            "default": {
+                                                                                "children": null,
+                                                                                "items": [
+                                                                                    {
+                                                                                        "element_id": "secondary_info",
+                                                                                        "styles": {}
+                                                                                    }
+                                                                                ],
+                                                                                "root": null,
+                                                                                "rules": null,
+                                                                                "styles": {
+                                                                                    "display": "grid",
+                                                                                    "gap": "var(--now-scalable-space--md)",
+                                                                                    "grid-auto-columns": "1fr",
+                                                                                    "grid-auto-flow": "row",
+                                                                                    "grid-auto-rows": "1fr",
+                                                                                    "grid-template-columns": "1fr 1fr 1fr 1fr",
+                                                                                    "grid-template-rows": "1fr"
+                                                                                },
+                                                                                "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
+                                                                                "type": "grid"
                                                                             },
-                                                                            "type": "CLIENT_TRANSFORM_SCRIPT"
-                                                                        },
-                                                                        "size": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": "md"
-                                                                        },
-                                                                        "truncated": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": false
+                                                                            "queries": [
+                                                                                {
+                                                                                    "layout": {
+                                                                                        "items": [],
+                                                                                        "styles": {
+                                                                                            "grid-template-columns": "1fr 1fr"
+                                                                                        },
+                                                                                        "type": "grid"
+                                                                                    },
+                                                                                    "queryId": "now_small"
+                                                                                },
+                                                                                {
+                                                                                    "layout": {
+                                                                                        "items": [],
+                                                                                        "styles": {
+                                                                                            "grid-template-columns": "1fr 1fr"
+                                                                                        },
+                                                                                        "type": "grid"
+                                                                                    },
+                                                                                    "queryId": "now_medium"
+                                                                                }
+                                                                            ],
+                                                                            "version": "3.0.0"
                                                                         }
                                                                     },
+                                                                    "preset": null,
+                                                                    "propertyValues": {},
+                                                                    "repeatWith": {
+                                                                        "script": {
+                                                                            "apiVersion": "2.0.0",
+                                                                            "controllerElementId": null,
+                                                                            "inlineScript": null,
+                                                                            "scriptSysId": "cbd15846835c9e10b3fb7230feaad301",
+                                                                            "target": null
+                                                                        },
+                                                                        "type": "CLIENT_TRANSFORM_SCRIPT"
+                                                                    },
                                                                     "slot": null,
-                                                                    "styles": null
+                                                                    "styles": {
+                                                                        "default": {},
+                                                                        "queries": [
+                                                                            {
+                                                                                "queryId": "now_small",
+                                                                                "value": {}
+                                                                            },
+                                                                            {
+                                                                                "queryId": "now_medium",
+                                                                                "value": {}
+                                                                            }
+                                                                        ]
+                                                                    }
                                                                 }
                                                             ],
                                                             "layout": {
@@ -1925,7 +2649,7 @@
                                                                     "children": null,
                                                                     "items": [
                                                                         {
-                                                                            "element_id": "secondary_info"
+                                                                            "element_id": "secondary_fields_repeater"
                                                                         }
                                                                     ],
                                                                     "root": null,
@@ -1937,6 +2661,16 @@
                                                                     "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
                                                                     "type": "flex"
                                                                 },
+                                                                "queries": [
+                                                                    {
+                                                                        "layout": {
+                                                                            "items": [],
+                                                                            "styles": {},
+                                                                            "type": "flex"
+                                                                        },
+                                                                        "queryId": "now_small"
+                                                                    }
+                                                                ],
                                                                 "version": "3.1.0"
                                                             }
                                                         },
@@ -1975,7 +2709,15 @@
                                                         "styles": {
                                                             "default": {
                                                                 "grid-column": "span 2"
-                                                            }
+                                                            },
+                                                            "queries": [
+                                                                {
+                                                                    "queryId": "now_small",
+                                                                    "value": {
+                                                                        "margin-top": "0"
+                                                                    }
+                                                                }
+                                                            ]
                                                         }
                                                     }
                                                 ],
@@ -2006,6 +2748,42 @@
                                                         "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
                                                         "type": "grid"
                                                     },
+                                                    "queries": [
+                                                        {
+                                                            "layout": {
+                                                                "items": [],
+                                                                "styles": {
+                                                                    "align-items": "center",
+                                                                    "display": "flex",
+                                                                    "flex-direction": "column",
+                                                                    "gap": "var(--now-scalable-space--lg)",
+                                                                    "grid-auto-columns": "unset",
+                                                                    "grid-auto-rows": "unset",
+                                                                    "grid-template-columns": "unset",
+                                                                    "grid-template-rows": "unset"
+                                                                },
+                                                                "type": "flex"
+                                                            },
+                                                            "queryId": "now_small"
+                                                        },
+                                                        {
+                                                            "layout": {
+                                                                "items": [],
+                                                                "styles": {
+                                                                    "align-items": "center",
+                                                                    "display": "flex",
+                                                                    "flex-direction": "column",
+                                                                    "gap": "var(--now-scalable-space--md)",
+                                                                    "grid-auto-columns": "unset",
+                                                                    "grid-auto-rows": "unset",
+                                                                    "grid-template-columns": "unset",
+                                                                    "grid-template-rows": "unset"
+                                                                },
+                                                                "type": "flex"
+                                                            },
+                                                            "queryId": "now_medium"
+                                                        }
+                                                    ],
                                                     "version": "3.1.0"
                                                 }
                                             },
@@ -2053,7 +2831,17 @@
                                                     "padding-left": "var(--now-scalable-space--xl)",
                                                     "padding-right": "var(--now-scalable-space--xl)",
                                                     "padding-top": "var(--now-scalable-space--xl)"
-                                                }
+                                                },
+                                                "queries": [
+                                                    {
+                                                        "queryId": "now_small",
+                                                        "value": {}
+                                                    },
+                                                    {
+                                                        "queryId": "now_medium",
+                                                        "value": {}
+                                                    }
+                                                ]
                                             }
                                         },
                                         {
@@ -3699,6 +4487,16 @@
                                                         "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
                                                         "type": "flex"
                                                     },
+                                                    "queries": [
+                                                        {
+                                                            "layout": {
+                                                                "items": [],
+                                                                "styles": {},
+                                                                "type": "flex"
+                                                            },
+                                                            "queryId": "now_medium"
+                                                        }
+                                                    ],
                                                     "version": "3.1.0"
                                                 }
                                             },
@@ -3748,7 +4546,15 @@
                                                     "padding-right": "var(--now-scalable-space--lg)",
                                                     "padding-top": "var(--now-scalable-space--lg)",
                                                     "position": "relative"
-                                                }
+                                                },
+                                                "queries": [
+                                                    {
+                                                        "queryId": "now_medium",
+                                                        "value": {
+                                                            "grid-column": "span 2"
+                                                        }
+                                                    }
+                                                ]
                                             }
                                         },
                                         {
@@ -4511,6 +5317,16 @@
                                                         "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
                                                         "type": "flex"
                                                     },
+                                                    "queries": [
+                                                        {
+                                                            "layout": {
+                                                                "items": [],
+                                                                "styles": {},
+                                                                "type": "flex"
+                                                            },
+                                                            "queryId": "now_medium"
+                                                        }
+                                                    ],
                                                     "version": "3.1.0"
                                                 }
                                             },
@@ -4559,7 +5375,15 @@
                                                     "padding-left": "var(--now-scalable-space--lg)",
                                                     "padding-right": "var(--now-scalable-space--lg)",
                                                     "padding-top": "var(--now-scalable-space--lg)"
-                                                }
+                                                },
+                                                "queries": [
+                                                    {
+                                                        "queryId": "now_medium",
+                                                        "value": {
+                                                            "grid-column": "span 2"
+                                                        }
+                                                    }
+                                                ]
                                             }
                                         },
                                         {
@@ -5475,6 +6299,16 @@
                                                         "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
                                                         "type": "flex"
                                                     },
+                                                    "queries": [
+                                                        {
+                                                            "layout": {
+                                                                "items": [],
+                                                                "styles": {},
+                                                                "type": "flex"
+                                                            },
+                                                            "queryId": "now_medium"
+                                                        }
+                                                    ],
                                                     "version": "3.1.0"
                                                 }
                                             },
@@ -5523,7 +6357,15 @@
                                                     "padding-left": "var(--now-scalable-space--lg)",
                                                     "padding-right": "var(--now-scalable-space--lg)",
                                                     "padding-top": "var(--now-scalable-space--lg)"
-                                                }
+                                                },
+                                                "queries": [
+                                                    {
+                                                        "queryId": "now_medium",
+                                                        "value": {
+                                                            "grid-column": "span 2"
+                                                        }
+                                                    }
+                                                ]
                                             }
                                         },
                                         {
@@ -5918,6 +6760,16 @@
                                                         "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
                                                         "type": "flex"
                                                     },
+                                                    "queries": [
+                                                        {
+                                                            "layout": {
+                                                                "items": [],
+                                                                "styles": {},
+                                                                "type": "flex"
+                                                            },
+                                                            "queryId": "now_medium"
+                                                        }
+                                                    ],
                                                     "version": "3.1.0"
                                                 }
                                             },
@@ -5966,7 +6818,15 @@
                                                     "padding-left": "var(--now-scalable-space--lg)",
                                                     "padding-right": "var(--now-scalable-space--lg)",
                                                     "padding-top": "var(--now-scalable-space--lg)"
-                                                }
+                                                },
+                                                "queries": [
+                                                    {
+                                                        "queryId": "now_medium",
+                                                        "value": {
+                                                            "grid-column": "span 2"
+                                                        }
+                                                    }
+                                                ]
                                             }
                                         }
                                     ],
@@ -6004,6 +6864,24 @@
                                             "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
                                             "type": "grid"
                                         },
+                                        "queries": [
+                                            {
+                                                "layout": {
+                                                    "items": [],
+                                                    "styles": {
+                                                        "display": "flex",
+                                                        "flex-direction": "column",
+                                                        "grid-auto-columns": "unset",
+                                                        "grid-auto-flow": "unset",
+                                                        "grid-auto-rows": "unset",
+                                                        "grid-template-columns": "unset",
+                                                        "grid-template-rows": "unset"
+                                                    },
+                                                    "type": "flex"
+                                                },
+                                                "queryId": "now_small"
+                                            }
+                                        ],
                                         "version": "3.1.0"
                                     }
                                 },
@@ -6038,82 +6916,303 @@
                                         "value": "section"
                                     }
                                 },
-                                "slot": "left",
+                                "slot": "right",
                                 "styles": {
                                     "default": {
+                                        "box-sizing": "border-box",
+                                        "height": "90vh",
+                                        "margin-left": "var(--now-scalable-space--sm)",
                                         "overflow-y": "scroll"
-                                    }
+                                    },
+                                    "queries": [
+                                        {
+                                            "queryId": "now_small",
+                                            "value": {}
+                                        }
+                                    ]
                                 }
                             }
-                        ],
-                        "layout": {
-                            "default": {
-                                "children": null,
-                                "items": [
-                                    {
-                                        "element_id": "container_2"
-                                    },
-                                    {
-                                        "element_id": "container_3"
-                                    }
-                                ],
-                                "root": null,
-                                "rules": null,
-                                "styles": {
-                                    "column-gap": "0",
-                                    "display": "grid",
-                                    "grid-auto-columns": "1fr",
-                                    "grid-auto-rows": "1fr",
-                                    "grid-template-columns": "30fr 70fr",
-                                    "grid-template-rows": "1fr",
-                                    "overflow": "hidden",
-                                    "width": "100%"
-                                },
-                                "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
-                                "type": "grid"
-                            },
-                            "version": "3.1.0"
-                        }
+                        ]
                     },
                     "preset": null,
                     "propertyValues": {
-                        "ariaRegionHeadingLevel": {
+                        "actionBar": {
                             "type": "JSON_LITERAL",
-                            "value": "1"
+                            "value": false
                         },
-                        "ariaRegionName": {
+                        "actionBarConfig": {
+                            "type": "JSON_LITERAL",
+                            "value": {
+                                "leftIcon": "record-activity-details-fill",
+                                "leftTooltip": "Display left pane only",
+                                "middleIcon": "record-activity-stream-outline",
+                                "middleTooltip": "Display both panes",
+                                "rightIcon": "record-activity-outline",
+                                "rightTooltip": "Display right pane only"
+                            }
+                        },
+                        "bare": {
+                            "type": "CLIENT_RESPONSIVE_QUERY",
+                            "value": {
+                                "default": {
+                                    "type": "JSON_LITERAL",
+                                    "value": true
+                                },
+                                "queries": [
+                                    {
+                                        "queryId": "now_small",
+                                        "value": {
+                                            "type": "JSON_LITERAL",
+                                            "value": true
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "bottomPaneAriaLabel": {
                             "type": "TRANSLATION_LITERAL",
                             "value": {
                                 "code": null,
                                 "comment": "",
-                                "message": ""
+                                "message": "Bottom pane"
                             }
                         },
-                        "ariaRole": {
+                        "bottomPaneConstraints": {
                             "type": "JSON_LITERAL",
-                            "value": ""
+                            "value": "{\"minRatio\": 20, \"minPixels\": 100}"
                         },
-                        "hideEmptyStateUi": {
+                        "defaultDisplayedPane": {
                             "type": "JSON_LITERAL",
-                            "value": true
+                            "value": "both"
                         },
-                        "includeAriaHeading": {
+                        "defaultDividerPosition": {
+                            "type": "CLIENT_RESPONSIVE_QUERY",
+                            "value": {
+                                "default": {
+                                    "type": "JSON_LITERAL",
+                                    "value": 25
+                                },
+                                "queries": [
+                                    {
+                                        "queryId": "now_small",
+                                        "value": {
+                                            "script": {
+                                                "apiVersion": "2.0.0",
+                                                "controllerElementId": null,
+                                                "inlineScript": null,
+                                                "scriptSysId": "bd00ccc283d89e10b3fb7230feaad37b",
+                                                "target": null
+                                            },
+                                            "type": "CLIENT_TRANSFORM_SCRIPT"
+                                        }
+                                    },
+                                    {
+                                        "queryId": "now_medium",
+                                        "value": {
+                                            "type": "JSON_LITERAL",
+                                            "value": 40
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "disabled": {
+                            "type": "CLIENT_RESPONSIVE_QUERY",
+                            "value": {
+                                "default": {
+                                    "type": "JSON_LITERAL",
+                                    "value": false
+                                },
+                                "queries": [
+                                    {
+                                        "queryId": "now_small",
+                                        "value": {
+                                            "type": "JSON_LITERAL",
+                                            "value": true
+                                        }
+                                    },
+                                    {
+                                        "queryId": "now_medium",
+                                        "value": {
+                                            "type": "JSON_LITERAL",
+                                            "value": true
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "displayDividerButton": {
                             "type": "JSON_LITERAL",
                             "value": false
                         },
-                        "type": {
+                        "dividerAriaLabel": {
+                            "type": "TRANSLATION_LITERAL",
+                            "value": {
+                                "code": null,
+                                "comment": "",
+                                "message": "Resizable panes divider"
+                            }
+                        },
+                        "dividerButtonConfig": {
                             "type": "JSON_LITERAL",
-                            "value": "section"
+                            "value": {
+                                "buttonProps": {
+                                    "icon": "chevron-left-outline"
+                                },
+                                "position": "top"
+                            }
+                        },
+                        "dividerHandleTooltip": {
+                            "type": "TRANSLATION_LITERAL",
+                            "value": {
+                                "code": null,
+                                "comment": "",
+                                "message": "Resizable panes divider handle"
+                            }
+                        },
+                        "dividerStyles": {
+                            "type": "CLIENT_RESPONSIVE_QUERY",
+                            "value": {
+                                "default": {
+                                    "type": "JSON_LITERAL",
+                                    "value": {}
+                                },
+                                "queries": [
+                                    {
+                                        "queryId": "now_small",
+                                        "value": {
+                                            "type": "JSON_LITERAL",
+                                            "value": {
+                                                "border-style": "none"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "queryId": "now_medium",
+                                        "value": {
+                                            "type": "JSON_LITERAL",
+                                            "value": {
+                                                "border": "none"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "leftPaneAriaLabel": {
+                            "type": "CLIENT_RESPONSIVE_QUERY",
+                            "value": {
+                                "default": {
+                                    "type": "TRANSLATION_LITERAL",
+                                    "value": {
+                                        "code": null,
+                                        "comment": "",
+                                        "message": "Contact List"
+                                    }
+                                },
+                                "queries": [
+                                    {
+                                        "queryId": "now_small",
+                                        "value": {
+                                            "type": "TRANSLATION_LITERAL",
+                                            "value": {
+                                                "code": null,
+                                                "comment": "",
+                                                "message": "Contact List"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "leftPaneConstraints": {
+                            "type": "CLIENT_RESPONSIVE_QUERY",
+                            "value": {
+                                "default": {
+                                    "type": "JSON_LITERAL",
+                                    "value": "{\"minRatio\": 20, \"minPixels\": 100}"
+                                },
+                                "queries": [
+                                    {
+                                        "queryId": "now_small",
+                                        "value": {
+                                            "type": "JSON_LITERAL",
+                                            "value": "{\"minRatio\": 0, \"minPixels\": 0}"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "panesPosition": {
+                            "type": "JSON_LITERAL",
+                            "value": "left-right"
+                        },
+                        "rightPaneAriaLabel": {
+                            "type": "CLIENT_RESPONSIVE_QUERY",
+                            "value": {
+                                "default": {
+                                    "type": "TRANSLATION_LITERAL",
+                                    "value": {
+                                        "code": null,
+                                        "comment": "",
+                                        "message": "Selected Contact Details"
+                                    }
+                                },
+                                "queries": [
+                                    {
+                                        "queryId": "now_small",
+                                        "value": {
+                                            "type": "TRANSLATION_LITERAL",
+                                            "value": {
+                                                "code": null,
+                                                "comment": "",
+                                                "message": "Selected Contact Details"
+                                            }
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "rightPaneConstraints": {
+                            "type": "CLIENT_RESPONSIVE_QUERY",
+                            "value": {
+                                "default": {
+                                    "type": "JSON_LITERAL",
+                                    "value": "{\"minRatio\": 65, \"minPixels\": 100}"
+                                },
+                                "queries": [
+                                    {
+                                        "queryId": "now_small",
+                                        "value": {
+                                            "type": "JSON_LITERAL",
+                                            "value": "{\"minRatio\": 0, \"minPixels\": 0}"
+                                        }
+                                    },
+                                    {
+                                        "queryId": "now_medium",
+                                        "value": {
+                                            "type": "JSON_LITERAL",
+                                            "value": "{\"minRatio\": 50, \"minPixels\": 100}"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "topPaneAriaLabel": {
+                            "type": "TRANSLATION_LITERAL",
+                            "value": {
+                                "code": null,
+                                "comment": "",
+                                "message": "Top pane"
+                            }
+                        },
+                        "topPaneConstraints": {
+                            "type": "JSON_LITERAL",
+                            "value": "{\"minRatio\": 20, \"minPixels\": 100}"
                         }
                     },
                     "slot": null,
-                    "styles": {
-                        "default": {
-                            "height": "90vh",
-                            "overflow": "hidden",
-                            "width": "100%"
-                        }
-                    }
+                    "styles": null
                 }
             ],
             "layout": {
@@ -6121,7 +7220,10 @@
                     "children": null,
                     "items": [
                         {
-                            "element_id": "main_grid"
+                            "element_id": "mobile_nav_bar"
+                        },
+                        {
+                            "element_id": "resizable_panes"
                         }
                     ],
                     "root": null,
@@ -6134,6 +7236,16 @@
                     "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
                     "type": "flex"
                 },
+                "queries": [
+                    {
+                        "layout": {
+                            "items": [],
+                            "styles": {},
+                            "type": "flex"
+                        },
+                        "queryId": "now_small"
+                    }
+                ],
                 "version": "3.1.0"
             }
         },
@@ -6176,7 +7288,16 @@
                 "padding-left": "var(--now-scalable-space--lg)",
                 "padding-right": "var(--now-scalable-space--lg)",
                 "padding-top": "var(--now-scalable-space--lg)"
-            }
+            },
+            "queries": [
+                {
+                    "queryId": "now_small",
+                    "value": {
+                        "overflow-y": "scroll",
+                        "padding-top": "0"
+                    }
+                }
+            ]
         }
     },
     {
@@ -7245,10 +8366,16 @@
   "message" : "Add a new contact",
   "comment" : ""
 }, {
+  "message" : "Bottom pane",
+  "comment" : ""
+}, {
   "message" : "Cancel",
   "comment" : ""
 }, {
   "message" : "Complete Task",
+  "comment" : ""
+}, {
+  "message" : "Contact List",
   "comment" : ""
 }, {
   "message" : "Contact Tasks",
@@ -7264,6 +8391,9 @@
   "comment" : ""
 }, {
   "message" : "Edit contact info",
+  "comment" : ""
+}, {
+  "message" : "Enter a label",
   "comment" : ""
 }, {
   "message" : "New tag/interest",
@@ -7284,13 +8414,25 @@
   "message" : "Reopen Task",
   "comment" : ""
 }, {
+  "message" : "Resizable panes divider",
+  "comment" : ""
+}, {
+  "message" : "Resizable panes divider handle",
+  "comment" : ""
+}, {
   "message" : "Search",
+  "comment" : ""
+}, {
+  "message" : "Selected Contact Details",
   "comment" : ""
 }, {
   "message" : "Tags &amp; Interests",
   "comment" : ""
 }, {
   "message" : "Take a quick note",
+  "comment" : ""
+}, {
+  "message" : "Top pane",
   "comment" : ""
 }, {
   "message" : "Yes",
@@ -7352,20 +8494,31 @@
         "name": "newTagInterest",
         "shape": "",
         "valueType": "string"
+    },
+    {
+        "fieldType": "boolean",
+        "id": "",
+        "initialValue": {
+            "type": "JSON_LITERAL",
+            "value": true
+        },
+        "name": "mobileShowContactList",
+        "shape": "",
+        "valueType": "boolean"
     }
 ]</state_properties>
         <sys_class_name>sys_ux_macroponent</sys_class_name>
         <sys_created_by>reece.poulsen</sys_created_by>
         <sys_created_on>2024-08-26 17:38:32</sys_created_on>
         <sys_id>db39784983541a10b3fb7230feaad329</sys_id>
-        <sys_mod_count>326</sys_mod_count>
+        <sys_mod_count>431</sys_mod_count>
         <sys_name>Contact List</sys_name>
         <sys_package display_value="BAM - You &amp; I Builder Live! Conference Notes" source="x_snc_bam_you_i_0">69fa6ee3838742107d786970ceaad318</sys_package>
         <sys_policy/>
         <sys_scope display_value="BAM - You &amp; I Builder Live! Conference Notes">69fa6ee3838742107d786970ceaad318</sys_scope>
         <sys_update_name>sys_ux_macroponent_db39784983541a10b3fb7230feaad329</sys_update_name>
         <sys_updated_by>reece.poulsen</sys_updated_by>
-        <sys_updated_on>2024-08-27 19:17:42</sys_updated_on>
+        <sys_updated_on>2024-08-29 18:02:40</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=db39784983541a10b3fb7230feaad329"/>
 </record_update>

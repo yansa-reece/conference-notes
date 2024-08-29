@@ -3,7 +3,7 @@
         <controller_preset/>
         <includes/>
         <macroponent display_value="Contact List">db39784983541a10b3fb7230feaad329</macroponent>
-        <name>secondary_info/now_default/items</name>
+        <name>secondary_fields_repeater/now_default/repeatWith</name>
         <preset/>
         <required_translations>[]</required_translations>
         <script><![CDATA[/**
@@ -46,16 +46,16 @@ function evaluateProperty({api, helpers}) {
         <script_api_version>2.0.0</script_api_version>
         <sys_class_name>sys_ux_client_script</sys_class_name>
         <sys_created_by>reece.poulsen</sys_created_by>
-        <sys_created_on>2024-08-26 19:18:41</sys_created_on>
-        <sys_id>f1294d0583d41a10b3fb7230feaad384</sys_id>
-        <sys_mod_count>5</sys_mod_count>
-        <sys_name>secondary_info/now_default/items</sys_name>
+        <sys_created_on>2024-08-29 17:25:02</sys_created_on>
+        <sys_id>cbd15846835c9e10b3fb7230feaad301</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>secondary_fields_repeater/now_default/repeatWith</sys_name>
         <sys_package display_value="BAM - You &amp; I Builder Live! Conference Notes" source="x_snc_bam_you_i_0">69fa6ee3838742107d786970ceaad318</sys_package>
         <sys_policy/>
         <sys_scope display_value="BAM - You &amp; I Builder Live! Conference Notes">69fa6ee3838742107d786970ceaad318</sys_scope>
-        <sys_update_name>sys_ux_client_script_f1294d0583d41a10b3fb7230feaad384</sys_update_name>
+        <sys_update_name>sys_ux_client_script_cbd15846835c9e10b3fb7230feaad301</sys_update_name>
         <sys_updated_by>reece.poulsen</sys_updated_by>
-        <sys_updated_on>2024-08-26 19:33:46</sys_updated_on>
+        <sys_updated_on>2024-08-29 17:25:02</sys_updated_on>
         <target>macroponent</target>
         <type>transform</type>
     </sys_ux_client_script>

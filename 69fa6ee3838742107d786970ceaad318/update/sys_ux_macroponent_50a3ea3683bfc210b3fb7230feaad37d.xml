@@ -118,12 +118,40 @@
                                         "value": {}
                                     },
                                     "css": {
-                                        "type": "JSON_LITERAL",
-                                        "value": "* { \n    color: white;\n}"
+                                        "type": "CLIENT_RESPONSIVE_QUERY",
+                                        "value": {
+                                            "default": {
+                                                "type": "JSON_LITERAL",
+                                                "value": "* { \n    color: white;\n}"
+                                            },
+                                            "queries": [
+                                                {
+                                                    "queryId": "now_small",
+                                                    "value": {
+                                                        "type": "JSON_LITERAL",
+                                                        "value": "* { \n    color: white;\n    text-align: center;\n}"
+                                                    }
+                                                }
+                                            ]
+                                        }
                                     },
                                     "tag": {
-                                        "type": "JSON_LITERAL",
-                                        "value": "h1"
+                                        "type": "CLIENT_RESPONSIVE_QUERY",
+                                        "value": {
+                                            "default": {
+                                                "type": "JSON_LITERAL",
+                                                "value": "h1"
+                                            },
+                                            "queries": [
+                                                {
+                                                    "queryId": "now_small",
+                                                    "value": {
+                                                        "type": "JSON_LITERAL",
+                                                        "value": "h2"
+                                                    }
+                                                }
+                                            ]
+                                        }
                                     },
                                     "text": {
                                         "type": "TRANSLATION_LITERAL",
@@ -169,6 +197,16 @@
                                 "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
                                 "type": "grid"
                             },
+                            "queries": [
+                                {
+                                    "layout": {
+                                        "items": [],
+                                        "styles": {},
+                                        "type": "grid"
+                                    },
+                                    "queryId": "now_small"
+                                }
+                            ],
                             "version": "3.1.0"
                         }
                     },
@@ -210,7 +248,15 @@
                             "height": "150px",
                             "position": "relative",
                             "width": "100%"
-                        }
+                        },
+                        "queries": [
+                            {
+                                "queryId": "now_small",
+                                "value": {
+                                    "height": "80px"
+                                }
+                            }
+                        ]
                     }
                 },
                 {
@@ -384,14 +430,14 @@
         <sys_created_by>reece.poulsen</sys_created_by>
         <sys_created_on>2024-08-07 15:21:20</sys_created_on>
         <sys_id>50a3ea3683bfc210b3fb7230feaad37d</sys_id>
-        <sys_mod_count>31</sys_mod_count>
+        <sys_mod_count>33</sys_mod_count>
         <sys_name>Contact Entry</sys_name>
         <sys_package display_value="BAM - You &amp; I Builder Live! Conference Notes" source="x_snc_bam_you_i_0">69fa6ee3838742107d786970ceaad318</sys_package>
         <sys_policy/>
         <sys_scope display_value="BAM - You &amp; I Builder Live! Conference Notes">69fa6ee3838742107d786970ceaad318</sys_scope>
         <sys_update_name>sys_ux_macroponent_50a3ea3683bfc210b3fb7230feaad37d</sys_update_name>
         <sys_updated_by>reece.poulsen</sys_updated_by>
-        <sys_updated_on>2024-08-27 14:51:35</sys_updated_on>
+        <sys_updated_on>2024-08-29 16:52:56</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=50a3ea3683bfc210b3fb7230feaad37d"/>
 </record_update>
