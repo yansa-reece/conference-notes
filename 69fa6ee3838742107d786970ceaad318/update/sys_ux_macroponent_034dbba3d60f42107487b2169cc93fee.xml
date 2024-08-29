@@ -3122,7 +3122,7 @@
                                                         "script": {
                                                             "apiVersion": "1.0.0",
                                                             "controllerElementId": null,
-                                                            "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\tconst dynamicReportData = {\n\t\ttable: \"x_snc_bam_you_i_0_contact_tasks\",\n\t\tquery: \"\",\n\t\ttitle: \"Tasks by State\"\n\t};\n\n\treturn {\n\t\tpropName: \"dynamicReportData\",\n\t\tvalue: dynamicReportData\n\t};\n}",
+                                                            "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\tconst dynamicReportData = {\n\t\ttable: \"x_snc_bam_you_i_0_contact_tasks\",\n\t\tquery: \"stateNOT IN3,4,7\",\n\t\ttitle: \"Tasks by State\"\n\t};\n\n\treturn {\n\t\tpropName: \"dynamicReportData\",\n\t\tvalue: dynamicReportData\n\t};\n}",
                                                             "scriptSysId": null,
                                                             "target": null
                                                         },
@@ -3998,7 +3998,46 @@
                                             },
                                             "elementId": "contacts_by_company_pie",
                                             "elementLabel": "Contacts by Company Pie",
-                                            "eventMappings": [],
+                                            "eventMappings": [
+                                                {
+                                                    "eventMappingId": "cmaaftkcctlaaaazxddbiiaavuojhhkh",
+                                                    "isConfiguration": false,
+                                                    "offRowStorageId": null,
+                                                    "sourceEventApiName": "now_vis_extensions.NOW_VIS_WRAPPER#CLICKED",
+                                                    "sourceEventCorrelationId": null,
+                                                    "sourceEventDefinition": {
+                                                        "apiName": "now_vis_extensions.NOW_VIS_WRAPPER#CLICKED",
+                                                        "id": null,
+                                                        "type": "UXEVENT"
+                                                    },
+                                                    "sourceEventSysId": null,
+                                                    "targets": [
+                                                        {
+                                                            "broker": null,
+                                                            "clientScript": null,
+                                                            "conditional": null,
+                                                            "declarativeAction": null,
+                                                            "event": {
+                                                                "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                                                                "payload": {
+                                                                    "script": {
+                                                                        "apiVersion": "1.0.0",
+                                                                        "controllerElementId": null,
+                                                                        "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\tconst dynamicReportData = {...api.state.dynamicReportData};\n\tdynamicReportData.query = event.payload.params.query;\n\treturn {\n\t\tpropName: \"dynamicReportData\",\n\t\tvalue: dynamicReportData\n\t};\n}",
+                                                                        "scriptSysId": null,
+                                                                        "target": null
+                                                                    },
+                                                                    "type": "CLIENT_TRANSFORM_SCRIPT"
+                                                                },
+                                                                "sysId": "32408b42ff7a10109046e490703bf176"
+                                                            },
+                                                            "operation": null,
+                                                            "targetId": "cmaaftmaahhmaabbaaeddbiiaawsdfbjjajj",
+                                                            "type": "EVENT"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
                                             "isHidden": {
                                                 "script": {
                                                     "apiVersion": "2.0.0",
@@ -4175,7 +4214,7 @@
                                                 },
                                                 "enableDrilldown": {
                                                     "type": "JSON_LITERAL",
-                                                    "value": false
+                                                    "value": true
                                                 },
                                                 "enableRealTimeUpdate": {
                                                     "type": "JSON_LITERAL",
@@ -4548,7 +4587,46 @@
                                             },
                                             "elementId": "contact_reach_out_status_pie",
                                             "elementLabel": "Contact Reach Out Status Pie",
-                                            "eventMappings": [],
+                                            "eventMappings": [
+                                                {
+                                                    "eventMappingId": "cmaaftnxsbbaabbbbhddbiiaaaabbffrngqr",
+                                                    "isConfiguration": false,
+                                                    "offRowStorageId": null,
+                                                    "sourceEventApiName": "now_vis_extensions.NOW_VIS_WRAPPER#CLICKED",
+                                                    "sourceEventCorrelationId": null,
+                                                    "sourceEventDefinition": {
+                                                        "apiName": "now_vis_extensions.NOW_VIS_WRAPPER#CLICKED",
+                                                        "id": null,
+                                                        "type": "UXEVENT"
+                                                    },
+                                                    "sourceEventSysId": null,
+                                                    "targets": [
+                                                        {
+                                                            "broker": null,
+                                                            "clientScript": null,
+                                                            "conditional": null,
+                                                            "declarativeAction": null,
+                                                            "event": {
+                                                                "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                                                                "payload": {
+                                                                    "script": {
+                                                                        "apiVersion": "1.0.0",
+                                                                        "controllerElementId": null,
+                                                                        "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\tconst dynamicReportData = {...api.state.dynamicReportData};\n\tdynamicReportData.query = event.payload.params.query;\n\treturn {\n\t\tpropName: \"dynamicReportData\",\n\t\tvalue: dynamicReportData\n\t};\n}",
+                                                                        "scriptSysId": null,
+                                                                        "target": null
+                                                                    },
+                                                                    "type": "CLIENT_TRANSFORM_SCRIPT"
+                                                                },
+                                                                "sysId": "32408b42ff7a10109046e490703bf176"
+                                                            },
+                                                            "operation": null,
+                                                            "targetId": "cmaaftnxsccaabbbbiddbiiaazmhhwffxod",
+                                                            "type": "EVENT"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
                                             "isHidden": {
                                                 "script": {
                                                     "apiVersion": "2.0.0",
@@ -4725,7 +4803,7 @@
                                                 },
                                                 "enableDrilldown": {
                                                     "type": "JSON_LITERAL",
-                                                    "value": false
+                                                    "value": true
                                                 },
                                                 "enableRealTimeUpdate": {
                                                     "type": "JSON_LITERAL",
@@ -5062,7 +5140,46 @@
                                             },
                                             "elementId": "tasks_by_state_pie",
                                             "elementLabel": "Tasks by State Pie",
-                                            "eventMappings": [],
+                                            "eventMappings": [
+                                                {
+                                                    "eventMappingId": "cmaaftojjhccaabbbbrddbiiaasddkeelxrff",
+                                                    "isConfiguration": false,
+                                                    "offRowStorageId": null,
+                                                    "sourceEventApiName": "now_vis_extensions.NOW_VIS_WRAPPER#CLICKED",
+                                                    "sourceEventCorrelationId": null,
+                                                    "sourceEventDefinition": {
+                                                        "apiName": "now_vis_extensions.NOW_VIS_WRAPPER#CLICKED",
+                                                        "id": null,
+                                                        "type": "UXEVENT"
+                                                    },
+                                                    "sourceEventSysId": null,
+                                                    "targets": [
+                                                        {
+                                                            "broker": null,
+                                                            "clientScript": null,
+                                                            "conditional": null,
+                                                            "declarativeAction": null,
+                                                            "event": {
+                                                                "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                                                                "payload": {
+                                                                    "script": {
+                                                                        "apiVersion": "1.0.0",
+                                                                        "controllerElementId": null,
+                                                                        "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\tconst dynamicReportData = {...api.state.dynamicReportData};\n\tdynamicReportData.query = event.payload.params.query;\n\treturn {\n\t\tpropName: \"dynamicReportData\",\n\t\tvalue: dynamicReportData\n\t};\n}",
+                                                                        "scriptSysId": null,
+                                                                        "target": null
+                                                                    },
+                                                                    "type": "CLIENT_TRANSFORM_SCRIPT"
+                                                                },
+                                                                "sysId": "32408b42ff7a10109046e490703bf176"
+                                                            },
+                                                            "operation": null,
+                                                            "targetId": "cmaaftojjhccaabbbbsddbiiaahhbeaaodiib",
+                                                            "type": "EVENT"
+                                                        }
+                                                    ]
+                                                }
+                                            ],
                                             "isHidden": {
                                                 "script": {
                                                     "apiVersion": "2.0.0",
@@ -5239,7 +5356,7 @@
                                                 },
                                                 "enableDrilldown": {
                                                     "type": "JSON_LITERAL",
-                                                    "value": false
+                                                    "value": true
                                                 },
                                                 "enableRealTimeUpdate": {
                                                     "type": "JSON_LITERAL",
@@ -7751,14 +7868,14 @@
         <sys_created_by>MGOPW</sys_created_by>
         <sys_created_on>2024-07-03 23:01:29</sys_created_on>
         <sys_id>034dbba3d60f42107487b2169cc93fee</sys_id>
-        <sys_mod_count>137</sys_mod_count>
+        <sys_mod_count>144</sys_mod_count>
         <sys_name>Home</sys_name>
         <sys_package display_value="BAM - You &amp; I Builder Live! Conference Notes" source="x_snc_bam_you_i_0">69fa6ee3838742107d786970ceaad318</sys_package>
         <sys_policy/>
         <sys_scope display_value="BAM - You &amp; I Builder Live! Conference Notes">69fa6ee3838742107d786970ceaad318</sys_scope>
         <sys_update_name>sys_ux_macroponent_034dbba3d60f42107487b2169cc93fee</sys_update_name>
         <sys_updated_by>reece.poulsen</sys_updated_by>
-        <sys_updated_on>2024-08-29 21:30:38</sys_updated_on>
+        <sys_updated_on>2024-08-29 22:03:22</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=034dbba3d60f42107487b2169cc93fee"/>
 </record_update>
