@@ -3123,53 +3123,6 @@
                                                                                     "operation": null,
                                                                                     "targetId": "cmaafuogqzaaaazkddbiiaaddmjjjjqilc",
                                                                                     "type": "CLIENT_SCRIPT"
-                                                                                },
-                                                                                {
-                                                                                    "broker": null,
-                                                                                    "clientScript": {
-                                                                                        "payload": {
-                                                                                            "type": "JSON_LITERAL",
-                                                                                            "value": {}
-                                                                                        },
-                                                                                        "sysId": "ffefaa7a83ffc210b3fb7230feaad3d0"
-                                                                                    },
-                                                                                    "conditional": null,
-                                                                                    "declarativeAction": null,
-                                                                                    "event": null,
-                                                                                    "operation": null,
-                                                                                    "targetId": "cmaafuqeegglaaaazqddbiiaatffhlkkggq",
-                                                                                    "type": "CLIENT_SCRIPT"
-                                                                                }
-                                                                            ]
-                                                                        },
-                                                                        {
-                                                                            "eventMappingId": "cmaafusnmeeaabbaabddbiiaarwjiintth",
-                                                                            "isConfiguration": false,
-                                                                            "offRowStorageId": null,
-                                                                            "sourceEventApiName": "sn_date_time.NOW_DATE_TIME#INPUT",
-                                                                            "sourceEventCorrelationId": null,
-                                                                            "sourceEventDefinition": {
-                                                                                "apiName": "sn_date_time.NOW_DATE_TIME#INPUT",
-                                                                                "id": null,
-                                                                                "type": "UXEVENT"
-                                                                            },
-                                                                            "sourceEventSysId": null,
-                                                                            "targets": [
-                                                                                {
-                                                                                    "broker": null,
-                                                                                    "clientScript": {
-                                                                                        "payload": {
-                                                                                            "type": "JSON_LITERAL",
-                                                                                            "value": {}
-                                                                                        },
-                                                                                        "sysId": "ffefaa7a83ffc210b3fb7230feaad3d0"
-                                                                                    },
-                                                                                    "conditional": null,
-                                                                                    "declarativeAction": null,
-                                                                                    "event": null,
-                                                                                    "operation": null,
-                                                                                    "targetId": "cmaafusnmffaabbaacddbiiaaghhvhhmjjkjj",
-                                                                                    "type": "CLIENT_SCRIPT"
                                                                                 }
                                                                             ]
                                                                         }
@@ -4865,14 +4818,14 @@
         <sys_created_by>reece.poulsen</sys_created_by>
         <sys_created_on>2024-08-07 16:15:00</sys_created_on>
         <sys_id>5eefeeba83ffc210b3fb7230feaad363</sys_id>
-        <sys_mod_count>236</sys_mod_count>
+        <sys_mod_count>237</sys_mod_count>
         <sys_name>Add Contact</sys_name>
         <sys_package display_value="BAM - You &amp; I Builder Live! Conference Notes" source="x_snc_bam_you_i_0">69fa6ee3838742107d786970ceaad318</sys_package>
         <sys_policy/>
         <sys_scope display_value="BAM - You &amp; I Builder Live! Conference Notes">69fa6ee3838742107d786970ceaad318</sys_scope>
         <sys_update_name>sys_ux_macroponent_5eefeeba83ffc210b3fb7230feaad363</sys_update_name>
         <sys_updated_by>reece.poulsen</sys_updated_by>
-        <sys_updated_on>2024-08-29 22:37:51</sys_updated_on>
+        <sys_updated_on>2024-08-29 22:42:08</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=5eefeeba83ffc210b3fb7230feaad363"/>
 </record_update>
