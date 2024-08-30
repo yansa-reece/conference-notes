@@ -40,7 +40,63 @@
                                 },
                                 "elementId": "process_stepper",
                                 "elementLabel": "Process Stepper",
-                                "eventMappings": [],
+                                "eventMappings": [
+                                    {
+                                        "eventMappingId": "clzuekmepaaccbbwddbiiaasddwcbzejj",
+                                        "isConfiguration": false,
+                                        "offRowStorageId": null,
+                                        "sourceEventApiName": "sn_stepper.NOW_STEPPER#SELECTED_ITEM_SET",
+                                        "sourceEventCorrelationId": null,
+                                        "sourceEventDefinition": {
+                                            "apiName": "sn_stepper.NOW_STEPPER#SELECTED_ITEM_SET",
+                                            "id": null,
+                                            "type": "UXEVENT"
+                                        },
+                                        "sourceEventSysId": null,
+                                        "targets": [
+                                            {
+                                                "broker": null,
+                                                "clientScript": null,
+                                                "conditional": {
+                                                    "operation": {
+                                                        "left": {
+                                                            "binding": {
+                                                                "address": [
+                                                                    "newContact"
+                                                                ]
+                                                            },
+                                                            "type": "STATE_BINDING"
+                                                        },
+                                                        "operator": "EQUAL",
+                                                        "right": {
+                                                            "type": "JSON_LITERAL",
+                                                            "value": true
+                                                        }
+                                                    },
+                                                    "type": "BINARY"
+                                                },
+                                                "declarativeAction": null,
+                                                "event": {
+                                                    "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                                                    "payload": {
+                                                        "script": {
+                                                            "apiVersion": "1.0.0",
+                                                            "controllerElementId": null,
+                                                            "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\tif (api.state.newContact) {\n\t\treturn {\n\t\t\tpropName: \"newContact\",\n\t\t\tvalue: false\n\t\t};\n\t}\n}",
+                                                            "scriptSysId": null,
+                                                            "target": null
+                                                        },
+                                                        "type": "CLIENT_TRANSFORM_SCRIPT"
+                                                    },
+                                                    "sysId": "32408b42ff7a10109046e490703bf176"
+                                                },
+                                                "operation": null,
+                                                "targetId": "clzuekmepaaccbbxddbiiaasggaadykxy",
+                                                "type": "EVENT"
+                                            }
+                                        ]
+                                    }
+                                ],
                                 "isHidden": {
                                     "type": "JSON_LITERAL",
                                     "value": null
@@ -120,8 +176,22 @@
                                         "type": "LIST_CONTAINER"
                                     },
                                     "labelPosition": {
-                                        "type": "JSON_LITERAL",
-                                        "value": "bottom"
+                                        "type": "CLIENT_RESPONSIVE_QUERY",
+                                        "value": {
+                                            "default": {
+                                                "type": "JSON_LITERAL",
+                                                "value": "bottom"
+                                            },
+                                            "queries": [
+                                                {
+                                                    "queryId": "now_small",
+                                                    "value": {
+                                                        "type": "JSON_LITERAL",
+                                                        "value": "bottom"
+                                                    }
+                                                }
+                                            ]
+                                        }
                                     },
                                     "manageSelectedItem": {
                                         "type": "JSON_LITERAL",
@@ -159,8 +229,22 @@
                                         "value": false
                                     },
                                     "size": {
-                                        "type": "JSON_LITERAL",
-                                        "value": "md"
+                                        "type": "CLIENT_RESPONSIVE_QUERY",
+                                        "value": {
+                                            "default": {
+                                                "type": "JSON_LITERAL",
+                                                "value": "md"
+                                            },
+                                            "queries": [
+                                                {
+                                                    "queryId": "now_small",
+                                                    "value": {
+                                                        "type": "JSON_LITERAL",
+                                                        "value": "sm"
+                                                    }
+                                                }
+                                            ]
+                                        }
                                     }
                                 },
                                 "slot": null,
@@ -282,7 +366,7 @@
                                                                         },
                                                                         "autofocus": {
                                                                             "type": "JSON_LITERAL",
-                                                                            "value": true
+                                                                            "value": false
                                                                         },
                                                                         "configAria": {
                                                                             "type": "JSON_LITERAL",
@@ -368,7 +452,7 @@
                                                                         },
                                                                         "pattern": {
                                                                             "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "value": "^.+$"
                                                                         },
                                                                         "placeholder": {
                                                                             "type": "TRANSLATION_LITERAL",
@@ -399,15 +483,29 @@
                                                                             "value": "text"
                                                                         },
                                                                         "value": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "script": {
+                                                                                "apiVersion": "2.0.0",
+                                                                                "controllerElementId": null,
+                                                                                "inlineScript": null,
+                                                                                "scriptSysId": "4a4ebbc183005610b3fb7230feaad36b",
+                                                                                "target": null
+                                                                            },
+                                                                            "type": "CLIENT_TRANSFORM_SCRIPT"
                                                                         }
                                                                     },
                                                                     "slot": null,
                                                                     "styles": {
                                                                         "default": {
                                                                             "grid-column": "span 2"
-                                                                        }
+                                                                        },
+                                                                        "queries": [
+                                                                            {
+                                                                                "queryId": "now_small",
+                                                                                "value": {
+                                                                                    "grid-column": "unset"
+                                                                                }
+                                                                            }
+                                                                        ]
                                                                     }
                                                                 },
                                                                 {
@@ -575,8 +673,14 @@
                                                                             "value": "email"
                                                                         },
                                                                         "value": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "script": {
+                                                                                "apiVersion": "2.0.0",
+                                                                                "controllerElementId": null,
+                                                                                "inlineScript": null,
+                                                                                "scriptSysId": "8a4ebbc183005610b3fb7230feaad36b",
+                                                                                "target": null
+                                                                            },
+                                                                            "type": "CLIENT_TRANSFORM_SCRIPT"
                                                                         }
                                                                     },
                                                                     "slot": null,
@@ -584,20 +688,20 @@
                                                                 },
                                                                 {
                                                                     "definition": {
-                                                                        "id": "838ba46920544c30b09458bec4acf33c",
+                                                                        "id": "bb0f92e8d7eff1590624bfe69d316f23",
                                                                         "type": "MACROPONENT"
                                                                     },
                                                                     "elementId": "phone_number_input",
                                                                     "elementLabel": "Phone Number Input",
                                                                     "eventMappings": [
                                                                         {
-                                                                            "eventMappingId": "clzkcmfohhaabbccvddbiiaafvthhccnwn",
+                                                                            "eventMappingId": "clzkclxaaaaaabbccqddbiiaayejjhhugxjj",
                                                                             "isConfiguration": false,
                                                                             "offRowStorageId": null,
-                                                                            "sourceEventApiName": "sn_input.NOW_INPUT_PHONE#VALUE_SET",
+                                                                            "sourceEventApiName": "sn_input.NOW_INPUT#VALUE_SET",
                                                                             "sourceEventCorrelationId": null,
                                                                             "sourceEventDefinition": {
-                                                                                "apiName": "sn_input.NOW_INPUT_PHONE#VALUE_SET",
+                                                                                "apiName": "sn_input.NOW_INPUT#VALUE_SET",
                                                                                 "id": null,
                                                                                 "type": "UXEVENT"
                                                                             },
@@ -616,7 +720,7 @@
                                                                                     "declarativeAction": null,
                                                                                     "event": null,
                                                                                     "operation": null,
-                                                                                    "targetId": "clzkcmfohhaabbccwddbiiaajjeecceeojjdgg",
+                                                                                    "targetId": "clzkclxaaaaaabbccrddbiiaatoddhjvrbb",
                                                                                     "type": "CLIENT_SCRIPT"
                                                                                 }
                                                                             ]
@@ -640,13 +744,13 @@
                                                                             "type": "JSON_LITERAL",
                                                                             "value": null
                                                                         },
-                                                                        "countryCodes": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": []
-                                                                        },
                                                                         "disabled": {
                                                                             "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "value": false
+                                                                        },
+                                                                        "enableCaretSlot": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": false
                                                                         },
                                                                         "fieldLayout": {
                                                                             "type": "JSON_LITERAL",
@@ -664,7 +768,7 @@
                                                                         },
                                                                         "invalid": {
                                                                             "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "value": false
                                                                         },
                                                                         "label": {
                                                                             "type": "TRANSLATION_LITERAL",
@@ -686,6 +790,10 @@
                                                                             "type": "JSON_LITERAL",
                                                                             "value": false
                                                                         },
+                                                                        "max": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": null
+                                                                        },
                                                                         "maxlength": {
                                                                             "type": "JSON_LITERAL",
                                                                             "value": null
@@ -694,7 +802,15 @@
                                                                             "container": [],
                                                                             "type": "LIST_CONTAINER"
                                                                         },
+                                                                        "min": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": null
+                                                                        },
                                                                         "minlength": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": null
+                                                                        },
+                                                                        "multiple": {
                                                                             "type": "JSON_LITERAL",
                                                                             "value": null
                                                                         },
@@ -702,23 +818,13 @@
                                                                             "type": "JSON_LITERAL",
                                                                             "value": "phone_number"
                                                                         },
-                                                                        "number": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": null
-                                                                        },
                                                                         "optional": {
                                                                             "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "value": false
                                                                         },
                                                                         "pattern": {
-                                                                            "script": {
-                                                                                "apiVersion": "2.0.0",
-                                                                                "controllerElementId": null,
-                                                                                "inlineScript": null,
-                                                                                "scriptSysId": "0334937a83f30610b3fb7230feaad312",
-                                                                                "target": null
-                                                                            },
-                                                                            "type": "CLIENT_TRANSFORM_SCRIPT"
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": null
                                                                         },
                                                                         "placeholder": {
                                                                             "type": "JSON_LITERAL",
@@ -726,23 +832,33 @@
                                                                         },
                                                                         "readonly": {
                                                                             "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "value": false
                                                                         },
                                                                         "required": {
                                                                             "type": "JSON_LITERAL",
-                                                                            "value": null
-                                                                        },
-                                                                        "selectedCountryCode": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "value": false
                                                                         },
                                                                         "size": {
                                                                             "type": "JSON_LITERAL",
                                                                             "value": "md"
                                                                         },
-                                                                        "value": {
+                                                                        "step": {
                                                                             "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "value": "any"
+                                                                        },
+                                                                        "type": {
+                                                                            "type": "JSON_LITERAL",
+                                                                            "value": "text"
+                                                                        },
+                                                                        "value": {
+                                                                            "script": {
+                                                                                "apiVersion": "2.0.0",
+                                                                                "controllerElementId": null,
+                                                                                "inlineScript": null,
+                                                                                "scriptSysId": "864ebbc183005610b3fb7230feaad36c",
+                                                                                "target": null
+                                                                            },
+                                                                            "type": "CLIENT_TRANSFORM_SCRIPT"
                                                                         }
                                                                     },
                                                                     "slot": null,
@@ -921,15 +1037,29 @@
                                                                             "value": "md"
                                                                         },
                                                                         "value": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "script": {
+                                                                                "apiVersion": "2.0.0",
+                                                                                "controllerElementId": null,
+                                                                                "inlineScript": null,
+                                                                                "scriptSysId": "0e4ebbc183005610b3fb7230feaad36b",
+                                                                                "target": null
+                                                                            },
+                                                                            "type": "CLIENT_TRANSFORM_SCRIPT"
                                                                         }
                                                                     },
                                                                     "slot": null,
                                                                     "styles": {
                                                                         "default": {
                                                                             "grid-column": "span 2"
-                                                                        }
+                                                                        },
+                                                                        "queries": [
+                                                                            {
+                                                                                "queryId": "now_small",
+                                                                                "value": {
+                                                                                    "grid-column": "unset"
+                                                                                }
+                                                                            }
+                                                                        ]
                                                                     }
                                                                 }
                                                             ],
@@ -965,6 +1095,18 @@
                                                                     "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
                                                                     "type": "grid"
                                                                 },
+                                                                "queries": [
+                                                                    {
+                                                                        "layout": {
+                                                                            "items": [],
+                                                                            "styles": {
+                                                                                "grid-template-columns": "1fr"
+                                                                            },
+                                                                            "type": "grid"
+                                                                        },
+                                                                        "queryId": "now_small"
+                                                                    }
+                                                                ],
                                                                 "version": "3.1.0"
                                                             }
                                                         },
@@ -1001,7 +1143,13 @@
                                                         },
                                                         "slot": null,
                                                         "styles": {
-                                                            "default": {}
+                                                            "default": {},
+                                                            "queries": [
+                                                                {
+                                                                    "queryId": "now_small",
+                                                                    "value": {}
+                                                                }
+                                                            ]
                                                         }
                                                     }
                                                 ],
@@ -1268,8 +1416,14 @@
                                                                             "value": "text"
                                                                         },
                                                                         "value": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "script": {
+                                                                                "apiVersion": "2.0.0",
+                                                                                "controllerElementId": null,
+                                                                                "inlineScript": null,
+                                                                                "scriptSysId": "4e4ebbc183005610b3fb7230feaad36b",
+                                                                                "target": null
+                                                                            },
+                                                                            "type": "CLIENT_TRANSFORM_SCRIPT"
                                                                         }
                                                                     },
                                                                     "slot": null,
@@ -1440,8 +1594,14 @@
                                                                             "value": "text"
                                                                         },
                                                                         "value": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "script": {
+                                                                                "apiVersion": "2.0.0",
+                                                                                "controllerElementId": null,
+                                                                                "inlineScript": null,
+                                                                                "scriptSysId": "8e4ebbc183005610b3fb7230feaad36b",
+                                                                                "target": null
+                                                                            },
+                                                                            "type": "CLIENT_TRANSFORM_SCRIPT"
                                                                         }
                                                                     },
                                                                     "slot": null,
@@ -1620,15 +1780,29 @@
                                                                             "value": "md"
                                                                         },
                                                                         "value": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "script": {
+                                                                                "apiVersion": "2.0.0",
+                                                                                "controllerElementId": null,
+                                                                                "inlineScript": null,
+                                                                                "scriptSysId": "ce4ebbc183005610b3fb7230feaad36b",
+                                                                                "target": null
+                                                                            },
+                                                                            "type": "CLIENT_TRANSFORM_SCRIPT"
                                                                         }
                                                                     },
                                                                     "slot": null,
                                                                     "styles": {
                                                                         "default": {
                                                                             "grid-column": "span 2"
-                                                                        }
+                                                                        },
+                                                                        "queries": [
+                                                                            {
+                                                                                "queryId": "now_small",
+                                                                                "value": {
+                                                                                    "grid-column": "unset"
+                                                                                }
+                                                                            }
+                                                                        ]
                                                                     }
                                                                 },
                                                                 {
@@ -1783,8 +1957,14 @@
                                                                                                     "value": false
                                                                                                 },
                                                                                                 "selected": {
-                                                                                                    "type": "JSON_LITERAL",
-                                                                                                    "value": false
+                                                                                                    "script": {
+                                                                                                        "apiVersion": "2.0.0",
+                                                                                                        "controllerElementId": null,
+                                                                                                        "inlineScript": null,
+                                                                                                        "scriptSysId": "024ebbc183005610b3fb7230feaad36c",
+                                                                                                        "target": null
+                                                                                                    },
+                                                                                                    "type": "CLIENT_TRANSFORM_SCRIPT"
                                                                                                 },
                                                                                                 "size": {
                                                                                                     "type": "JSON_LITERAL",
@@ -1887,6 +2067,16 @@
                                                                                 "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
                                                                                 "type": "flex"
                                                                             },
+                                                                            "queries": [
+                                                                                {
+                                                                                    "layout": {
+                                                                                        "items": [],
+                                                                                        "styles": {},
+                                                                                        "type": "flex"
+                                                                                    },
+                                                                                    "queryId": "now_small"
+                                                                                }
+                                                                            ],
                                                                             "version": "3.1.0"
                                                                         }
                                                                     },
@@ -1927,7 +2117,15 @@
                                                                             "grid-column": "span 2",
                                                                             "margin-bottom": "0",
                                                                             "margin-top": "var(--now-scalable-space--md)"
-                                                                        }
+                                                                        },
+                                                                        "queries": [
+                                                                            {
+                                                                                "queryId": "now_small",
+                                                                                "value": {
+                                                                                    "grid-column": "unset"
+                                                                                }
+                                                                            }
+                                                                        ]
                                                                     }
                                                                 }
                                                             ],
@@ -1963,6 +2161,18 @@
                                                                     "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
                                                                     "type": "grid"
                                                                 },
+                                                                "queries": [
+                                                                    {
+                                                                        "layout": {
+                                                                            "items": [],
+                                                                            "styles": {
+                                                                                "grid-template-columns": "1fr"
+                                                                            },
+                                                                            "type": "grid"
+                                                                        },
+                                                                        "queryId": "now_small"
+                                                                    }
+                                                                ],
                                                                 "version": "3.1.0"
                                                             }
                                                         },
@@ -1999,7 +2209,13 @@
                                                         },
                                                         "slot": null,
                                                         "styles": {
-                                                            "default": {}
+                                                            "default": {},
+                                                            "queries": [
+                                                                {
+                                                                    "queryId": "now_small",
+                                                                    "value": {}
+                                                                }
+                                                            ]
                                                         }
                                                     }
                                                 ],
@@ -2266,8 +2482,14 @@
                                                                             "value": "text"
                                                                         },
                                                                         "value": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "script": {
+                                                                                "apiVersion": "2.0.0",
+                                                                                "controllerElementId": null,
+                                                                                "inlineScript": null,
+                                                                                "scriptSysId": "424ebbc183005610b3fb7230feaad36c",
+                                                                                "target": null
+                                                                            },
+                                                                            "type": "CLIENT_TRANSFORM_SCRIPT"
                                                                         }
                                                                     },
                                                                     "slot": null,
@@ -2440,8 +2662,14 @@
                                                                             "value": "text"
                                                                         },
                                                                         "value": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "script": {
+                                                                                "apiVersion": "2.0.0",
+                                                                                "controllerElementId": null,
+                                                                                "inlineScript": null,
+                                                                                "scriptSysId": "824ebbc183005610b3fb7230feaad36c",
+                                                                                "target": null
+                                                                            },
+                                                                            "type": "CLIENT_TRANSFORM_SCRIPT"
                                                                         }
                                                                     },
                                                                     "slot": null,
@@ -2846,8 +3074,14 @@
                                                                             "value": "text"
                                                                         },
                                                                         "value": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "script": {
+                                                                                "apiVersion": "2.0.0",
+                                                                                "controllerElementId": null,
+                                                                                "inlineScript": null,
+                                                                                "scriptSysId": "064ebbc183005610b3fb7230feaad36c",
+                                                                                "target": null
+                                                                            },
+                                                                            "type": "CLIENT_TRANSFORM_SCRIPT"
                                                                         }
                                                                     },
                                                                     "slot": null,
@@ -2860,10 +3094,42 @@
                                                                     },
                                                                     "elementId": "date_met_input",
                                                                     "elementLabel": "Date Met Input",
-                                                                    "eventMappings": [],
+                                                                    "eventMappings": [
+                                                                        {
+                                                                            "eventMappingId": "cmaafuogqzaaaazjddbiiaauceejbkzf",
+                                                                            "isConfiguration": false,
+                                                                            "offRowStorageId": null,
+                                                                            "sourceEventApiName": "sn_date_time.NOW_DATE_TIME#VALUE_SET",
+                                                                            "sourceEventCorrelationId": null,
+                                                                            "sourceEventDefinition": {
+                                                                                "apiName": "sn_date_time.NOW_DATE_TIME#VALUE_SET",
+                                                                                "id": null,
+                                                                                "type": "UXEVENT"
+                                                                            },
+                                                                            "sourceEventSysId": null,
+                                                                            "targets": [
+                                                                                {
+                                                                                    "broker": null,
+                                                                                    "clientScript": {
+                                                                                        "payload": {
+                                                                                            "type": "JSON_LITERAL",
+                                                                                            "value": {}
+                                                                                        },
+                                                                                        "sysId": "ff42fffe83b70610b3fb7230feaad36a"
+                                                                                    },
+                                                                                    "conditional": null,
+                                                                                    "declarativeAction": null,
+                                                                                    "event": null,
+                                                                                    "operation": null,
+                                                                                    "targetId": "cmaafuogqzaaaazkddbiiaaddmjjjjqilc",
+                                                                                    "type": "CLIENT_SCRIPT"
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    ],
                                                                     "isHidden": {
                                                                         "type": "JSON_LITERAL",
-                                                                        "value": true
+                                                                        "value": false
                                                                     },
                                                                     "preset": null,
                                                                     "propertyValues": {
@@ -2917,8 +3183,14 @@
                                                                             "type": "LIST_CONTAINER"
                                                                         },
                                                                         "format": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": null
+                                                                            "binding": {
+                                                                                "address": [
+                                                                                    "user",
+                                                                                    "dateFormat"
+                                                                                ],
+                                                                                "category": "session"
+                                                                            },
+                                                                            "type": "CONTEXT_BINDING"
                                                                         },
                                                                         "helperContent": {
                                                                             "type": "JSON_LITERAL",
@@ -3006,11 +3278,17 @@
                                                                         },
                                                                         "type": {
                                                                             "type": "JSON_LITERAL",
-                                                                            "value": "date-time"
+                                                                            "value": "date"
                                                                         },
                                                                         "value": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": ""
+                                                                            "script": {
+                                                                                "apiVersion": "2.0.0",
+                                                                                "controllerElementId": null,
+                                                                                "inlineScript": null,
+                                                                                "scriptSysId": "464ebbc183005610b3fb7230feaad36c",
+                                                                                "target": null
+                                                                            },
+                                                                            "type": "CLIENT_TRANSFORM_SCRIPT"
                                                                         },
                                                                         "weekdayHeadings": {
                                                                             "type": "JSON_LITERAL",
@@ -3060,6 +3338,18 @@
                                                                     "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
                                                                     "type": "grid"
                                                                 },
+                                                                "queries": [
+                                                                    {
+                                                                        "layout": {
+                                                                            "items": [],
+                                                                            "styles": {
+                                                                                "grid-template-columns": "1fr"
+                                                                            },
+                                                                            "type": "grid"
+                                                                        },
+                                                                        "queryId": "now_small"
+                                                                    }
+                                                                ],
                                                                 "version": "3.1.0"
                                                             }
                                                         },
@@ -3096,7 +3386,13 @@
                                                         },
                                                         "slot": null,
                                                         "styles": {
-                                                            "default": {}
+                                                            "default": {},
+                                                            "queries": [
+                                                                {
+                                                                    "queryId": "now_small",
+                                                                    "value": {}
+                                                                }
+                                                            ]
                                                         }
                                                     }
                                                 ],
@@ -3241,554 +3537,473 @@
                                     "composition": [
                                         {
                                             "definition": {
-                                                "id": "d37ce8abca89d02905fed903c8e34d8e",
+                                                "id": "d356d14b6e293a3020a244b63d278d8f",
                                                 "type": "MACROPONENT"
                                             },
-                                            "elementId": "back_button",
-                                            "elementLabel": "Back Button",
-                                            "eventMappings": [
-                                                {
-                                                    "eventMappingId": "clzkffeaacfaabbddkddbiiaaffbbniltgo",
-                                                    "isConfiguration": false,
-                                                    "offRowStorageId": null,
-                                                    "sourceEventApiName": "sn_button.NOW_BUTTON#CLICKED",
-                                                    "sourceEventCorrelationId": null,
-                                                    "sourceEventDefinition": {
-                                                        "apiName": "sn_button.NOW_BUTTON#CLICKED",
-                                                        "id": null,
-                                                        "type": "UXEVENT"
-                                                    },
-                                                    "sourceEventSysId": null,
-                                                    "targets": [
-                                                        {
-                                                            "broker": null,
-                                                            "clientScript": null,
-                                                            "conditional": null,
-                                                            "declarativeAction": null,
-                                                            "event": {
-                                                                "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
-                                                                "payload": {
-                                                                    "script": {
-                                                                        "apiVersion": "1.0.0",
-                                                                        "controllerElementId": null,
-                                                                        "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tpropName: \"currentStep\",\n\t\tvalue: parseInt(api.state.currentStep) - 1\n\t};\n}",
-                                                                        "scriptSysId": null,
-                                                                        "target": null
-                                                                    },
-                                                                    "type": "CLIENT_TRANSFORM_SCRIPT"
-                                                                },
-                                                                "sysId": "32408b42ff7a10109046e490703bf176"
-                                                            },
-                                                            "operation": null,
-                                                            "targetId": "clzkffeaacfaabbddlddbiiaaggisggfpbbee",
-                                                            "type": "EVENT"
-                                                        }
-                                                    ]
-                                                }
-                                            ],
+                                            "elementId": "button_container",
+                                            "elementLabel": "Button Container",
+                                            "eventMappings": [],
                                             "isHidden": {
-                                                "operation": {
-                                                    "left": {
-                                                        "binding": {
-                                                            "address": [
-                                                                "currentStep"
-                                                            ]
+                                                "type": "JSON_LITERAL",
+                                                "value": null
+                                            },
+                                            "overrides": {
+                                                "composition": [
+                                                    {
+                                                        "definition": {
+                                                            "id": "d37ce8abca89d02905fed903c8e34d8e",
+                                                            "type": "MACROPONENT"
                                                         },
-                                                        "type": "STATE_BINDING"
-                                                    },
-                                                    "operator": "EQUAL",
-                                                    "right": {
-                                                        "type": "JSON_LITERAL",
-                                                        "value": 1
-                                                    }
-                                                },
-                                                "type": "BINARY"
-                                            },
-                                            "preset": null,
-                                            "propertyValues": {
-                                                "configAria": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": null
-                                                },
-                                                "disabled": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": false
-                                                },
-                                                "icon": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": null
-                                                },
-                                                "label": {
-                                                    "type": "TRANSLATION_LITERAL",
-                                                    "value": {
-                                                        "code": null,
-                                                        "comment": "",
-                                                        "message": "Back"
-                                                    }
-                                                },
-                                                "landmark": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": null
-                                                },
-                                                "size": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": "md"
-                                                },
-                                                "tooltipContent": {
-                                                    "type": "TRANSLATION_LITERAL",
-                                                    "value": {
-                                                        "code": null,
-                                                        "comment": "",
-                                                        "message": "Move back a step"
-                                                    }
-                                                },
-                                                "variant": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": "secondary"
-                                                }
-                                            },
-                                            "slot": null,
-                                            "styles": {
-                                                "default": {
-                                                    "grid-column": "1/2",
-                                                    "justify-self": "left",
-                                                    "width": "80px"
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "definition": {
-                                                "id": "d37ce8abca89d02905fed903c8e34d8e",
-                                                "type": "MACROPONENT"
-                                            },
-                                            "elementId": "next_button",
-                                            "elementLabel": "Next Button",
-                                            "eventMappings": [
-                                                {
-                                                    "eventMappingId": "clzkffcebbraabbccfddbiiaaftumhhiibbhh",
-                                                    "isConfiguration": false,
-                                                    "offRowStorageId": null,
-                                                    "sourceEventApiName": "sn_button.NOW_BUTTON#CLICKED",
-                                                    "sourceEventCorrelationId": null,
-                                                    "sourceEventDefinition": {
-                                                        "apiName": "sn_button.NOW_BUTTON#CLICKED",
-                                                        "id": null,
-                                                        "type": "UXEVENT"
-                                                    },
-                                                    "sourceEventSysId": null,
-                                                    "targets": [
-                                                        {
-                                                            "broker": null,
-                                                            "clientScript": null,
-                                                            "conditional": null,
-                                                            "declarativeAction": null,
-                                                            "event": {
-                                                                "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
-                                                                "payload": {
-                                                                    "script": {
-                                                                        "apiVersion": "1.0.0",
-                                                                        "controllerElementId": null,
-                                                                        "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tpropName: \"currentStep\",\n\t\tvalue: parseInt(api.state.currentStep) + 1\n\t};\n}",
-                                                                        "scriptSysId": null,
-                                                                        "target": null
-                                                                    },
-                                                                    "type": "CLIENT_TRANSFORM_SCRIPT"
+                                                        "elementId": "back_button",
+                                                        "elementLabel": "Back Button",
+                                                        "eventMappings": [
+                                                            {
+                                                                "eventMappingId": "clzkffeaacfaabbddkddbiiaaffbbniltgo",
+                                                                "isConfiguration": false,
+                                                                "offRowStorageId": null,
+                                                                "sourceEventApiName": "sn_button.NOW_BUTTON#CLICKED",
+                                                                "sourceEventCorrelationId": null,
+                                                                "sourceEventDefinition": {
+                                                                    "apiName": "sn_button.NOW_BUTTON#CLICKED",
+                                                                    "id": null,
+                                                                    "type": "UXEVENT"
                                                                 },
-                                                                "sysId": "32408b42ff7a10109046e490703bf176"
-                                                            },
-                                                            "operation": null,
-                                                            "targetId": "clzkffcebbraabbccgddbiiaaotddccohiis",
-                                                            "type": "EVENT"
-                                                        }
-                                                    ]
-                                                }
-                                            ],
-                                            "isHidden": {
-                                                "operation": {
-                                                    "left": {
-                                                        "binding": {
-                                                            "address": [
-                                                                "currentStep"
-                                                            ]
-                                                        },
-                                                        "type": "STATE_BINDING"
-                                                    },
-                                                    "operator": "EQUAL",
-                                                    "right": {
-                                                        "type": "JSON_LITERAL",
-                                                        "value": 3
-                                                    }
-                                                },
-                                                "type": "BINARY"
-                                            },
-                                            "preset": null,
-                                            "propertyValues": {
-                                                "configAria": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": null
-                                                },
-                                                "disabled": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": false
-                                                },
-                                                "icon": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": null
-                                                },
-                                                "label": {
-                                                    "type": "TRANSLATION_LITERAL",
-                                                    "value": {
-                                                        "code": null,
-                                                        "comment": "",
-                                                        "message": "Next"
-                                                    }
-                                                },
-                                                "landmark": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": null
-                                                },
-                                                "size": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": "md"
-                                                },
-                                                "tooltipContent": {
-                                                    "type": "TRANSLATION_LITERAL",
-                                                    "value": {
-                                                        "code": null,
-                                                        "comment": "",
-                                                        "message": "Move to the next step"
-                                                    }
-                                                },
-                                                "variant": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": "primary"
-                                                }
-                                            },
-                                            "slot": null,
-                                            "styles": {
-                                                "default": {
-                                                    "grid-column": "2/3",
-                                                    "justify-self": "right",
-                                                    "width": "80px"
-                                                }
-                                            }
-                                        },
-                                        {
-                                            "definition": {
-                                                "id": "d37ce8abca89d02905fed903c8e34d8e",
-                                                "type": "MACROPONENT"
-                                            },
-                                            "elementId": "submit_button",
-                                            "elementLabel": "Submit Button",
-                                            "eventMappings": [
-                                                {
-                                                    "eventMappingId": "clzkdccweefaabbgghhddbiiaauccrraaggvaa",
-                                                    "isConfiguration": false,
-                                                    "offRowStorageId": null,
-                                                    "sourceEventApiName": "sn_button.NOW_BUTTON#CLICKED",
-                                                    "sourceEventCorrelationId": null,
-                                                    "sourceEventDefinition": {
-                                                        "apiName": "sn_button.NOW_BUTTON#CLICKED",
-                                                        "id": null,
-                                                        "type": "UXEVENT"
-                                                    },
-                                                    "sourceEventSysId": null,
-                                                    "targets": [
-                                                        {
-                                                            "broker": null,
-                                                            "clientScript": null,
-                                                            "conditional": null,
-                                                            "declarativeAction": null,
-                                                            "event": {
-                                                                "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
-                                                                "payload": {
-                                                                    "script": {
-                                                                        "apiVersion": "1.0.0",
-                                                                        "controllerElementId": null,
-                                                                        "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\tconsole.log(`contactData ${JSON.stringify(api.state.contactData, null, 2)}`);\n\treturn {\n\t\tpropName: null,\n\t\tvalue: null\n\t};\n}",
-                                                                        "scriptSysId": null,
-                                                                        "target": null
-                                                                    },
-                                                                    "type": "CLIENT_TRANSFORM_SCRIPT"
-                                                                },
-                                                                "sysId": "32408b42ff7a10109046e490703bf176"
-                                                            },
-                                                            "operation": null,
-                                                            "targetId": "clzkdccweefaabbggiiddbiiaahhufdojjfp",
-                                                            "type": "EVENT"
-                                                        },
-                                                        {
-                                                            "broker": null,
-                                                            "clientScript": null,
-                                                            "conditional": {
-                                                                "binding": {
-                                                                    "address": [
-                                                                        "contactData",
-                                                                        "name"
-                                                                    ]
-                                                                },
-                                                                "type": "STATE_BINDING"
-                                                            },
-                                                            "declarativeAction": null,
-                                                            "event": null,
-                                                            "operation": {
-                                                                "dataBrokerId": "beda4252770300108d070d74c810618f",
-                                                                "operationName": "EXECUTE",
-                                                                "parentResourceId": "create_contact_record",
-                                                                "payload": {
-                                                                    "container": {
-                                                                        "table": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": "x_snc_bam_you_i_0_contact"
-                                                                        },
-                                                                        "templateFields": {
-                                                                            "transform": {
-                                                                                "operands": {
-                                                                                    "container": [
-                                                                                        {
-                                                                                            "type": "JSON_LITERAL",
-                                                                                            "value": "name="
-                                                                                        },
-                                                                                        {
-                                                                                            "binding": {
-                                                                                                "address": [
-                                                                                                    "contactData",
-                                                                                                    "name"
-                                                                                                ]
-                                                                                            },
-                                                                                            "type": "STATE_BINDING"
-                                                                                        },
-                                                                                        {
-                                                                                            "type": "JSON_LITERAL",
-                                                                                            "value": "^email="
-                                                                                        },
-                                                                                        {
-                                                                                            "binding": {
-                                                                                                "address": [
-                                                                                                    "contactData",
-                                                                                                    "email"
-                                                                                                ]
-                                                                                            },
-                                                                                            "type": "STATE_BINDING"
-                                                                                        },
-                                                                                        {
-                                                                                            "type": "JSON_LITERAL",
-                                                                                            "value": "^phone_number="
-                                                                                        },
-                                                                                        {
-                                                                                            "binding": {
-                                                                                                "address": [
-                                                                                                    "contactData",
-                                                                                                    "phone_number"
-                                                                                                ]
-                                                                                            },
-                                                                                            "type": "STATE_BINDING"
-                                                                                        },
-                                                                                        {
-                                                                                            "type": "JSON_LITERAL",
-                                                                                            "value": "^note="
-                                                                                        },
-                                                                                        {
-                                                                                            "binding": {
-                                                                                                "address": [
-                                                                                                    "contactData",
-                                                                                                    "note"
-                                                                                                ]
-                                                                                            },
-                                                                                            "type": "STATE_BINDING"
-                                                                                        },
-                                                                                        {
-                                                                                            "type": "JSON_LITERAL",
-                                                                                            "value": "^job_title="
-                                                                                        },
-                                                                                        {
-                                                                                            "binding": {
-                                                                                                "address": [
-                                                                                                    "contactData",
-                                                                                                    "job_title"
-                                                                                                ]
-                                                                                            },
-                                                                                            "type": "STATE_BINDING"
-                                                                                        },
-                                                                                        {
-                                                                                            "type": "JSON_LITERAL",
-                                                                                            "value": "^company_organization="
-                                                                                        },
-                                                                                        {
-                                                                                            "binding": {
-                                                                                                "address": [
-                                                                                                    "contactData",
-                                                                                                    "company_organization"
-                                                                                                ]
-                                                                                            },
-                                                                                            "type": "STATE_BINDING"
-                                                                                        },
-                                                                                        {
-                                                                                            "type": "JSON_LITERAL",
-                                                                                            "value": "^tags_interests="
-                                                                                        },
-                                                                                        {
-                                                                                            "binding": {
-                                                                                                "address": [
-                                                                                                    "contactData",
-                                                                                                    "tags_interests"
-                                                                                                ]
-                                                                                            },
-                                                                                            "type": "STATE_BINDING"
-                                                                                        },
-                                                                                        {
-                                                                                            "type": "JSON_LITERAL",
-                                                                                            "value": "^follow_up_action="
-                                                                                        },
-                                                                                        {
-                                                                                            "binding": {
-                                                                                                "address": [
-                                                                                                    "contactData",
-                                                                                                    "follow_up_action"
-                                                                                                ]
-                                                                                            },
-                                                                                            "type": "STATE_BINDING"
-                                                                                        },
-                                                                                        {
-                                                                                            "type": "JSON_LITERAL",
-                                                                                            "value": "^event_name="
-                                                                                        },
-                                                                                        {
-                                                                                            "binding": {
-                                                                                                "address": [
-                                                                                                    "contactData",
-                                                                                                    "event_name"
-                                                                                                ]
-                                                                                            },
-                                                                                            "type": "STATE_BINDING"
-                                                                                        },
-                                                                                        {
-                                                                                            "type": "JSON_LITERAL",
-                                                                                            "value": "^location_met="
-                                                                                        },
-                                                                                        {
-                                                                                            "binding": {
-                                                                                                "address": [
-                                                                                                    "contactData",
-                                                                                                    "location_met"
-                                                                                                ]
-                                                                                            },
-                                                                                            "type": "STATE_BINDING"
-                                                                                        },
-                                                                                        {
-                                                                                            "type": "JSON_LITERAL",
-                                                                                            "value": "^event_role="
-                                                                                        },
-                                                                                        {
-                                                                                            "binding": {
-                                                                                                "address": [
-                                                                                                    "contactData",
-                                                                                                    "event_role"
-                                                                                                ]
-                                                                                            },
-                                                                                            "type": "STATE_BINDING"
-                                                                                        },
-                                                                                        {
-                                                                                            "type": "JSON_LITERAL",
-                                                                                            "value": "^session_attended="
-                                                                                        },
-                                                                                        {
-                                                                                            "binding": {
-                                                                                                "address": [
-                                                                                                    "contactData",
-                                                                                                    "session_attended"
-                                                                                                ]
-                                                                                            },
-                                                                                            "type": "STATE_BINDING"
-                                                                                        }
-                                                                                    ],
-                                                                                    "type": "LIST_CONTAINER"
+                                                                "sourceEventSysId": null,
+                                                                "targets": [
+                                                                    {
+                                                                        "broker": null,
+                                                                        "clientScript": null,
+                                                                        "conditional": null,
+                                                                        "declarativeAction": null,
+                                                                        "event": {
+                                                                            "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                                                                            "payload": {
+                                                                                "script": {
+                                                                                    "apiVersion": "1.0.0",
+                                                                                    "controllerElementId": null,
+                                                                                    "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tpropName: \"currentStep\",\n\t\tvalue: parseInt(api.state.currentStep) - 1\n\t};\n}",
+                                                                                    "scriptSysId": null,
+                                                                                    "target": null
                                                                                 },
-                                                                                "operator": "CONCAT"
+                                                                                "type": "CLIENT_TRANSFORM_SCRIPT"
                                                                             },
-                                                                            "type": "CLIENT_TRANSFORM"
+                                                                            "sysId": "32408b42ff7a10109046e490703bf176"
                                                                         },
-                                                                        "useSetDisplayValue": {
-                                                                            "type": "JSON_LITERAL",
-                                                                            "value": null
-                                                                        }
+                                                                        "operation": null,
+                                                                        "targetId": "clzkffeaacfaabbddlddbiiaaggisggfpbbee",
+                                                                        "type": "EVENT"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ],
+                                                        "isHidden": {
+                                                            "operation": {
+                                                                "left": {
+                                                                    "binding": {
+                                                                        "address": [
+                                                                            "currentStep"
+                                                                        ]
                                                                     },
-                                                                    "type": "MAP_CONTAINER"
+                                                                    "type": "STATE_BINDING"
+                                                                },
+                                                                "operator": "EQUAL",
+                                                                "right": {
+                                                                    "type": "JSON_LITERAL",
+                                                                    "value": 1
                                                                 }
                                                             },
-                                                            "targetId": "clzkdiddvuaabbhhsddbiiaapvgffswye",
-                                                            "type": "DATABROKER_OP"
-                                                        }
-                                                    ]
-                                                }
-                                            ],
-                                            "isHidden": {
-                                                "operation": {
-                                                    "left": {
-                                                        "binding": {
-                                                            "address": [
-                                                                "currentStep"
-                                                            ]
+                                                            "type": "BINARY"
                                                         },
-                                                        "type": "STATE_BINDING"
+                                                        "preset": null,
+                                                        "propertyValues": {
+                                                            "configAria": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            },
+                                                            "disabled": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": false
+                                                            },
+                                                            "icon": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            },
+                                                            "label": {
+                                                                "type": "TRANSLATION_LITERAL",
+                                                                "value": {
+                                                                    "code": null,
+                                                                    "comment": "",
+                                                                    "message": "Back"
+                                                                }
+                                                            },
+                                                            "landmark": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            },
+                                                            "size": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": "md"
+                                                            },
+                                                            "tooltipContent": {
+                                                                "type": "TRANSLATION_LITERAL",
+                                                                "value": {
+                                                                    "code": null,
+                                                                    "comment": "",
+                                                                    "message": "Move back a step"
+                                                                }
+                                                            },
+                                                            "variant": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": "secondary"
+                                                            }
+                                                        },
+                                                        "slot": null,
+                                                        "styles": {
+                                                            "default": {
+                                                                "width": "80px"
+                                                            }
+                                                        }
                                                     },
-                                                    "operator": "NOT_EQUAL",
-                                                    "right": {
-                                                        "type": "JSON_LITERAL",
-                                                        "value": 3
+                                                    {
+                                                        "definition": {
+                                                            "id": "d37ce8abca89d02905fed903c8e34d8e",
+                                                            "type": "MACROPONENT"
+                                                        },
+                                                        "elementId": "submit_button",
+                                                        "elementLabel": "Submit Button",
+                                                        "eventMappings": [
+                                                            {
+                                                                "eventMappingId": "clzkdccweefaabbgghhddbiiaauccrraaggvaa",
+                                                                "isConfiguration": false,
+                                                                "offRowStorageId": null,
+                                                                "sourceEventApiName": "sn_button.NOW_BUTTON#CLICKED",
+                                                                "sourceEventCorrelationId": null,
+                                                                "sourceEventDefinition": {
+                                                                    "apiName": "sn_button.NOW_BUTTON#CLICKED",
+                                                                    "id": null,
+                                                                    "type": "UXEVENT"
+                                                                },
+                                                                "sourceEventSysId": null,
+                                                                "targets": [
+                                                                    {
+                                                                        "broker": null,
+                                                                        "clientScript": null,
+                                                                        "conditional": null,
+                                                                        "declarativeAction": null,
+                                                                        "event": {
+                                                                            "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                                                                            "payload": {
+                                                                                "script": {
+                                                                                    "apiVersion": "1.0.0",
+                                                                                    "controllerElementId": null,
+                                                                                    "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\tconsole.log(`contactData ${JSON.stringify(api.state.contactData, null, 2)}`);\n\treturn {\n\t\tpropName: null,\n\t\tvalue: null\n\t};\n}",
+                                                                                    "scriptSysId": null,
+                                                                                    "target": null
+                                                                                },
+                                                                                "type": "CLIENT_TRANSFORM_SCRIPT"
+                                                                            },
+                                                                            "sysId": "32408b42ff7a10109046e490703bf176"
+                                                                        },
+                                                                        "operation": null,
+                                                                        "targetId": "clzkdccweefaabbggiiddbiiaahhufdojjfp",
+                                                                        "type": "EVENT"
+                                                                    },
+                                                                    {
+                                                                        "broker": null,
+                                                                        "clientScript": null,
+                                                                        "conditional": {
+                                                                            "binding": {
+                                                                                "address": [
+                                                                                    "contactData",
+                                                                                    "name"
+                                                                                ]
+                                                                            },
+                                                                            "type": "STATE_BINDING"
+                                                                        },
+                                                                        "declarativeAction": null,
+                                                                        "event": null,
+                                                                        "operation": {
+                                                                            "dataBrokerId": "beda4252770300108d070d74c810618f",
+                                                                            "operationName": "EXECUTE",
+                                                                            "parentResourceId": "create_contact_record",
+                                                                            "payload": {
+                                                                                "script": {
+                                                                                    "apiVersion": "1.0.0",
+                                                                                    "controllerElementId": null,
+                                                                                    "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\tconst fields = [];\n\tconst contactData = {...api.state.contactData};\n\tObject.keys(contactData).forEach(key =&gt; {\n\t\tconst value = contactData[key];\n\t\tfields.push(`${key}=${value}`);\n\t});\n\n\treturn {\n\t\ttable: \"x_snc_bam_you_i_0_contact\",\n\t\ttemplateFields: fields.join(\"^\"),\n\t\tuseSetDisplayValue: null\n\t};\n}",
+                                                                                    "scriptSysId": null,
+                                                                                    "target": null
+                                                                                },
+                                                                                "type": "CLIENT_TRANSFORM_SCRIPT"
+                                                                            }
+                                                                        },
+                                                                        "targetId": "clzkdiddvuaabbhhsddbiiaapvgffswye",
+                                                                        "type": "DATABROKER_OP"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ],
+                                                        "isHidden": {
+                                                            "operation": {
+                                                                "left": {
+                                                                    "binding": {
+                                                                        "address": [
+                                                                            "currentStep"
+                                                                        ]
+                                                                    },
+                                                                    "type": "STATE_BINDING"
+                                                                },
+                                                                "operator": "NOT_EQUAL",
+                                                                "right": {
+                                                                    "type": "JSON_LITERAL",
+                                                                    "value": 3
+                                                                }
+                                                            },
+                                                            "type": "BINARY"
+                                                        },
+                                                        "preset": null,
+                                                        "propertyValues": {
+                                                            "configAria": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            },
+                                                            "disabled": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": false
+                                                            },
+                                                            "icon": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": "save-outline"
+                                                            },
+                                                            "label": {
+                                                                "type": "TRANSLATION_LITERAL",
+                                                                "value": {
+                                                                    "code": null,
+                                                                    "comment": "",
+                                                                    "message": "Submit"
+                                                                }
+                                                            },
+                                                            "landmark": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            },
+                                                            "size": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": "md"
+                                                            },
+                                                            "tooltipContent": {
+                                                                "type": "TRANSLATION_LITERAL",
+                                                                "value": {
+                                                                    "code": null,
+                                                                    "comment": "",
+                                                                    "message": "Save this contact"
+                                                                }
+                                                            },
+                                                            "variant": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": "primary"
+                                                            }
+                                                        },
+                                                        "slot": null,
+                                                        "styles": {
+                                                            "default": {
+                                                                "width": "80px"
+                                                            }
+                                                        }
+                                                    },
+                                                    {
+                                                        "definition": {
+                                                            "id": "d37ce8abca89d02905fed903c8e34d8e",
+                                                            "type": "MACROPONENT"
+                                                        },
+                                                        "elementId": "next_button",
+                                                        "elementLabel": "Next Button",
+                                                        "eventMappings": [
+                                                            {
+                                                                "eventMappingId": "clzkffcebbraabbccfddbiiaaftumhhiibbhh",
+                                                                "isConfiguration": false,
+                                                                "offRowStorageId": null,
+                                                                "sourceEventApiName": "sn_button.NOW_BUTTON#CLICKED",
+                                                                "sourceEventCorrelationId": null,
+                                                                "sourceEventDefinition": {
+                                                                    "apiName": "sn_button.NOW_BUTTON#CLICKED",
+                                                                    "id": null,
+                                                                    "type": "UXEVENT"
+                                                                },
+                                                                "sourceEventSysId": null,
+                                                                "targets": [
+                                                                    {
+                                                                        "broker": null,
+                                                                        "clientScript": null,
+                                                                        "conditional": null,
+                                                                        "declarativeAction": null,
+                                                                        "event": {
+                                                                            "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                                                                            "payload": {
+                                                                                "script": {
+                                                                                    "apiVersion": "1.0.0",
+                                                                                    "controllerElementId": null,
+                                                                                    "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tpropName: \"currentStep\",\n\t\tvalue: parseInt(api.state.currentStep) + 1\n\t};\n}",
+                                                                                    "scriptSysId": null,
+                                                                                    "target": null
+                                                                                },
+                                                                                "type": "CLIENT_TRANSFORM_SCRIPT"
+                                                                            },
+                                                                            "sysId": "32408b42ff7a10109046e490703bf176"
+                                                                        },
+                                                                        "operation": null,
+                                                                        "targetId": "clzkffcebbraabbccgddbiiaaotddccohiis",
+                                                                        "type": "EVENT"
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ],
+                                                        "isHidden": {
+                                                            "operation": {
+                                                                "left": {
+                                                                    "binding": {
+                                                                        "address": [
+                                                                            "currentStep"
+                                                                        ]
+                                                                    },
+                                                                    "type": "STATE_BINDING"
+                                                                },
+                                                                "operator": "EQUAL",
+                                                                "right": {
+                                                                    "type": "JSON_LITERAL",
+                                                                    "value": 3
+                                                                }
+                                                            },
+                                                            "type": "BINARY"
+                                                        },
+                                                        "preset": null,
+                                                        "propertyValues": {
+                                                            "configAria": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            },
+                                                            "disabled": {
+                                                                "operation": {
+                                                                    "operand": {
+                                                                        "binding": {
+                                                                            "address": [
+                                                                                "contactData",
+                                                                                "name"
+                                                                            ]
+                                                                        },
+                                                                        "type": "STATE_BINDING"
+                                                                    },
+                                                                    "operator": "NOT"
+                                                                },
+                                                                "type": "UNARY"
+                                                            },
+                                                            "icon": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            },
+                                                            "label": {
+                                                                "type": "TRANSLATION_LITERAL",
+                                                                "value": {
+                                                                    "code": null,
+                                                                    "comment": "",
+                                                                    "message": "Next"
+                                                                }
+                                                            },
+                                                            "landmark": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": null
+                                                            },
+                                                            "size": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": "md"
+                                                            },
+                                                            "tooltipContent": {
+                                                                "script": {
+                                                                    "apiVersion": "2.0.0",
+                                                                    "controllerElementId": null,
+                                                                    "inlineScript": null,
+                                                                    "scriptSysId": "c64ebbc183005610b3fb7230feaad36b",
+                                                                    "target": null
+                                                                },
+                                                                "type": "CLIENT_TRANSFORM_SCRIPT"
+                                                            },
+                                                            "variant": {
+                                                                "type": "JSON_LITERAL",
+                                                                "value": "primary"
+                                                            }
+                                                        },
+                                                        "slot": null,
+                                                        "styles": {
+                                                            "default": {
+                                                                "width": "80px"
+                                                            }
+                                                        }
                                                     }
-                                                },
-                                                "type": "BINARY"
+                                                ],
+                                                "layout": {
+                                                    "default": {
+                                                        "children": null,
+                                                        "items": [
+                                                            {
+                                                                "element_id": "back_button"
+                                                            },
+                                                            {
+                                                                "element_id": "submit_button"
+                                                            },
+                                                            {
+                                                                "element_id": "next_button"
+                                                            }
+                                                        ],
+                                                        "root": null,
+                                                        "rules": null,
+                                                        "styles": {
+                                                            "align-items": "center",
+                                                            "display": "flex",
+                                                            "flex-direction": "row",
+                                                            "gap": "var(--now-scalable-space--md)"
+                                                        },
+                                                        "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
+                                                        "type": "flex"
+                                                    },
+                                                    "version": "3.1.0"
+                                                }
                                             },
                                             "preset": null,
                                             "propertyValues": {
-                                                "configAria": {
+                                                "ariaRegionHeadingLevel": {
                                                     "type": "JSON_LITERAL",
-                                                    "value": null
+                                                    "value": "1"
                                                 },
-                                                "disabled": {
+                                                "ariaRegionName": {
+                                                    "type": "TRANSLATION_LITERAL",
+                                                    "value": {
+                                                        "code": null,
+                                                        "comment": "",
+                                                        "message": ""
+                                                    }
+                                                },
+                                                "ariaRole": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": ""
+                                                },
+                                                "hideEmptyStateUi": {
+                                                    "type": "JSON_LITERAL",
+                                                    "value": true
+                                                },
+                                                "includeAriaHeading": {
                                                     "type": "JSON_LITERAL",
                                                     "value": false
                                                 },
-                                                "icon": {
+                                                "type": {
                                                     "type": "JSON_LITERAL",
-                                                    "value": "save-outline"
-                                                },
-                                                "label": {
-                                                    "type": "TRANSLATION_LITERAL",
-                                                    "value": {
-                                                        "code": null,
-                                                        "comment": "",
-                                                        "message": "Submit"
-                                                    }
-                                                },
-                                                "landmark": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": null
-                                                },
-                                                "size": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": "md"
-                                                },
-                                                "tooltipContent": {
-                                                    "type": "TRANSLATION_LITERAL",
-                                                    "value": {
-                                                        "code": null,
-                                                        "comment": "",
-                                                        "message": "Save this contact"
-                                                    }
-                                                },
-                                                "variant": {
-                                                    "type": "JSON_LITERAL",
-                                                    "value": "primary"
+                                                    "value": "section"
                                                 }
                                             },
                                             "slot": null,
                                             "styles": {
                                                 "default": {
                                                     "grid-column": "2/3",
-                                                    "justify-self": "right",
-                                                    "width": "80px"
+                                                    "justify-self": "right"
                                                 }
                                             }
                                         }
@@ -3798,13 +4013,7 @@
                                             "children": null,
                                             "items": [
                                                 {
-                                                    "element_id": "back_button"
-                                                },
-                                                {
-                                                    "element_id": "next_button"
-                                                },
-                                                {
-                                                    "element_id": "submit_button"
+                                                    "element_id": "button_container"
                                                 }
                                             ],
                                             "root": null,
@@ -3819,6 +4028,16 @@
                                             "templateId": "5832fd4d53c31010e6bcddeeff7b12db",
                                             "type": "grid"
                                         },
+                                        "queries": [
+                                            {
+                                                "layout": {
+                                                    "items": [],
+                                                    "styles": {},
+                                                    "type": "grid"
+                                                },
+                                                "queryId": "now_small"
+                                            }
+                                        ],
                                         "version": "3.1.0"
                                     }
                                 },
@@ -3858,7 +4077,15 @@
                                     "default": {
                                         "margin-bottom": "0",
                                         "margin-top": "var(--now-scalable-space--xl)"
-                                    }
+                                    },
+                                    "queries": [
+                                        {
+                                            "queryId": "now_small",
+                                            "value": {
+                                                "padding-bottom": "var(--now-scalable-space--xl)"
+                                            }
+                                        }
+                                    ]
                                 }
                             }
                         ],
@@ -3925,7 +4152,6 @@
                         "default": {
                             "margin-left": "auto",
                             "margin-right": "auto",
-                            "min-width": "450px",
                             "width": "100%"
                         }
                     }
@@ -4088,6 +4314,165 @@
                         },
                         "operation": null,
                         "targetId": "clzkfeegybaabbifddbiiaaalkdwggqi",
+                        "type": "EVENT"
+                    },
+                    {
+                        "broker": null,
+                        "clientScript": null,
+                        "conditional": null,
+                        "declarativeAction": null,
+                        "event": {
+                            "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                            "payload": {
+                                "script": {
+                                    "apiVersion": "1.0.0",
+                                    "controllerElementId": null,
+                                    "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tpropName: \"contactData\",\n\t\tvalue: {}\n\t};\n}",
+                                    "scriptSysId": null,
+                                    "target": null
+                                },
+                                "type": "CLIENT_TRANSFORM_SCRIPT"
+                            },
+                            "sysId": "32408b42ff7a10109046e490703bf176"
+                        },
+                        "operation": null,
+                        "targetId": "cmaacpcdwkaaaawzddbiiaadccguffhhoo",
+                        "type": "EVENT"
+                    },
+                    {
+                        "broker": null,
+                        "clientScript": null,
+                        "conditional": null,
+                        "declarativeAction": null,
+                        "event": {
+                            "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                            "payload": {
+                                "type": "JSON_LITERAL",
+                                "value": {
+                                    "propName": "currentStep",
+                                    "value": 1
+                                }
+                            },
+                            "sysId": "32408b42ff7a10109046e490703bf176"
+                        },
+                        "operation": null,
+                        "targetId": "cmaacpqxjjzaaaaxkddbiiaaddffkaddmgu",
+                        "type": "EVENT"
+                    }
+                ]
+            },
+            {
+                "eventMappingId": "clzueffceesaabbvoddbiiaarjjryeemdii",
+                "isConfiguration": false,
+                "offRowStorageId": null,
+                "sourceEventApiName": "sn_canvas_chrome.NOW_CONFIRM_MODAL#POSITIVE_BUTTON_CLICKED",
+                "sourceEventCorrelationId": null,
+                "sourceEventDefinition": {
+                    "apiName": "sn_canvas_chrome.NOW_CONFIRM_MODAL#POSITIVE_BUTTON_CLICKED",
+                    "id": null,
+                    "type": "UXEVENT"
+                },
+                "sourceEventSysId": null,
+                "targets": [
+                    {
+                        "broker": null,
+                        "clientScript": null,
+                        "conditional": null,
+                        "declarativeAction": null,
+                        "event": {
+                            "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                            "payload": {
+                                "type": "JSON_LITERAL",
+                                "value": {
+                                    "propName": "currentStep",
+                                    "value": 1
+                                }
+                            },
+                            "sysId": "32408b42ff7a10109046e490703bf176"
+                        },
+                        "operation": null,
+                        "targetId": "clzueffmyaaabbwccddbiiaaoaaqzqrwa",
+                        "type": "EVENT"
+                    },
+                    {
+                        "broker": null,
+                        "clientScript": null,
+                        "conditional": null,
+                        "declarativeAction": null,
+                        "event": {
+                            "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                            "payload": {
+                                "script": {
+                                    "apiVersion": "1.0.0",
+                                    "controllerElementId": null,
+                                    "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tpropName: \"contactData\",\n\t\tvalue: {}\n\t};\n}",
+                                    "scriptSysId": null,
+                                    "target": null
+                                },
+                                "type": "CLIENT_TRANSFORM_SCRIPT"
+                            },
+                            "sysId": "32408b42ff7a10109046e490703bf176"
+                        },
+                        "operation": null,
+                        "targetId": "clzueffvjzaabbwdddbiiaaqscvxdny",
+                        "type": "EVENT"
+                    }
+                ]
+            },
+            {
+                "eventMappingId": "cmaacscdafaaaaxffddbiiaahpiilghhkc",
+                "isConfiguration": false,
+                "offRowStorageId": null,
+                "sourceEventApiName": "sn_canvas_core.CANVAS_MODAL#CLOSED",
+                "sourceEventCorrelationId": null,
+                "sourceEventDefinition": {
+                    "apiName": "sn_canvas_core.CANVAS_MODAL#CLOSED",
+                    "id": null,
+                    "type": "UXEVENT"
+                },
+                "sourceEventSysId": null,
+                "targets": [
+                    {
+                        "broker": null,
+                        "clientScript": null,
+                        "conditional": null,
+                        "declarativeAction": null,
+                        "event": {
+                            "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                            "payload": {
+                                "type": "JSON_LITERAL",
+                                "value": {
+                                    "propName": "currentStep",
+                                    "value": 1
+                                }
+                            },
+                            "sysId": "32408b42ff7a10109046e490703bf176"
+                        },
+                        "operation": null,
+                        "targetId": "cmaacscdagaaaaxggddbiiaazeextnhem",
+                        "type": "EVENT"
+                    },
+                    {
+                        "broker": null,
+                        "clientScript": null,
+                        "conditional": null,
+                        "declarativeAction": null,
+                        "event": {
+                            "apiName": "sn_uxf.MACROPONENT_STATE_UPDATE_REQUESTED",
+                            "payload": {
+                                "script": {
+                                    "apiVersion": "1.0.0",
+                                    "controllerElementId": null,
+                                    "inlineScript": "/**\n* @param {params} params\n* @param {api} params.api\n* @param {any} params.event\n*/\nfunction evaluateEvent({api, event}) {\n\treturn {\n\t\tpropName: \"contactData\",\n\t\tvalue: {}\n\t};\n}",
+                                    "scriptSysId": null,
+                                    "target": null
+                                },
+                                "type": "CLIENT_TRANSFORM_SCRIPT"
+                            },
+                            "sysId": "32408b42ff7a10109046e490703bf176"
+                        },
+                        "operation": null,
+                        "targetId": "cmaacscjibaaaaxhddbiiaaqyxiddkql",
                         "type": "EVENT"
                     }
                 ]
@@ -4354,9 +4739,6 @@
   "message" : "Move back a step",
   "comment" : ""
 }, {
-  "message" : "Move to the next step",
-  "comment" : ""
-}, {
   "message" : "Name",
   "comment" : ""
 }, {
@@ -4436,14 +4818,14 @@
         <sys_created_by>reece.poulsen</sys_created_by>
         <sys_created_on>2024-08-07 16:15:00</sys_created_on>
         <sys_id>5eefeeba83ffc210b3fb7230feaad363</sys_id>
-        <sys_mod_count>174</sys_mod_count>
+        <sys_mod_count>237</sys_mod_count>
         <sys_name>Add Contact</sys_name>
         <sys_package display_value="BAM - You &amp; I Builder Live! Conference Notes" source="x_snc_bam_you_i_0">69fa6ee3838742107d786970ceaad318</sys_package>
         <sys_policy/>
         <sys_scope display_value="BAM - You &amp; I Builder Live! Conference Notes">69fa6ee3838742107d786970ceaad318</sys_scope>
         <sys_update_name>sys_ux_macroponent_5eefeeba83ffc210b3fb7230feaad363</sys_update_name>
         <sys_updated_by>reece.poulsen</sys_updated_by>
-        <sys_updated_on>2024-08-07 22:35:59</sys_updated_on>
+        <sys_updated_on>2024-08-29 22:42:08</sys_updated_on>
     </sys_ux_macroponent>
     <sys_translated_text action="delete_multiple" query="documentkey=5eefeeba83ffc210b3fb7230feaad363"/>
 </record_update>

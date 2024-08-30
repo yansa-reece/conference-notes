@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Contact List">db39784983541a10b3fb7230feaad329</macroponent>
+        <name>resizable_panes/now_small/defaultDisplayedPane</name>
+        <preset/>
+        <required_translations>[]</required_translations>
+        <script><![CDATA[/**
+  * @param {params} params
+  * @param {api} params.api
+  * @param {TransformApiHelpers} params.helpers
+  */
+function evaluateProperty({api, helpers}) {
+  const showContactList = api.state.showContactList;
+  const paneToDisplay = showContactList ? "Left" : "Right";
+	return paneToDisplay;
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>reece.poulsen</sys_created_by>
+        <sys_created_on>2024-08-29 16:04:29</sys_created_on>
+        <sys_id>f900ccc283d89e10b3fb7230feaad37b</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>resizable_panes/now_small/defaultDisplayedPane</sys_name>
+        <sys_package display_value="BAM - You &amp; I Builder Live! Conference Notes" source="x_snc_bam_you_i_0">69fa6ee3838742107d786970ceaad318</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BAM - You &amp; I Builder Live! Conference Notes">69fa6ee3838742107d786970ceaad318</sys_scope>
+        <sys_update_name>sys_ux_client_script_f900ccc283d89e10b3fb7230feaad37b</sys_update_name>
+        <sys_updated_by>reece.poulsen</sys_updated_by>
+        <sys_updated_on>2024-08-29 16:16:32</sys_updated_on>
+        <target>macroponent</target>
+        <type>transform</type>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BAM - You &amp; I Builder Live! Conference Notes">69fa6ee3838742107d786970ceaad318</application>
+        <file_path/>
+        <instance_id>1da02244dbbdb990ae4c9027c59619b6</instance_id>
+        <instance_name>dev181649</instance_name>
+        <name>sys_ux_client_script_f900ccc283d89e10b3fb7230feaad37b</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;controller_preset/&gt;&lt;includes/&gt;&lt;macroponent display_value="Contact List"&gt;db39784983541a10b3fb7230feaad329&lt;/macroponent&gt;&lt;name&gt;resizable_panes/now_small/defaultDisplayedPane&lt;/name&gt;&lt;preset/&gt;&lt;required_translations&gt;[]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[/**
+  * @param {params} params
+  * @param {api} params.api
+  * @param {TransformApiHelpers} params.helpers
+  */
+function evaluateProperty({api, helpers}) {
+  const showContactList = api.state.showContactList;
+  const paneToDisplay = showContactList ? "Left" : "Right";
+	return paneToDisplay;
+}]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;reece.poulsen&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-08-29 16:04:29&lt;/sys_created_on&gt;&lt;sys_id&gt;f900ccc283d89e10b3fb7230feaad37b&lt;/sys_id&gt;&lt;sys_mod_count&gt;3&lt;/sys_mod_count&gt;&lt;sys_name&gt;resizable_panes/now_small/defaultDisplayedPane&lt;/sys_name&gt;&lt;sys_package display_value="BAM - You &amp;amp; I Builder Live! Conference Notes" source="x_snc_bam_you_i_0"&gt;69fa6ee3838742107d786970ceaad318&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="BAM - You &amp;amp; I Builder Live! Conference Notes"&gt;69fa6ee3838742107d786970ceaad318&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_f900ccc283d89e10b3fb7230feaad37b&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;reece.poulsen&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-08-29 16:16:32&lt;/sys_updated_on&gt;&lt;target&gt;macroponent&lt;/target&gt;&lt;type&gt;transform&lt;/type&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-849764279</payload_hash>
+        <record_name>resizable_panes/now_small/defaultDisplayedPane</record_name>
+        <reverted_from/>
+        <source>5498c4c3837b0610b3fb7230feaad3ef</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>reece.poulsen</sys_created_by>
+        <sys_created_on>2024-08-29 16:16:32</sys_created_on>
+        <sys_id>5b3380ca83d89e10b3fb7230feaad361</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1919eec9cd10000001</sys_recorded_at>
+        <sys_updated_by>reece.poulsen</sys_updated_by>
+        <sys_updated_on>2024-08-29 16:16:32</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>5f3380ca27d89e10df94e1e7eb050f60</update_guid>
+        <update_guid_history>5f3380ca27d89e10df94e1e7eb050f60:-849764279,7670c4c6f7d89e1047b5f787a76c85d5:-1544618935</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>reece.poulsen</sys_created_by>
+        <sys_created_on>2024-08-29 16:18:41</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>0e2d10c99cbe4d0882e7110458255190</sys_id>
+        <sys_metadata>f900ccc283d89e10b3fb7230feaad37b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>resizable_panes/now_small/defaultDisplayedPane</sys_name>
+        <sys_package display_value="BAM - You &amp; I Builder Live! Conference Notes" source="x_snc_bam_you_i_0">69fa6ee3838742107d786970ceaad318</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BAM - You &amp; I Builder Live! Conference Notes">69fa6ee3838742107d786970ceaad318</sys_scope>
+        <sys_scope_delete display_value="">8e6b586c18d945e4a392cb47d16fdc89</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_f900ccc283d89e10b3fb7230feaad37b</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_f900ccc283d89e10b3fb7230feaad37b">5b3380ca83d89e10b3fb7230feaad361</sys_update_version>
+        <sys_updated_by>reece.poulsen</sys_updated_by>
+        <sys_updated_on>2024-08-29 16:18:41</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

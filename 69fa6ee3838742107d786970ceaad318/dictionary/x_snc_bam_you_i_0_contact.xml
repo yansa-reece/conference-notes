@@ -16,7 +16,7 @@
             </choice>
         </element>
         <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
-        <element attributes="edge_encryption_enabled=true" label="Phone number" max_length="255" name="phone_number" type="phone_number_e164"/>
+        <element attributes="edge_encryption_enabled=true" label="Phone number" max_length="255" name="phone_number" type="string"/>
         <element attributes="edge_encryption_enabled=true,default_rows=3" label="Note" max_length="5000" name="note" type="string"/>
         <element label="Location met" max_length="255" name="location_met" type="string"/>
         <element label="Job title" max_length="255" name="job_title" type="string"/>

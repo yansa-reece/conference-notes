@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>MGOPW</sys_created_by>
+        <sys_created_on>2024-07-03 22:38:33</sys_created_on>
+        <sys_id>a708732f83cb42107d786970ceaad3a9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_bam_you_i_0_contact.x_snc_bam_you_i_0.admin</sys_name>
+        <sys_package display_value="BAM - You &amp; I Builder Live! Conference Notes" source="x_snc_bam_you_i_0">69fa6ee3838742107d786970ceaad318</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BAM - You &amp; I Builder Live! Conference Notes">69fa6ee3838742107d786970ceaad318</sys_scope>
+        <sys_security_acl display_value="x_snc_bam_you_i_0_contact">eb08732f83cb42107d786970ceaad310</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_a708732f83cb42107d786970ceaad3a9</sys_update_name>
+        <sys_updated_by>MGOPW</sys_updated_by>
+        <sys_updated_on>2024-07-03 22:38:33</sys_updated_on>
+        <sys_user_role display_value="x_snc_bam_you_i_0.admin" name="x_snc_bam_you_i_0.admin">65fa6ee3838742107d786970ceaad32d</sys_user_role>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BAM - You &amp; I Builder Live! Conference Notes">69fa6ee3838742107d786970ceaad318</application>
+        <file_path/>
+        <instance_id>1da02244dbbdb990ae4c9027c59619b6</instance_id>
+        <instance_name>dev181649</instance_name>
+        <name>sys_security_acl_role_a708732f83cb42107d786970ceaad3a9</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>MGOPW</sys_created_by><sys_created_on>2024-07-03 22:38:33</sys_created_on><sys_id>a708732f83cb42107d786970ceaad3a9</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_snc_bam_you_i_0_contact.x_snc_bam_you_i_0.admin</sys_name><sys_package display_value="BAM - You &amp; I Builder Live! Conference Notes" source="x_snc_bam_you_i_0">69fa6ee3838742107d786970ceaad318</sys_package><sys_policy/><sys_scope display_value="BAM - You &amp; I Builder Live! Conference Notes">69fa6ee3838742107d786970ceaad318</sys_scope><sys_security_acl display_value="x_snc_bam_you_i_0_contact">eb08732f83cb42107d786970ceaad310</sys_security_acl><sys_update_name>sys_security_acl_role_a708732f83cb42107d786970ceaad3a9</sys_update_name><sys_updated_by>MGOPW</sys_updated_by><sys_updated_on>2024-07-03 22:38:33</sys_updated_on><sys_user_role display_value="x_snc_bam_you_i_0.admin" name="x_snc_bam_you_i_0.admin">65fa6ee3838742107d786970ceaad32d</sys_user_role></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>113986931</payload_hash>
+        <record_name>x_snc_bam_you_i_0_contact.x_snc_bam_you_i_0.admin</record_name>
+        <reverted_from/>
+        <source>5ee2aefa837fc210b3fb7230feaad315</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>reece.poulsen</sys_created_by>
+        <sys_created_on>2024-08-07 15:18:26</sys_created_on>
+        <sys_id>79f2a23e837fc210b3fb7230feaad337</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1912d6b83df0000001</sys_recorded_at>
+        <sys_updated_by>reece.poulsen</sys_updated_by>
+        <sys_updated_on>2024-08-07 15:18:26</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>e708732f5bcb42101b9784aa38a82dab</update_guid>
+        <update_guid_history>e708732f5bcb42101b9784aa38a82dab:113986931</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_snc_bam_you_i_0_contact.x_snc_bam_you_i_0.admin">3614600a83dc9e10b3fb7230feaad3d0</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>MGOPW</sys_created_by>
+        <sys_created_on>2024-08-29 18:40:08</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>9d6c66f550da406ca38f07908a8ae301</sys_id>
+        <sys_metadata>a708732f83cb42107d786970ceaad3a9</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_bam_you_i_0_contact.x_snc_bam_you_i_0.admin</sys_name>
+        <sys_package display_value="BAM - You &amp; I Builder Live! Conference Notes" source="x_snc_bam_you_i_0">69fa6ee3838742107d786970ceaad318</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BAM - You &amp; I Builder Live! Conference Notes">69fa6ee3838742107d786970ceaad318</sys_scope>
+        <sys_scope_delete display_value="">8e6b586c18d945e4a392cb47d16fdc89</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_a708732f83cb42107d786970ceaad3a9</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_a708732f83cb42107d786970ceaad3a9">79f2a23e837fc210b3fb7230feaad337</sys_update_version>
+        <sys_updated_by>MGOPW</sys_updated_by>
+        <sys_updated_on>2024-08-29 18:40:08</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
