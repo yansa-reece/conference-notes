@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="DELETE">
+        <controller_preset/>
+        <includes/>
+        <macroponent display_value="Shared Filters">9a3b6ab78318da50b3fb7230feaad34a</macroponent>
+        <name>second_pivot_table/now_default/dataSources</name>
+        <preset/>
+        <required_translations>[]</required_translations>
+        <script><![CDATA[/**
+  * @param {params} params
+  * @param {api} params.api
+  * @param {TransformApiHelpers} params.helpers
+  */
+function evaluateProperty({api, helpers}) {
+  // Not sure what to return here, this is just a guess but it doesn't work
+  return [
+      {
+          "allowRealTime": true,
+          "dataCategories": [
+              "trend",
+              "group",
+              "simple"
+          ],
+          "filterQuery": api.state.sharedFilter || "",
+          "id": "aGFibGV0YXNrMTcyNTQ2OTA5MTU5Mw==",
+          "isDatabaseView": false,
+          "label": "Task",
+          "preferredVisualizations": [
+              "d24d53f60350de7a652caf3188a46ed2"
+          ],
+          "reportSourceSysId": null,
+          "sourceType": "table",
+          "tableOrViewName": "task"
+      }
+  ];
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>reece.poulsen</sys_created_by>
+        <sys_created_on>2024-09-04 17:06:34</sys_created_on>
+        <sys_id>1d1687338398da50b3fb7230feaad3ed</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>second_pivot_table/now_default/dataSources</sys_name>
+        <sys_package display_value="BAM - You &amp; I Builder Live! Conference Notes" source="x_snc_bam_you_i_0">69fa6ee3838742107d786970ceaad318</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BAM - You &amp; I Builder Live! Conference Notes">69fa6ee3838742107d786970ceaad318</sys_scope>
+        <sys_update_name>sys_ux_client_script_1d1687338398da50b3fb7230feaad3ed</sys_update_name>
+        <sys_updated_by>reece.poulsen</sys_updated_by>
+        <sys_updated_on>2024-09-04 20:53:54</sys_updated_on>
+        <target>macroponent</target>
+        <type>transform</type>
+    </sys_ux_client_script>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="BAM - You &amp; I Builder Live! Conference Notes">69fa6ee3838742107d786970ceaad318</application>
+        <file_path/>
+        <instance_id>1da02244dbbdb990ae4c9027c59619b6</instance_id>
+        <instance_name>dev181649</instance_name>
+        <name>sys_ux_client_script_1d1687338398da50b3fb7230feaad3ed</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ux_client_script"&gt;&lt;sys_ux_client_script action="INSERT_OR_UPDATE"&gt;&lt;controller_preset/&gt;&lt;includes/&gt;&lt;macroponent display_value="Shared Filters"&gt;9a3b6ab78318da50b3fb7230feaad34a&lt;/macroponent&gt;&lt;name&gt;second_pivot_table/now_default/dataSources&lt;/name&gt;&lt;preset/&gt;&lt;required_translations&gt;[]&lt;/required_translations&gt;&lt;script&gt;&lt;![CDATA[/**
+  * @param {params} params
+  * @param {api} params.api
+  * @param {TransformApiHelpers} params.helpers
+  */
+function evaluateProperty({api, helpers}) {
+  // Not sure what to return here, this is just a guess but it doesn't work
+  return [
+      {
+          "allowRealTime": true,
+          "dataCategories": [
+              "trend",
+              "group",
+              "simple"
+          ],
+          "filterQuery": api.state.sharedFilter || "",
+          "id": "aGFibGV0YXNrMTcyNTQ2OTA5MTU5Mw==",
+          "isDatabaseView": false,
+          "label": "Task",
+          "preferredVisualizations": [
+              "d24d53f60350de7a652caf3188a46ed2"
+          ],
+          "reportSourceSysId": null,
+          "sourceType": "table",
+          "tableOrViewName": "task"
+      }
+  ];
+}]]&gt;&lt;/script&gt;&lt;script_api_version&gt;2.0.0&lt;/script_api_version&gt;&lt;sys_class_name&gt;sys_ux_client_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;reece.poulsen&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-09-04 17:06:34&lt;/sys_created_on&gt;&lt;sys_id&gt;1d1687338398da50b3fb7230feaad3ed&lt;/sys_id&gt;&lt;sys_mod_count&gt;9&lt;/sys_mod_count&gt;&lt;sys_name&gt;second_pivot_table/now_default/dataSources&lt;/sys_name&gt;&lt;sys_package display_value="BAM - You &amp;amp; I Builder Live! Conference Notes" source="x_snc_bam_you_i_0"&gt;69fa6ee3838742107d786970ceaad318&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="BAM - You &amp;amp; I Builder Live! Conference Notes"&gt;69fa6ee3838742107d786970ceaad318&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ux_client_script_1d1687338398da50b3fb7230feaad3ed&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;reece.poulsen&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-09-04 20:53:54&lt;/sys_updated_on&gt;&lt;target&gt;macroponent&lt;/target&gt;&lt;type&gt;transform&lt;/type&gt;&lt;/sys_ux_client_script&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-150357509</payload_hash>
+        <record_name>second_pivot_table/now_default/dataSources</record_name>
+        <reverted_from/>
+        <source>5498c4c3837b0610b3fb7230feaad3ef</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>reece.poulsen</sys_created_by>
+        <sys_created_on>2024-09-04 20:53:54</sys_created_on>
+        <sys_id>b04c3b3f83101e50b3fb7230feaad3c0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>191bed0b5fe0000001</sys_recorded_at>
+        <sys_updated_by>reece.poulsen</sys_updated_by>
+        <sys_updated_on>2024-09-04 20:53:54</sys_updated_on>
+        <type>UX Client Script</type>
+        <update_guid>b44c3b3f07101e50fca6a08f5a8babbf</update_guid>
+        <update_guid_history>b44c3b3f07101e50fca6a08f5a8babbf:-150357509,f70cf7fbd2101e508b0deb1805346af2:-183353621,99fbff7b0c101e5067f6142f2962346f:1681521067,cd5bbfbb58101e5095b778171f105868:-2139262952,363847b775d8da50461cd3773654b4f6:-1404907584</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>reece.poulsen</sys_created_by>
+        <sys_created_on>2024-09-04 20:58:27</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_client_script">sys_ux_client_script</sys_db_object>
+        <sys_id>0545464158314b70a6a156d872618be1</sys_id>
+        <sys_metadata>1d1687338398da50b3fb7230feaad3ed</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>second_pivot_table/now_default/dataSources</sys_name>
+        <sys_package display_value="BAM - You &amp; I Builder Live! Conference Notes" source="x_snc_bam_you_i_0">69fa6ee3838742107d786970ceaad318</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="BAM - You &amp; I Builder Live! Conference Notes">69fa6ee3838742107d786970ceaad318</sys_scope>
+        <sys_scope_delete display_value="">8e6b586c18d945e4a392cb47d16fdc89</sys_scope_delete>
+        <sys_update_name>sys_ux_client_script_1d1687338398da50b3fb7230feaad3ed</sys_update_name>
+        <sys_update_version display_value="sys_ux_client_script_1d1687338398da50b3fb7230feaad3ed">b04c3b3f83101e50b3fb7230feaad3c0</sys_update_version>
+        <sys_updated_by>reece.poulsen</sys_updated_by>
+        <sys_updated_on>2024-09-04 20:58:27</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

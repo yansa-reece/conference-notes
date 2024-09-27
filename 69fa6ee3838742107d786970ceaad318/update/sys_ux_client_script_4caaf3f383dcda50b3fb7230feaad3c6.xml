@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_client_script">
+    <sys_ux_client_script action="INSERT_OR_UPDATE">
+        <controller_preset/>
+        <includes>8f0ec3492c5f441781f1f44f36351242</includes>
+        <macroponent display_value="Shared Filters">9a3b6ab78318da50b3fb7230feaad34a</macroponent>
+        <name>Apply Encoded Query to PARFIlters</name>
+        <preset/>
+        <required_translations>[]</required_translations>
+        <script><![CDATA[/**
+* @param {params} params
+* @param {api} params.api
+* @param {any} params.event
+* @param {any} params.imports
+* @param {ApiHelpers} params.helpers
+*/
+function handler({api, event, helpers, imports}) {
+    const table = event.payload.table;
+    const encodedQuery = event.payload.query;
+    const company = "Yansa Labs";
+
+    const mergePARFiltersV2 = imports["global.mergePARFilters"]().v2;
+    api.setState("parFilters", ({ currentValue, api }) => {
+        const { parFilters, encodedQueries } = mergePARFiltersV2(
+            currentValue,
+            [{
+                apply_to: [table + ".company_organization"], 
+                filterId: event.elementId,
+                include_unmatched_or_empty: false,
+                label: "Company/Organization",
+                order: 9000,
+                source: {
+                    type: "table",
+                    encodedQuery: "",
+                    choices: undefined,
+                    emptyOption: undefined,
+                    payload: {
+                        field: undefined,
+                        primaryKey: undefined,
+                        table: table
+                    }
+                },
+                type: "choice",
+                values: [
+                    company
+                ]
+            }],
+        );
+
+        api.setState("encodedQueries", encodedQueries);
+        console.log("parFilters", parFilters);
+        console.log("encodedQueries", encodedQueries);
+        return parFilters;
+    });
+
+}]]></script>
+        <script_api_version>2.0.0</script_api_version>
+        <sys_class_name>sys_ux_client_script</sys_class_name>
+        <sys_created_by>reece.poulsen</sys_created_by>
+        <sys_created_on>2024-09-04 21:21:37</sys_created_on>
+        <sys_id>4caaf3f383dcda50b3fb7230feaad3c6</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_name>Apply Encoded Query to PARFIlters</sys_name>
+        <sys_package display_value="BAM - You &amp; I Builder Live! Conference Notes" source="x_snc_bam_you_i_0">69fa6ee3838742107d786970ceaad318</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="BAM - You &amp; I Builder Live! Conference Notes">69fa6ee3838742107d786970ceaad318</sys_scope>
+        <sys_update_name>sys_ux_client_script_4caaf3f383dcda50b3fb7230feaad3c6</sys_update_name>
+        <sys_updated_by>reece.poulsen</sys_updated_by>
+        <sys_updated_on>2024-09-04 22:19:46</sys_updated_on>
+        <target>macroponent</target>
+        <type>default</type>
+    </sys_ux_client_script>
+</record_update>
